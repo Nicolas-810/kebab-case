@@ -22,7 +22,7 @@ const Login = () => {
         photo: user.photoURL,
       };
       UserDAO.createUser(newUser);
-      // navigate("/Quiz");
+      navigate("/Home"); 
     }
   }, [user, navigate]);
 
