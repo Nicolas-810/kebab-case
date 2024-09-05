@@ -15,8 +15,7 @@ const useAuthStore = create((set) => ({
   loading: true,
 
   loginGoogleWithPopUp: async () => {
-    await signInWithPopup(auth, provider)
-    .catch((error) => {
+    await signInWithPopup(auth, provider).catch((error) => {
       console.log(error);
     });
   },
@@ -25,6 +24,7 @@ const useAuthStore = create((set) => ({
     await signOut(auth)
       .then(() => {
         set({ user: null });
+       
       })
       .catch((error) => {
         console.log(error);
