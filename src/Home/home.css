@@ -1,0 +1,28 @@
+.header-container {
+    position: relative;
+    padding: 0.1rem;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    z-index: 10;
+  }
+  
+  .logoGroup {
+    width: auto;
+    max-width: 100px;
+    height: auto;
+    padding: 0.1em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  
+  .logoGroup:hover {
+    filter: drop-shadow(0 0 1em #5cb9ebaa);
+  }
+  
+  .controls {
+    display: flex;
+    gap: 5px;
+  }
+  
