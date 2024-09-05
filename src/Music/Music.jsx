@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import audioFile from '../assets/Agua.mp3';
-import '../Home/home.css';
+import '../Home/Home.css';
 
 const Music = () => {
   const audioRef = useRef(null);
