@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import groupLogo from "../assets/LogoS.png";
 import Logo3D from "../Logo3D/Logo3D";
-import Music from "../Music/Music";
+import Music from "../Music/Music.jsx";
 import Links from "../Components/Links";
 import "./Home.css";
 
