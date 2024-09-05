@@ -22,9 +22,8 @@ const Login = () => {
         photo: user.photoURL,
       };
       UserDAO.createUser(newUser);
-      navigate("/Home"); 
     }
-  }, [user, navigate]);
+  }, [user]);
 
   const handleLogin = useCallback(() => {
     loginGoogleWithPopUp();
