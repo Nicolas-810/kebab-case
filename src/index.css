@@ -17,18 +17,4 @@ body {
   user-select: none;
 }
 
-button {
-    padding: 7px 10px;
-    font-size: medium;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-   
-  }
   
