@@ -24,3 +24,36 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
+
+
+.button-audio {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #B57BF2;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px; 
+}
+
+.button-audio:hover {
+  background-color: #150342;
+}
+
+.button-logout {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.button-logout:hover {
+  background-color: #ff0000;
+}
+
