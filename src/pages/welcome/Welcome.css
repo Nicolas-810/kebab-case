@@ -1,0 +1,161 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(#FFFF, #C8EAFF, #0392FF);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem 1rem;
+  background-color: #D7F3FF; 
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-section img {
+  height: 60px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-left: 5px; 
+}
+
+.button-section {
+  display: flex;
+  gap: 20px; 
+}
+
+.button-section button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-section button:hover {
+  background-color: #0056b3;
+}
+
+.content-container {
+  display: flex;
+  flex-grow: 1;
+  padding: 2rem;
+  justify-content: space-between;
+}
+
+.text-section {
+  max-width: 100%;
+}
+
+.text-section img {
+  width: 130%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.image-section img {
+  max-width: 70%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-left: 15rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+  border: none;
+  background-color: transparent;
+}
+
+.tab.active {
+  border-bottom: 2px solid #007bff;
+}
+
+.modal-button, .google-button {
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-button:hover, .google-button:hover {
+  background-color: #0056b3;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.rounded-input {
+  padding: 0.75rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.rounded-input::placeholder {
+  color: #aaa;
+}

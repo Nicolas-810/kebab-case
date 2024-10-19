@@ -30,9 +30,9 @@ nav ul li a:hover {
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  background-color: #4405a3;
+  background-color: #B57BF2;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   outline: none;
   margin-right: 10px; 
@@ -48,7 +48,7 @@ nav ul li a:hover {
   color: #fff;
   background-color: #007bff;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   outline: none;
 }
