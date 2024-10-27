@@ -1,8 +1,8 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Links from "../../components/Links";
-import Fish3D from "../../components/logo-3d/Fish3D";
-import Music from "../../music/Music";
+import Links from "../../Components/logo-3d/Links";
+import Fish3D from "../../Components/logo-3d/Fish3D";
+import Music from "../../Music/Music";
 import groupLogo from '../../assets/LogoS.png';
 import "./Home.css";
 
