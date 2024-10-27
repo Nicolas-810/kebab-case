@@ -1,13 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
-import Welcome from "./pages/Welcome/Welcome";
+import Welcome from "./pages/welcome/Welcome";
 // import Login from "./pages/Login/Login";
 import Page404 from "./pages/page404/page404";
 import Home from "./pages/home/Home";
 import "./index.css"
-import Problematicas from './pages/problematics/Problematics'; 
+import Problematics from './pages/problematics/Problematics'; 
 
 
 const router = createBrowserRouter([
@@ -15,7 +14,7 @@ const router = createBrowserRouter([
 
 
   // { path: "/login", element: <Login /> },
-  { path:"/problematics", element:<Problematicas />},
+  { path:"/problematics", element:<Problematics />},
   { path: "/home", element: <Home /> },
   { path: "*", element: <Page404 /> },
 ]);
