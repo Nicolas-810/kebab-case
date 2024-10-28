@@ -86,6 +86,7 @@ const Welcome = () => {
   };
 
   return (
+    <>
     <div className="page-container">
       <header className="navbar-container">
         <div className="logo-section">
@@ -193,6 +194,7 @@ const Welcome = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
