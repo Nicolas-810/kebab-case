@@ -1,9 +1,10 @@
 import React, { useState, useRef, useCallback } from "react";
-import useAuthStore from "../stores/use-auth-store";
+import useAuthStore from "../stores/use-auth-store"; 
 import { useNavigate } from "react-router-dom";
-import audioFile from '../assets/Beautiful.mp3'; 
+import audioFile from '../assets/Agua.mp3'; 
+import muteIcon from '../assets/sin-sonido.png';
+import soundIcon from '../assets/volumen.png'; 
 import "./Links.css";
-
 
 const Links = () => {
   const { logout } = useAuthStore();
@@ -18,6 +19,7 @@ const Links = () => {
       } else {
         audioRef.current.play().catch(err => {
           console.error('Audio playback failed: ', err);
+          alert('No se pudo reproducir el audio.'); 
         });
       }
       setIsPlaying(!isPlaying);
@@ -26,8 +28,8 @@ const Links = () => {
 
   const handleLogout = useCallback(() => {
     console.log("Clic en cerrar sesión");
+    logout(); 
     navigate("/");
-    logout();
   }, [logout, navigate]);
 
   return (
@@ -36,12 +38,24 @@ const Links = () => {
         <nav>
           <ul>
             <li>
-              <button className="button-audio" onClick={handleAudioClick}>
-                {isPlaying ? 'Calma' : 'Agua'}
+              <button 
+                className="button-audio" 
+                onClick={handleAudioClick} 
+                aria-label={isPlaying ? 'Detener música' : 'Reproducir música'}
+              >
+                {isPlaying ? (
+                  <img src={soundIcon} alt="Mute" /> 
+                ) : (
+                  <img src= {muteIcon}alt="Sound" /> 
+                )}
               </button>
             </li>
             <li>
-              <button className="button-logout" onClick={handleLogout}>
+              <button 
+                className="button-logout" 
+                onClick={handleLogout} 
+                aria-label="Cerrar sesión"
+              >
                 Cerrar sesión
               </button>
             </li>
@@ -49,12 +63,10 @@ const Links = () => {
         </nav>
       </header>
       <audio ref={audioRef} src={audioFile} loop>
-        Your browser does not support the audio element.
+        Tu navegador no soporta el elemento de audio.
       </audio>
     </>
   );
 };
 
 export default Links;
-
-

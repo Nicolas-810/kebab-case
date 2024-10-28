@@ -6,15 +6,10 @@ import Welcome from "./pages/welcome/Welcome";
 import Page404 from "./pages/page404/Page404";
 import Home from "./pages/home/Home";
 import "./index.css"
-import Problematics from './pages/problematics/Problematics'; 
-
 
 const router = createBrowserRouter([
   { path: "/", element: <Welcome /> },
-
-
-  // { path: "/login", element: <Login /> },
-  { path:"/problematics", element:<Problematics />},
+  { path:"/welcome", element:<Welcome />},
   { path: "/home", element: <Home /> },
   { path: "*", element: <Page404 /> },
 ]);
