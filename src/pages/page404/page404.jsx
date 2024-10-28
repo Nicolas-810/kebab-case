@@ -1,4 +1,4 @@
-import Links from "../../components/Links";
+import Links from "../../Components/Links";
 import './page404.css';
 
 const Page404 = () => {
