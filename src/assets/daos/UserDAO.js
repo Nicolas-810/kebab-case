@@ -5,7 +5,7 @@ import {
   addDoc,
   setDoc,
 } from "firebase/firestore";
-import { db } from "../../firebase.config";
+import { db } from "../../../firebase.config";
 
 class UserDAO {
   constructor() {
