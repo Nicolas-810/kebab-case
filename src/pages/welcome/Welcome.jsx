@@ -6,6 +6,7 @@ import "./Welcome.css";
 import useAuthStore from "../../stores/use-auth-store";
 import UserDAO from "../../daos/UserDAO";
 
+
 const Welcome = () => {
   const { user, loginGoogleWithPopUp, observeAuthState, loading } = useAuthStore();
   const navigate = useNavigate();
