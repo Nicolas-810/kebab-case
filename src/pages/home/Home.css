@@ -1,30 +1,118 @@
-.header-container {
-  position: relative;
-  padding: 0.1rem;
-  background-color: rgb(179, 227, 253);
+body {
+  font-family: Arial, sans-serif;
+  color: #f0f8ff;
+  margin: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  background-color: #88bbe7;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
-  width: 100%;
-  max-width: 100vw;
-  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  background-color: rgb(255, 255, 255);
 }
 
-.logoGroup {
-  width: auto;
-  max-width: 100px;
-  height: auto;
-  padding: 0.1em;
-  will-change: filter;
-  transition: filter 300ms;
+.importance-container {
+  text-align: center; 
+  padding: 30px; 
+  margin: 20px; 
+  background-color: rgba(240, 248, 255, 0.9);
+  border-radius: 10px; 
 }
 
-.logoGroup:hover {
-  filter: drop-shadow(0 0 1em #5cb9ebaa);
+.importance-title {
+  font-size: 2.5rem; 
+  color: #ffd700; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+  position: center;
 }
 
-.controls {
+.importance-text {
+  font-size: 1.2rem;
+  color: #333; 
+  line-height: 1.5; 
+  margin: 0;
+}
+
+.problematicas-container {
   display: flex;
-  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 600px;
+  background-color: #88bbe7;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  max-width: 50%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #88bbe7;
+}
+
+.header-container h2 {
+  font-size: 2.9rem;
+  color: #ffd700;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); 
+  margin-bottom: 1rem;
+  position: center;
+} 
+
+.tarjetas-container {
+  padding: 30px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tarjeta {
+  width: 300px;
+  height: 370px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-align: center;
+}
+
+.tarjeta:hover {
+  transform: translateY(-15px);
+  box-shadow: 6px 6px 12px rgba(1, 1, 106, 0.8);
+}
+
+.tarjeta-imagen {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.tarjeta p {
+  font-size: 0.9em;
+  color: #555;
 }
