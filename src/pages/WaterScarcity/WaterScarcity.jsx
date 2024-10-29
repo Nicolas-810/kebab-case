@@ -1,40 +1,46 @@
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import Links from "../../components/Links";
-import Fish3D from "../../components/logo-3d/Fish3D";
-import Music from "../../music/Music";
-import groupLogo from '../../assets/LogoS.png';
+import { useNavigate } from "react-router-dom";
+import groupLogo from "../../assets/Icon.png";
 import "./WaterScarcity.css";
 
-
 const WaterScarcity = () => {
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate("/home");
+  };
+
+  const goNext = () => {
+    navigate("/OceanAcidification");
+  };
+
   return (
-    <>
-      <header className="header-container">
-        <img src={groupLogo} alt="Group Logo" className="logoGroup" />
-        <Links />
+    <div className="page-container">
+      <header className="waterS-navbar-container">
+        <div className="logo-section">
+          <img src={groupLogo} alt="Logo del proyecto" className="logo" />
+          <h3 className="project-title">HYDRONET</h3>
+        </div>
+        <div className="button-section">
+          <button onClick={goBack}>Volver</button>
+          <button onClick={goNext}>Siguiente</button>
+        </div>
       </header>
 
-      <div id="root">
-        <Canvas
-          camera={{
-            position: [4, 0, 15],
-            fov: 90,
-            zoom: 28
-          }}
-          style={{ width: "60vw", height: "60vh", position: "absolute" }}
-        >
-          <ambientLight />
-          <directionalLight position={[10, 10, 10]} intensity={5} />
-          <OrbitControls autoRotate={false} enableZoom={false}/>
-          <Fish3D />
-        </Canvas>
-
-        <div className="controls">
-          <Music />
+      <div className="text-container">
+        <div className="text-box left-box">
+          <h2 className="text-title">Escasez de Agua</h2>
+          <p>
+            La escasez de agua es un problema creciente que afecta a comunidades y ecosistemas en todo el mundo. Es crucial tomar medidas para conservar este recurso vital.
+          </p>
+        </div>
+        <div className="text-box right-box">
+          <h2 className="text-title">Impacto Global</h2>
+          <p>
+            La falta de agua limpia impacta directamente la salud, la producción de alimentos y la estabilidad de las economías. Proteger el agua es esencial para nuestro futuro.
+          </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

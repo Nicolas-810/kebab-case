@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import './page404.css';
-import groupLogo from '../../assets/Icon.png'; // Asegúrate de importar el logo
-import centerImage from '../../assets/Error404.png'; // Asegúrate de tener esta imagen
+import groupLogo from '../../assets/Icon.png';
+import centerImage from '../../assets/Error404.png'; 
 
 const Page404 = () => {
   const navigate = useNavigate();
