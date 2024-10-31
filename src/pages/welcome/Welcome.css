@@ -8,22 +8,19 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: #85bfe8;
   background-size: cover;
-    background-color: #85bfe8;
   background-position: center;
 }
 
-
-.navbar-container{
+.navbar-container {
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  padding: 1px;
-  background-color: #85bfe8;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
   border-bottom: 2px solid #2596be;
 }
-
-
 
 .logo-section {
   display: flex;
@@ -33,12 +30,12 @@ body {
 }
 
 .logo {
-  height: 50px;
+  height: 60px;
 }
 
 .project-title {
   font-size: 1.8rem;
-  color: black;
+  color: #ffffff;
 }
 
 .button-section {
@@ -51,7 +48,7 @@ body {
 .button-section button {
   background: none;
   border: none;
-  color: black;
+  color: #ffffff;
   font-size: 1.1rem;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -97,19 +94,18 @@ body {
 }
 
 .image-section {
-  max-width: 60%; 
+  max-width: 44%; 
   display: flex;
   justify-content: flex-start;
   margin-top: -170px; 
 }
 
 .image-section img {
-  width:400px; 
-  height: 300px;
+  width: 480px; 
+  height: auto;
   border-radius: 10px;
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.7); 
   transition: transform 0.3s ease; 
-
 }
 
 .image-section img:hover {
@@ -204,4 +200,3 @@ label {
 .rounded-input::placeholder {
   color: #aaa;
 }
-

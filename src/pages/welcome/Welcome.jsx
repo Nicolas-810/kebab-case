@@ -6,6 +6,7 @@ import "./Welcome.css";
 import useAuthStore from "../../stores/use-auth-store";
 import UserDAO from "../../daos/UserDAO";
 
+
 const Welcome = () => {
   const { user, loginGoogleWithPopUp, observeAuthState, loading } = useAuthStore();
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ const Welcome = () => {
         photo: user.photoURL,
       };
       UserDAO.createUser(newUser);
-      navigate("/Home");
+      navigate("/home");
     }
   }, [user, navigate]);
 
@@ -51,7 +52,7 @@ const Welcome = () => {
 
   const handleSubmitLogin = (e) => {
     e.preventDefault();
-    navigate("/Home");
+    navigate("/home");
   };
 
   const handleGoogleLogin = useCallback(() => {
@@ -62,7 +63,7 @@ const Welcome = () => {
     if (username === "") {
       setErrorMessage("Por favor escriba su nombre de usuario.");
     } else {
-      navigate("/Home");
+      navigate("/home");
     }
   };
 

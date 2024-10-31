@@ -1,26 +1,30 @@
 import React from "react";
-import Links from "../../Components/Links";
-import Fish3D from "../../Components/logo-3d/Fish3D";
-import Shark3D from "../../Components/logo-3d/shark3D";
+import { OrbitControls } from "@react-three/drei";
+import { useNavigate } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
+import Links from "../../components/Links";
+import Fish3D from "../../components/logo-3d/Fish3D";
+import Shark3D from "../../Components/logo-3d/Shark3D";
 import groupLogo from "../../assets/Icon.png";
 import imagen1 from "../../assets/watercon.webp";
 import imagen2 from "../../assets/waterscacez.webp";
 import imagen3 from "../../assets/aciocean.webp";
 import "./Home.css";
-import { OrbitControls } from "@react-three/drei";
+
 
 const Home = () => {
+  const navigate = useNavigate(); 
+
   const goToPage1 = () => {
-    console.log("Navegando a la problemática 1");
+    navigate("/WaterPullution"); 
   };
-  
+
   const goToPage2 = () => {
-    console.log("Navegando a la problemática 2");
+    navigate("/WaterScarcity"); 
   };
-  
+
   const goToPage3 = () => {
-    console.log("Navegando a la problemática 3");
+    navigate("/OceanAcidification"); 
   };
 
   return (
@@ -47,12 +51,12 @@ const Home = () => {
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
           <Fish3D position={[-9, 2, -5]} />
-          <OrbitControls/>
+          <OrbitControls />
         </Canvas>
       </div>
 
 
-      <div className="shark3d-container">
+      <div className="Shark3d-container">
         <Canvas>
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
@@ -60,9 +64,6 @@ const Home = () => {
           <OrbitControls autoRotate/>
         </Canvas>
       </div>
-
-
-
 
       <div className="problematicas-container">
         <div className="header-container">
