@@ -1,19 +1,36 @@
-import React from "react";
-import useAuthStore from "../stores/use-auth-store";
-import "./Links.css";
-import { useCallback } from "react";
+import React, { useState, useRef, useCallback } from "react";
+import useAuthStore from "../stores/use-auth-store"; 
 import { useNavigate } from "react-router-dom";
+import audioFile from '../assets/Agua.mp3'; 
+import muteIcon from '../assets/sin-sonido.png';
+import soundIcon from '../assets/volumen.png'; 
+import "./Links.css";
 
 const Links = () => {
   const { logout } = useAuthStore();
-
   const navigate = useNavigate();
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handleAudioClick = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch(err => {
+          console.error('Audio playback failed: ', err);
+          alert('No se pudo reproducir el audio.'); 
+        });
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   const handleLogout = useCallback(() => {
     console.log("Clic en cerrar sesión");
+    logout(); 
     navigate("/");
-    logout();
-  }, [logout]);
+  }, [logout, navigate]);
 
   return (
     <>
@@ -21,13 +38,33 @@ const Links = () => {
         <nav>
           <ul>
             <li>
-              <button className="button-logout" onClick={handleLogout}>
+              <button 
+                className="button-audio" 
+                onClick={handleAudioClick} 
+                aria-label={isPlaying ? 'Detener música' : 'Reproducir música'}
+              >
+                {isPlaying ? (
+                  <img src={soundIcon} alt="Mute" /> 
+                ) : (
+                  <img src= {muteIcon}alt="Sound" /> 
+                )}
+              </button>
+            </li>
+            <li>
+              <button 
+                className="button-logout" 
+                onClick={handleLogout} 
+                aria-label="Cerrar sesión"
+              >
                 Cerrar sesión
               </button>
             </li>
           </ul>
         </nav>
       </header>
+      <audio ref={audioRef} src={audioFile} loop>
+        Tu navegador no soporta el elemento de audio.
+      </audio>
     </>
   );
 };
