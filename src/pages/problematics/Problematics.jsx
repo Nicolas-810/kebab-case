@@ -1,4 +1,4 @@
-import Links from "../../components/Links";
+import Links from "../../Components/Links";
 import "./Problematics.css";
 import { useNavigate } from "react-router-dom"; 
 import imagen1 from "../../assets/watercon.webp";
