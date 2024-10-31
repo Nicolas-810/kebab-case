@@ -4,59 +4,36 @@ body {
   margin: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'); /* Fuente Poppins */
-
-body {
-  font-family: Arial, sans-serif;
-  color: #f0f8ff;
-  margin: 0;
-}
-
 .page-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-size: cover;
-    background-color: #85bfe8;
-  background-position: center;
   background-color: #85bfe8;
   background-size: cover;
   background-position: center;
 }
 
-
-.navbar-container{
+.navbar-container {
   display: flex;
   justify-content: space-between; 
-  justify-content: space-between; 
   align-items: center;
-  padding: 1px;
-  background-color: #85bfe8;
-  border-bottom: 2px solid #2596be;
   padding: 0.5rem 1rem;
   background-color: transparent;
   border-bottom: 2px solid #2596be;
 }
-
-
 
 .logo-section {
   display: flex;
   align-items: center;
   gap: 10px;
   font-family: Tahoma;
-  font-family: Tahoma;
 }
 
-.logo {
-  height: 50px;
 .logo {
   height: 60px;
 }
 
 .project-title {
-  font-size: 1.8rem;
-  color: black;
   font-size: 1.8rem;
   color: #ffffff;
 }
@@ -66,32 +43,18 @@ body {
   gap: 20px;
   color: #ffffff;
   font-size: 1rem;
-  gap: 20px;
-  color: #ffffff;
-  font-size: 1rem;
 }
 
 .button-section button {
   background: none;
-  background: none;
   border: none;
-  color: black;
-  font-size: 1.1rem;
   color: #ffffff;
   font-size: 1.1rem;
   cursor: pointer;
   transition: color 0.3s ease;
-  transition: color 0.3s ease;
 }
 
 .button-section button:hover {
-  color: #ffd700;
-}
-
-.button-section button:not(:last-child)::after {
-  content: " │ ";
-  color: #ffffff;
-  padding: 0 10px;
   color: #ffd700;
 }
 
@@ -108,38 +71,14 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse; 
-  align-items: center;
-  flex-direction: row-reverse; 
 }
 
 .text-section {
   max-width: 50%;
   font-family: 'Poppins', sans-serif;
   margin-top: -300px; 
-  max-width: 50%;
-  font-family: 'Poppins', sans-serif;
-  margin-top: -300px; 
 }
 
-.text-section h1 {
-  font-size: 3.9rem;
-  color: #ffd700;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); 
-  margin-bottom: 1rem;
-}
-
-.text-section p {
-  font-size: 1.3rem;
-  color: #f0f8ff;
-  line-height: 1.8;
-  margin-top: 5px; 
-}
-
-.image-section {
-  max-width: 60%; 
-  display: flex;
-  justify-content: flex-start;
-  margin-top: -170px; 
 .text-section h1 {
   font-size: 3.9rem;
   color: #ffd700;
@@ -162,16 +101,6 @@ body {
 }
 
 .image-section img {
-  width:400px; 
-  height: 300px;
-  border-radius: 10px;
-  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.7); 
-  transition: transform 0.3s ease; 
-
-}
-
-.image-section img:hover {
-  transform: scale(1.05); 
   width: 480px; 
   height: auto;
   border-radius: 10px;
@@ -194,19 +123,14 @@ body {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
 }
 
 .modal-content {
   background-color: #ffffff;
-  background-color: #ffffff;
   padding: 2rem;
-  border-radius: 15px;
   border-radius: 15px;
   width: 400px;
   position: relative;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -241,8 +165,6 @@ body {
 
 .modal-button,
 .google-button {
-.modal-button,
-.google-button {
   padding: 0.75rem 1.5rem;
   width: 100%;
   margin-top: 1rem;
@@ -254,8 +176,6 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.modal-button:hover,
-.google-button:hover {
 .modal-button:hover,
 .google-button:hover {
   background-color: #0056b3;
@@ -280,4 +200,3 @@ label {
 .rounded-input::placeholder {
   color: #aaa;
 }
-
