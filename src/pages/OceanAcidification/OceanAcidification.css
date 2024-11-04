@@ -1,23 +1,43 @@
-body {
-    font-family: Arial, sans-serif;
-    color: #f0f8ff;
-    margin: 0;
+.home-page-ocean {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 200vh;
+  background-color: #88bbe7;
+  background-size: cover;
+  background-position: center;
+  padding-top: 70px;
 }
 
-.page-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #85bfe8;
-    background-size: cover;
-    background-position: center;
+.page-container-ocean {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #85bfe8;
+  background-size: cover;
+  background-position: center;
 }
 
 .ocean-navbar-container {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 0.5rem 1rem;
-    background-color: transparent;
-    border-bottom: 2px solid #2596be;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: rgb(12, 68, 118);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.fish3d-container {
+  width: 700px;
+  height: 400px;
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  margin-left: auto;
+  border-radius: 20;
 }

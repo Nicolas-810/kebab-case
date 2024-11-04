@@ -1,5 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import groupLogo from "../../assets/Icon.png";
+
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import Fish3D from "../../components/logo-3d/Fish3D";
 import "./OceanAcidification.css";
 
 const oceanAcidification = () => {
@@ -14,7 +18,8 @@ const oceanAcidification = () => {
   };
 
   return (
-    <div className="page-container">
+    <div className="home-page-ocean">
+    <div className="page-container-ocean">
       <header className="ocean-navbar-container">
         <div className="logo-section">
           <img src={groupLogo} alt="Logo del proyecto" className="logo" />
@@ -25,6 +30,16 @@ const oceanAcidification = () => {
           <button onClick={goNext}>Siguiente</button>
         </div>
       </header>
+
+      <div className="fish3d-container">
+          <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[10, 10, 5]} intensity={1} />
+            <Fish3D position={[-10, 0, -17]} />
+            <OrbitControls enablePan={false} />
+          </Canvas>
+        </div>
+    </div>
     </div>
   );
 };

@@ -15,16 +15,16 @@ const Fish3D = (props) => {
     if (startTime && fishRef.current) {
       console.log("Animación ejecutándose");
 
-      const elapsedTime = (Date.now() - startTime) / 1000;
+      const elapsedTime = (Date.now() - startTime) / 100;
 
       // Movimiento de nado en el eje Y
       const swimAmplitude = 0.1;
-      const swimFrequency = 1.5;
+      const swimFrequency = 1.2;
       fishRef.current.position.y = swimAmplitude * Math.sin(swimFrequency * elapsedTime);
 
       // Movimiento en el eje Z
-      const forwardBackwardAmplitude = 10;
-      fishRef.current.position.z = forwardBackwardAmplitude * Math.sin(elapsedTime * 0.2);
+      const forwardBackwardAmplitude = 8;
+      fishRef.current.position.z = forwardBackwardAmplitude * Math.sin(elapsedTime * 0.1);
 
       // Rotación para balanceo
       fishRef.current.rotation.z = 0.05 * Math.sin(elapsedTime * 1);

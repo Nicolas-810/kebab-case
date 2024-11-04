@@ -1,6 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 import groupLogo from "../../assets/Icon.png";
-import "./waterPollution.css"
+import "./waterPollution.css";
+import Fish3D from "../../components/logo-3d/Fish3D";
 
 const WaterPollution = () => {
   const navigate = useNavigate();
@@ -14,17 +17,28 @@ const WaterPollution = () => {
   };
 
   return (
-    <div className="page-container">
-      <header className="waterP-navbar-container">
-        <div className="logo-section">
-          <img src={groupLogo} alt="Logo del proyecto" className="logo" />
-          <h3 className="project-title">HYDRONET</h3>
+    <div className="home-page-pullution">
+      <div className="page-container-pollution">
+        <header className="waterP-navbar-container">
+          <div className="logo-section">
+            <img src={groupLogo} alt="Logo del proyecto" className="logo" />
+            <h3 className="project-title">HYDRONET</h3>
+          </div>
+          <div className="button-section">
+            <button onClick={goBack}>Volver</button>
+            <button onClick={goNext}>Siguiente</button>
+          </div>
+        </header>
+
+        <div className="fish3d-container">
+          <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[10, 10, 5]} intensity={1} />
+            <Fish3D position={[-10, 0, -17]} />
+            <OrbitControls enablePan={false} />
+          </Canvas>
         </div>
-        <div className="button-section">
-          <button onClick={goBack}>Volver</button>
-          <button onClick={goNext}>Siguiente</button>
-        </div>
-      </header>
+      </div>
     </div>
   );
 };

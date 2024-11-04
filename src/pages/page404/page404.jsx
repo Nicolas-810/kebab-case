@@ -12,7 +12,7 @@ const Page404 = () => {
 
   return (
     <div className="container-404">
-      <header className="navbar-container">
+      <header className="navbar-container-404">
         <div className="logo-section">
           <img src={groupLogo} alt="Logo del proyecto" className="logo" />
           <h3 className="project-title">HYDRONET</h3>
