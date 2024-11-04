@@ -1,7 +1,7 @@
 import React, { useState, useRef, useCallback } from "react";
 import useAuthStore from "../stores/use-auth-store"; 
 import { useNavigate } from "react-router-dom";
-import audioFile from '../assets/Agua.mp3'; 
+import audioFile from '../assets/La vie en rose.mp3'; 
 import muteIcon from '../assets/sin-sonido.png';
 import soundIcon from '../assets/volumen.png'; 
 import "./Links.css";
@@ -11,6 +11,8 @@ const Links = () => {
   const navigate = useNavigate();
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(1); // Volumen inicial al 100%
+  const [showVolumeSlider, setShowVolumeSlider] = useState(false);
 
   const handleAudioClick = () => {
     if (audioRef.current) {
@@ -23,6 +25,15 @@ const Links = () => {
         });
       }
       setIsPlaying(!isPlaying);
+      setShowVolumeSlider(!showVolumeSlider); // Mostrar/ocultar el slider
+    }
+  };
+
+  const handleVolumeChange = (e) => {
+    const newVolume = e.target.value;
+    setVolume(newVolume);
+    if (audioRef.current) {
+      audioRef.current.volume = newVolume;
     }
   };
 
@@ -46,10 +57,24 @@ const Links = () => {
                 {isPlaying ? (
                   <img src={soundIcon} alt="Mute" /> 
                 ) : (
-                  <img src= {muteIcon}alt="Sound" /> 
+                  <img src={muteIcon} alt="Sound" /> 
                 )}
               </button>
             </li>
+            {showVolumeSlider && (
+              <li className="volume-slider-container">
+                <input 
+                  type="range" 
+                  min="0" 
+                  max="1" 
+                  step="0.01" 
+                  value={volume} 
+                  onChange={handleVolumeChange} 
+                  className="volume-slider" 
+                  aria-label="Control de volumen"
+                />
+              </li>
+            )}
             <li>
               <button 
                 className="button-logout" 

@@ -1,13 +1,13 @@
 .container-404 {
   height: 100vh;
-  background-image: url('../../assets/Error.jpeg');
+  background-color: #0686f6;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
 }
 
-.navbar-container {
+.navbar-container-404 {
   display: flex;
   justify-content: space-between;
   align-items: center;

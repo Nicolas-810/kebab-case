@@ -7,7 +7,7 @@ nav {
 
 nav ul {
   display: flex;
-  align-items: flex-start; 
+  align-items: center;
   list-style: none; 
   padding: 0;
   margin: 0; 
@@ -15,17 +15,6 @@ nav ul {
 
 nav ul li {
   margin-right: 2rem; 
-  position: relative; 
-}
-
-nav ul li:last-child {
-  margin-right: 0; 
-}
-
-nav ul li:not(:last-child)::after {
-  content: " │ "; 
-  color: white; 
-  margin-left: 10px; 
 }
 
 .button-audio, .button-logout {
@@ -49,8 +38,18 @@ nav ul li:not(:last-child)::after {
   margin-right: 5px; 
 }
 
-.button-logout {
-  margin-top: 10px;
+.volume-slider-container {
+  display: flex;
+  align-items: center;
+}
+
+.volume-slider {
+  width: 100px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 5px;
+  appearance: none;
+  outline: none;
 }
 
 nav {
@@ -62,7 +61,7 @@ nav {
 
 nav ul {
   display: flex;
-  align-items: flex-start; 
+  align-items: center;
   list-style: none; 
   padding: 0;
   margin: 0; 
@@ -70,17 +69,6 @@ nav ul {
 
 nav ul li {
   margin-right: 2rem; 
-  position: relative; 
-}
-
-nav ul li:last-child {
-  margin-right: 0; 
-}
-
-nav ul li:not(:last-child)::after {
-  content: " │ "; 
-  color: white; 
-  margin-left: 10px; 
 }
 
 .button-audio, .button-logout {
@@ -104,6 +92,16 @@ nav ul li:not(:last-child)::after {
   margin-right: 5px; 
 }
 
-.button-logout {
-  margin-top: 10px;
+.volume-slider-container {
+  display: flex;
+  align-items: center;
+}
+
+.volume-slider {
+  width: 100px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 5px;
+  appearance: none;
+  outline: none;
 }

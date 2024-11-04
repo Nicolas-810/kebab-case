@@ -1,0 +1,77 @@
+.home-page-scarcity {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 200vh;
+    background-color: #88bbe7;
+    background-size: cover;
+    background-position: center;
+    padding-top: 70px; 
+  }
+  
+.page-container-scarcity {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #85bfe8;
+    background-size: cover;
+    background-position: center;
+}
+
+.waterS-navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgb(12, 68, 118);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.text-box {
+    width: 45%;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    color: #333;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-box {
+    align-self: flex-start;
+    margin-left: 1rem;
+}
+
+.right-box {
+    align-self: flex-end;
+    margin-right: 1rem;
+}
+
+.text-title {
+    color: #2596be;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.fish3d-container {
+    width: 700px;
+    height: 400px;
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    margin-left: auto;
+    border-radius: 20px;
+}
