@@ -8,8 +8,6 @@ import imagen1 from "../../assets/watercon.webp";
 import imagen2 from "../../assets/waterscacez.webp";
 import imagen3 from "../../assets/aciocean.webp";
 import { Canvas } from "@react-three/fiber";
-import Fish3D from "../../Components/logo-3d/Fish3D";
-import Shark3D from "../../Components/logo-3d/Shark3D";
 import { OrbitControls } from "@react-three/drei";
 import "./Home.css";
 
