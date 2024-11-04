@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import './page404.css';
 import groupLogo from '../../assets/Icon.png';
 import centerImage from '../../assets/Error404.png'; 
+import './page404.css';
 
 const Page404 = () => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const Page404 = () => {
 
   return (
     <div className="container-404">
-      <header className="navbar-container">
+      <header className="navbar-container-404">
         <div className="logo-section">
           <img src={groupLogo} alt="Logo del proyecto" className="logo" />
           <h3 className="project-title">HYDRONET</h3>
