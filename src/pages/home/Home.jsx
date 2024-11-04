@@ -7,10 +7,6 @@ import groupLogo from "../../assets/Icon.png";
 import imagen1 from "../../assets/watercon.webp";
 import imagen2 from "../../assets/waterscacez.webp";
 import imagen3 from "../../assets/aciocean.webp";
-import { Canvas } from "@react-three/fiber";
-import Fish3D from "../../Components/logo-3d/Fish3D";
-import Shark3D from "../../Components/logo-3d/Shark3D";
-import { OrbitControls } from "@react-three/drei";
 import "./Home.css";
 
 const Home = () => {
@@ -52,25 +48,6 @@ const Home = () => {
           Cuidar y conservar este recurso es fundamental para garantizar un
           futuro sostenible para las generaciones venideras.
         </p>
-      </div>
-
-      <div className="fish3d-container">
-        <Canvas>
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[10, 10, 5]} intensity={1} />
-          <Fish3D position={[-9, 2, -5]} />
-          <OrbitControls />
-        </Canvas>
-      </div>
-
-
-      <div className="Shark3d-container">
-        <Canvas>
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[10, 10, 5]} intensity={1} />
-          <Shark3D position={[-9, 2, -5]} />
-          <OrbitControls autoRotate />
-        </Canvas>
       </div>
 
       <div className="problematicas-container">
