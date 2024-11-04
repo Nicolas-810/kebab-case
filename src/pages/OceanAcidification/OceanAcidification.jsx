@@ -3,7 +3,7 @@ import groupLogo from "../../assets/Icon.png";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Fish3D from "../../components/logo-3d/Fish3D";
+import Fish3D from "../../Components/logo-3d/Fish3D";
 import "./OceanAcidification.css";
 
 const oceanAcidification = () => {

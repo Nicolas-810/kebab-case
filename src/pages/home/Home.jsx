@@ -1,6 +1,6 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-import Links from "../../components/Links";
+import React from "react";
+import Links from "../../Components/Links";
 import groupLogo from "../../assets/Icon.png";
 import imagen1 from "../../assets/watercon.webp";
 import imagen2 from "../../assets/waterscacez.webp";
