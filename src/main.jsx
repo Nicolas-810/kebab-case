@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
 import Page404 from "./pages/page404/Page404";
 import Home from "./pages/home/Home";
 import Welcome from "./pages/welcome/Welcome";

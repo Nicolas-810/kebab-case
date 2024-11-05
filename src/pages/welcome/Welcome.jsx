@@ -85,7 +85,7 @@ const Welcome = () => {
           <img src={watergruoup} alt="Cuidado del agua" className="turtle-image" />
         </div>
         <div className="text-section">
-          <h1>Bienvenidos</h1>
+          <h1>BIENVENIDOS</h1>
           <p>
             ¿Listo para hacer la diferencia? Inicia sesión y explora cómo puedes
             proteger el agua, uno de nuestros recursos más preciados.

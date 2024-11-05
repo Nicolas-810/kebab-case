@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import React from "react";
-import Links from "../../Components/Links";
+import { Canvas } from "@react-three/fiber";
+import Links from "../../components/Links";
+import Fish3D from "../../Components/logo-3d/Fish3D";
+import Shark3D from "../../Components/logo-3d/Shark3D";
 import groupLogo from "../../assets/Icon.png";
 import imagen1 from "../../assets/watercon.webp";
 import imagen2 from "../../assets/waterscacez.webp";
