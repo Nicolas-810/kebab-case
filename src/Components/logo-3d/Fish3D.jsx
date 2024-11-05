@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 const Fish3D = (props) => {
-  const { nodes, materials } = useGLTF("../models-3D/AngelFish.glb");
+  const { nodes, materials } = useGLTF("../models-3D/turtle.glb");
   const fishRef = useRef();
   const [startTime, setStartTime] = useState(null);
 
@@ -32,22 +32,18 @@ const Fish3D = (props) => {
   });
 
   return (
-    <group {...props} dispose={null}>
-      <group name="Scene">
-        <mesh
-          ref={fishRef} 
-          name="AngelFish_Royal_Instance_Wander"
-          geometry={nodes.AngelFish_Royal_Instance_Wander.geometry}
-          material={materials.AngelFish_Royal_Instanced_Indirect}
-          position={[0.556, -0.604, -0.431]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={37.253}
-        />
+      <group {...props} dispose={null}>
+        <group>
+          <mesh
+            name="geometry_0"
+            geometry={nodes.geometry_0.geometry}
+            material={nodes.geometry_0.material}
+          />
+        </group>
       </group>
-    </group>
   );
 };
 
-useGLTF.preload("../models-3D/AngelFish.glb");
+useGLTF.preload("../models-3D/turtle.glb");
 
 export default Fish3D;
