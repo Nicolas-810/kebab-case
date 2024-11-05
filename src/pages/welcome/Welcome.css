@@ -2,15 +2,16 @@ body {
   font-family: Arial, sans-serif;
   color: #f0f8ff;
   margin: 0;
+
 }
 
 .page-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #85bfe8;
   background-size: cover;
   background-position: center;
+  background-image: url('../../assets/fondo.gif');
 }
 
 .navbar-container {
@@ -20,6 +21,7 @@ body {
   padding: 0.5rem 1rem;
   background-color: transparent;
   border-bottom: 2px solid #2596be;
+  background-color: rgb(12, 68, 118);
 }
 
 .logo-section {
@@ -81,7 +83,7 @@ body {
 
 .text-section h1 {
   font-size: 3.9rem;
-  color: #ffd700;
+  color: white;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); 
   margin-bottom: 1rem;
 }
