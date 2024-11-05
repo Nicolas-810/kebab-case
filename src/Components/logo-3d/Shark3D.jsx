@@ -7,7 +7,6 @@ import { useFrame } from "@react-three/fiber";
 const Shark3D = (props) => {
     const { nodes, materials } = useGLTF('../models-3D/WhaleShark.glb')
 
-
     return (
       <group {...props} dispose={null}>
         <group name="Scene">

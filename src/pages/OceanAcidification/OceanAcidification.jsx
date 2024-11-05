@@ -3,7 +3,6 @@ import groupLogo from "../../assets/Icon.png";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Fish3D from "../../Components/logo-3d/Fish3D";
 import "./OceanAcidification.css";
 import Shark3D from "../../Components/logo-3d/Shark3D";
 
@@ -36,7 +35,7 @@ const oceanAcidification = () => {
           <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
-            <Shark3D position={[-10, 0, -17]} />
+            <Shark3D position={[0, 0, -5]} />
             <OrbitControls enablePan={false} />
           </Canvas>
         </div>
