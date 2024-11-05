@@ -4,7 +4,8 @@ import { OrbitControls } from "@react-three/drei";
 import groupLogo from "../../assets/Icon.png";
 import "./waterPollution.css";
 import House3D from "../../Components/logo-3d/LightHouse";
-import TitleWaterPollution from "../../Components/logo-3d/TitleWaterPollution";
+import TitleWaterPollution from "../../Components/logo-3d/TitleOceanAcidification";
+
 
 const WaterPollution = () => {
   const navigate = useNavigate();
@@ -85,10 +86,39 @@ const WaterPollution = () => {
               </ul>
             </p>
           </div>
+          <div className="text-box">
+            <h2 className="text-title">
+              Solución al problema de la contaminación del Agua
+            </h2>
+            <p>
+              <ul>
+                <li>
+                Actualizar plantas de tratamiento: Mejorar las instalaciones para el tratamiento de aguas residuales ayuda a remover contaminantes industriales, agrícolas y domésticos antes de que lleguen a ríos y mares.
+                </li>
+
+                <li>
+                Instalación de sistemas de filtración avanzados: Las tecnologías avanzadas, como los sistemas de filtración por membrana, pueden ser más efectivas en la eliminación de toxinas y bacterias.
+                </li>
+
+                <li>
+                Agricultura sostenible: Promover técnicas de agricultura sostenible, como el uso de fertilizantes orgánicos y pesticidas naturales, reduce la contaminación que llega a cuerpos de agua.
+                </li>
+
+                <li>
+                Crear barreras vegetales: Los árboles y plantas cerca de campos agrícolas pueden absorber el exceso de nutrientes y contaminantes antes de que lleguen a los ríos.
+                </li>
+
+                <li>
+                Los humedales y manglares actúan como filtros naturales al absorber y filtrar contaminantes. Proteger estos ecosistemas es crucial para la purificación del agua.
+                </li>
+                <br/>
+              </ul>
+            </p>
+          </div>
         </div>
       </div>
       <div className="house3D-container">
-        <Canvas camera={{ position: [10, 5, 15], fov: 45 }}>
+        <Canvas camera={{ position: [10, 5, 15], fov: 85 }}>
           <TitleWaterPollution/>
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
