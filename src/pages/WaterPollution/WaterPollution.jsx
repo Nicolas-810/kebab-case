@@ -4,6 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 import groupLogo from "../../assets/Icon.png";
 import "./waterPollution.css";
 import House3D from "../../Components/logo-3d/LightHouse";
+import TitleWaterPollution from "../../Components/logo-3d/TitleWaterPollution";
 
 const WaterPollution = () => {
   const navigate = useNavigate();
@@ -88,12 +89,11 @@ const WaterPollution = () => {
       </div>
       <div className="house3D-container">
         <Canvas camera={{ position: [10, 5, 15], fov: 45 }}>
+          <TitleWaterPollution/>
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
           <House3D position={[-10, 0, -17]} />
           <OrbitControls enablePan={false} autoRotate />
-          
-          
         </Canvas>
       </div>
     </div>

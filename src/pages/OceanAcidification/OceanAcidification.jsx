@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import groupLogo from "../../assets/Icon.png";
-
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import "./OceanAcidification.css";
 import Shark3D from "../../Components/logo-3d/Shark3D";
+import TitleOceanAcidification from "../../Components/logo-3d/TitleOceanAcidification";
 
 const oceanAcidification = () => {
   const navigate = useNavigate();
@@ -33,6 +33,7 @@ const oceanAcidification = () => {
 
         <div className="Shark3d-container">
           <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+            <TitleOceanAcidification/>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
             <Shark3D position={[0, 0, -5]} />

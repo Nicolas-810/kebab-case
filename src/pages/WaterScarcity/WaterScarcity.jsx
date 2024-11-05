@@ -4,6 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 import groupLogo from "../../assets/Icon.png";
 import Fish3D from "../../Components/logo-3d/Fish3D";
 import "./WaterScarcity.css";
+import TitleWaterScarcity from "../../Components/logo-3d/TitleWaterScarcity";
 
 const WaterScarcity = () => {
   const navigate = useNavigate();
@@ -32,6 +33,7 @@ const WaterScarcity = () => {
 
         <div className="fish3d-container">
           <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+            <TitleWaterScarcity/>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
             <Fish3D position={[-10, 0, -17]} />
