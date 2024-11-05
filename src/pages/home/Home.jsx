@@ -35,9 +35,7 @@ const Home = () => {
       </header>
 
       <div className="importance-container">
-        <h2 className="importance-title">
-          ¿Por qué es importante cuidar el agua?
-        </h2>
+        <h2 className="importance-title">¿POR QUÉ ES IMPORTANTE CUIDAR EL AGUA?</h2>
         <p className="importance-text">
           El agua es un recurso vital para todos los seres vivos. Es esencial
           para la supervivencia humana, la agricultura, la industria y el
