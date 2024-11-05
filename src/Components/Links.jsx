@@ -12,7 +12,7 @@ const Links = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(1); // Volumen inicial al 100%
-  const [showVolumeSlider, setShowVolumeSlider] = useState(false); // Estado para mostrar el slider
+  const [showVolumeSlider, setShowVolumeSlider] = useState(false);
 
   const handleAudioClick = () => {
     if (audioRef.current) {

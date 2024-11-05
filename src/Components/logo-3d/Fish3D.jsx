@@ -13,7 +13,7 @@ const Fish3D = (props) => {
 
   useFrame(() => {
     if (startTime && fishRef.current) {
-      console.log("Animación ejecutándose");
+      console.log("Animación ejecutándose");  // Verificación en consola
 
       const elapsedTime = (Date.now() - startTime) / 100;
 
