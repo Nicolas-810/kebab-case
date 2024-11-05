@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID
+  apiKey: "AIzaSyAwGWSPzGn-8a_8cgB1_Qdu2tfh4n5wllE",
+  authDomain: "kebab-case.firebaseapp.com",
+  projectId: "kebab-case",
+  storageBucket: "kebab-case.appspot.com",
+  messagingSenderId: "756334425278",
+  appId: "1:756334425278:web:533e0ad1473c7d3d489ae"
 };
 
 const app = initializeApp(firebaseConfig);

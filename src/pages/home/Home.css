@@ -1,39 +1,47 @@
-body {
-  font-family: Arial, sans-serif;
-  color: #f0f8ff;
-  margin: 0;
-  padding: 0;
-}
-
-.page-container {
+.home-page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background-color: #88bbe7;
+  width: 100%;
+  min-height: 200vh;
+  background-image: url('../../assets/fondo.gif');
   background-size: cover;
   background-position: center;
+  padding-top: 70px;
 }
 
-.navbar-container {
+.navbar-container-home {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(12, 68, 118);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 30px;
 }
 
 .importance-container {
-  flex-grow: 1; 
   text-align: center;
   padding: 30px;
-  margin: 20px;
-  background-color: rgba(240, 248, 255, 0.9);
+  margin: 70px 20px; 
+  background-color: rgba(252, 252, 252, 0.9);
   border-radius: 10px;
 }
 
 .importance-title {
   font-size: 2.5rem;
-  color: #ffd700;
+  color: #414141;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -41,7 +49,6 @@ body {
   font-size: 1.2rem;
   color: #333;
   line-height: 1.5;
-  margin: 0;
 }
 
 .problematicas-container {
@@ -49,23 +56,11 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #8dc0ec;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  max-width: 50%;
-  font-family: 'Poppins', sans-serif;
 }
 
 .header-container h2 {
   font-size: 2.9rem;
-  color: #ffd700;
+  color: #ffffff;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
 }
 
@@ -90,7 +85,7 @@ body {
 }
 
 .tarjeta:hover {
-  transform: translateY(-15px);
+  transform: translateY(-10px);
   box-shadow: 6px 6px 12px rgba(1, 1, 106, 0.8);
 }
 
@@ -103,21 +98,12 @@ body {
 }
 
 .tarjeta h3 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: #333;
   margin: 10px 0;
 }
 
 .tarjeta p {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: #555;
-}
-
-.fish3d-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
 }
