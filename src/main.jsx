@@ -4,9 +4,9 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Page404 from "./pages/page404/Page404";
 import Home from "./pages/home/Home";
 import Welcome from "./pages/welcome/Welcome";
-import WaterScarcity from "./pages/waterscarcity/WaterScarcity";
+import WaterScarcity from "./pages/WaterScarcity/WaterScarcity";
 import WaterPollution from "./pages/waterpollution/WaterPollution";
-import OceanAcidificacion from "./pages/oceanacidification/OceanAcidification";
+import OceanAcidificacion from "./pages/OceanAcidification/OceanAcidification";
 import "./index.css"
 
 const router = createBrowserRouter([
