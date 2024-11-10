@@ -1,0 +1,104 @@
+.home-page-modelS {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;  
+  background-color: #6395b7;
+  padding-top: 70px; 
+  background-size: cover;
+  background-position: center;
+}
+
+.modelS-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: rgb(12, 68, 118);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.canvas-sea-container {
+  width: 100%;
+  height: calc(100vh - 70px); 
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-top: 20px; 
+}
+
+.button-start {
+  background-color: #4CAF50;  
+  border: none;
+  color: white;
+  padding: 20px;  
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;  
+  width: 100px;
+  height: 100px; 
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.button-start:hover {
+  background-color: #ff0000;  
+}
+
+.button-start:active {
+  background-color: #ff0000; 
+}
+
+.instructions-message {
+  position: absolute;
+  top: 50%;  /* Centra verticalmente */
+  left: 50%;  /* Centra horizontalmente */
+  transform: translate(-50%, -50%);  /* Ajusta el posicionamiento exacto */
+  background-color: rgba(0, 0, 0, 0.7);  /* Fondo semitransparente */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+}
+
+.instructions-message h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.instructions-message p {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.start-button {
+  background-color: #4CAF50;  /* Verde */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 8px;  /* Bordes redondeados */
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #45a049;  /* Un verde más oscuro cuando se pasa el ratón */
+}
+
+.start-button:active {
+  background-color: #3e8e41;  /* Un verde aún más oscuro cuando se hace clic */
+}
