@@ -1,19 +1,21 @@
 import { useNavigate } from "react-router-dom";
+import { OrbitControls, Sky } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Links from "../../components/Links";
-import Fish3D from "../../Components/logo-3d/Fish3D";
-import Shark3D from "../../Components/logo-3d/Shark3D";
 import groupLogo from "../../assets/Icon.png";
 import imagen1 from "../../assets/watercon.webp";
 import imagen2 from "../../assets/waterscacez.webp";
 import imagen3 from "../../assets/aciocean.webp";
+import Links from "../../Components/Links";
+import Home3D from "../../Components/logo-3d/ModelHome";
+import TitleWater from "../../Components/logo-3d/TitleWaterScarcity";
 import "./Home.css";
+
 
 const Home = () => {
   const navigate = useNavigate();
 
   const goToPage1 = () => {
-    navigate("/WaterPullution");
+    navigate("/WaterPollution");
   };
 
   const goToPage2 = () => {
@@ -37,7 +39,9 @@ const Home = () => {
       </header>
 
       <div className="importance-container">
-        <h2 className="importance-title">¿POR QUÉ ES IMPORTANTE CUIDAR EL AGUA?</h2>
+        <h2 className="importance-title">
+          ¿POR QUÉ ES IMPORTANTE CUIDAR EL AGUA?
+        </h2>
         <p className="importance-text">
           El agua es un recurso vital para todos los seres vivos. Es esencial
           para la supervivencia humana, la agricultura, la industria y el
@@ -83,6 +87,21 @@ const Home = () => {
               agua marina por la absorción de dióxido de carbono (CO₂), lo que
               afecta negativamente a organismos que habitan en los océanos.
             </p>
+          </div>
+
+          <div className="canvas-sea-container">
+            <Canvas camera={{ position: [5, 0, 20], fov: 100 }} shadows>
+              <Sky sunPosition={[10, 10, 10]} />
+              <ambientLight intensity={0.5} />
+              <OrbitControls enablePan={false} autoRotate />
+              <directionalLight
+                position={[10, 10, 5]}
+                intensity={1}
+                castShadow
+              />
+              <TitleWater/>
+              <Home3D position={[-10, 0, -17]} castShadow receiveShadow />
+            </Canvas>
           </div>
         </div>
       </div>

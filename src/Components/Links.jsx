@@ -1,7 +1,7 @@
 import React, { useState, useRef, useCallback } from "react";
 import useAuthStore from "../stores/use-auth-store"; 
 import { useNavigate } from "react-router-dom";
-import audioFile from '../assets/La vie en rose.mp3'; 
+import audioFile from '../assets/Agua.mp3'; 
 import muteIcon from '../assets/sin-sonido.png';
 import soundIcon from '../assets/volumen.png'; 
 import "./Links.css";

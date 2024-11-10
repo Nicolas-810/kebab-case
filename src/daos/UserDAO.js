@@ -28,7 +28,6 @@ class UserDAO {
 
   async createUser(userData) {
     try {
-      // Verificar si el usuario ya existe
       const userExists = await this.getUserByEmail(userData.email);
 
       if (userExists.success) {
@@ -38,7 +37,6 @@ class UserDAO {
         return;
       }
 
-      // Crear el nuevo usuario si no existe
       await setDoc(doc(this.collectionRef, userData.email), userData);
       console.log("Documento escrito con ID: ", userData.email);
     } catch (error) {

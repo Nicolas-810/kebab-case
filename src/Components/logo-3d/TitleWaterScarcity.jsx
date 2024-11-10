@@ -1,23 +1,21 @@
-import {Text3D, Center } from "@react-three/drei";
+import { Html} from "@react-three/drei";
+import "../../pages/waterscarcity/WaterScarcity.css"
 
 const TitleWaterScarcity = () => {
-  return <>
-    <Center top left position={[1,7,0]}>
-        <Text3D
-          position={[1, 7, 0]}
-          font="/fonts/Arial_Regular.json"
-          bevelEnabled
-          bevelSize={0.02}
-          height={0.5}
-          lineHeight={0.75}
-          letterSpacing={0.05}
-          size={0.9}
-        >
-          {`ESCASEZ DEL AGUA`}
-          <meshNormalMaterial />
-        </Text3D>
-      </Center>
-  </>;
+  return (
+    <>
+      <Html
+        occlude
+        className="Welcome-Text"
+        center
+        distanceFactor={100}
+        trasform
+        position={[1, 8, 0]}
+      >
+        <h4>Conoce_A_Nuestro_Pez_Camaleon</h4>
+      </Html>
+    </>
+  );
 };
 
 export default TitleWaterScarcity;
