@@ -1,11 +1,10 @@
 import { useRef, useEffect, useState, useMemo } from "react";
 import { useGLTF, useAnimations, Shadow, useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { MeshStandardMaterial } from "three";
 
 const House3D = (props) => {
   const { nodes, materials, animations } = useGLTF(
-    "../models-3D/LightHouse.glb"
+    "../models-3D/fuente.glb"
   );
   const PATH = useMemo(() => "materials/waterconta/rock_face_", []);
 
@@ -19,54 +18,39 @@ const House3D = (props) => {
 
   console.log(floorTexture);
 
-  const handleLight = () => {
-    alert(
-      "La contaminación del agua es un problema ambiental crítico. Afecta la salud de los ecosistemas y la vida humana"
-    );
-  };
-
+  const group = useRef();
   const houseRef = useRef();
-
-  const { actions } = useAnimations(animations, houseRef);
-
-  const standardMaterial = useMemo(
-    () =>
-      new MeshStandardMaterial({
-        map: floorTexture.map,
-      }),
-    [floorTexture]
-  );
+  const [startTime, setStartTime] = useState(null);
+  const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (fishRef.current) {
-        switch (event.key) {
-          case "ArrowUp":
-          case "w":
-            fishRef.current.position.z -= speed;
-            break;
-          case "ArrowDown":
-          case "s":
-            fishRef.current.position.z += speed;
-            break;
-          case "ArrowLeft":
-          case "a":
-            fishRef.current.position.x -= speed;
-            break;
-          case "ArrowRight":
-          case "d":
-            fishRef.current.position.x += speed;
-            break;
-        }
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    setStartTime(Date.now());
   }, []);
 
+  useFrame(() => {
+    if (startTime && houseRef.current) {
+      console.log("Animación ejecutándose");
+
+      const elapsedTime = (Date.now() - startTime) / 100;
+
+      // Movimiento de nado en el eje Y
+      const swimAmplitude = 0.1;
+      const swimFrequency = 1.2;
+      houseRef.current.position.y =
+        swimAmplitude * Math.sin(swimFrequency * elapsedTime);
+
+      // Movimiento en el eje Z
+      const forwardBackwardAmplitude = 8;
+      houseRef.current.position.z =
+        forwardBackwardAmplitude * Math.sin(elapsedTime * 0.1);
+
+      // Rotación para balanceo
+      houseRef.current.rotation.z = 0.05 * Math.sin(elapsedTime * 1);
+    }
+  });
+
   return (
-    <group ref={houseRef} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null}>
       <group name="Scene">
         <mesh
           name="Cube"
@@ -74,9 +58,7 @@ const House3D = (props) => {
           material={materials.Material}
           position={[0, 3.486, 0]}
           scale={3.917}
-          onClick={handleLight}
         />
-
         <group
           name="Cylinder"
           position={[-2.186, 2.885, -4.276]}
@@ -216,14 +198,14 @@ const House3D = (props) => {
         <mesh
           name="Plane"
           geometry={nodes.Plane.geometry}
-          material={standardMaterial}
+          material={materials.Material}
           position={[0.028, 0.443, 0.461]}
           scale={18.54}
         />
         <mesh
           name="Cube016"
           geometry={nodes.Cube016.geometry}
-          material={standardMaterial}
+          material={materials.Material}
           position={[-4.345, 0.422, -6.185]}
           rotation={[-0.314, -0.295, -1.916]}
           scale={[-1.379, -1.086, -2.202]}
@@ -231,7 +213,7 @@ const House3D = (props) => {
         <mesh
           name="Cube017"
           geometry={nodes.Cube017.geometry}
-          material={standardMaterial}
+          material={materials.Material}
           position={[-4.345, 0.422, 6.492]}
           rotation={[-0.314, -0.295, -1.916]}
           scale={[-1.379, -1.086, -2.202]}
@@ -239,7 +221,7 @@ const House3D = (props) => {
         <mesh
           name="Cube018"
           geometry={nodes.Cube018.geometry}
-          material={standardMaterial}
+          material={materials.Material}
           position={[-4.345, -0.62, -4.837]}
           rotation={[-0.314, -0.295, -1.916]}
           scale={[-1.162, -0.915, -1.856]}
@@ -247,7 +229,7 @@ const House3D = (props) => {
         <mesh
           name="Cube019"
           geometry={nodes.Cube019.geometry}
-          material={standardMaterial}
+          material={materials.Material}
           position={[12.001, -1.209, 5.409]}
           rotation={[-2.835, 0.194, 1.259]}
           scale={[-1.927, -1.518, -3.077]}
@@ -255,7 +237,7 @@ const House3D = (props) => {
         <mesh
           name="Cube020"
           geometry={nodes.Cube020.geometry}
-          material={standardMaterial}
+          material={materials.Material}
           position={[5.119, -0.41, 14.529]}
           rotation={[-0.301, 0.082, -1.796]}
           scale={[-1.121, -0.883, -1.79]}
