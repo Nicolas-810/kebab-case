@@ -5,7 +5,7 @@ body {
 
 }
 
-.page-container {
+.page-container-we {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -14,13 +14,11 @@ body {
   background-image: url('../../assets/fondo.gif');
 }
 
-.navbar-container {
+.navbar-container-we {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: transparent;
-  border-bottom: 2px solid #2596be;
   background-color: rgb(12, 68, 118);
 }
 
@@ -66,25 +64,25 @@ body {
   padding: 0 10px;
 }
 
-.content-container {
+.content-container-we {
   display: flex;
   flex-grow: 1;
   padding: 2rem;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row-reverse; 
+  flex-direction: row-reverse;
 }
 
 .text-section {
   max-width: 50%;
   font-family: 'Poppins', sans-serif;
-  margin-top: -300px; 
+  margin-top: -300px;
 }
 
 .text-section h1 {
   font-size: 3.9rem;
   color: white;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); 
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
   margin-bottom: 1rem;
 }
 
@@ -92,26 +90,44 @@ body {
   font-size: 1.3rem;
   color: #f0f8ff;
   line-height: 1.8;
-  margin-top: 5px; 
+  margin-top: 5px;
 }
 
 .image-section {
-  max-width: 44%; 
   display: flex;
-  justify-content: flex-start;
-  margin-top: -170px; 
+  gap: 20px;
+  max-width: 44%;
+  justify-content: center;
+  margin-top: -170px;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
 }
 
 .image-section img {
-  width: 480px; 
+  width: 300px; /* Tamaño reducido de las imágenes */
   height: auto;
   border-radius: 10px;
-  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.7); 
-  transition: transform 0.3s ease; 
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.image-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: #f0f8ff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 8px;
 }
 
 .image-section img:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .modal {

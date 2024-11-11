@@ -1,21 +1,25 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Page404 from "./pages/page404/Page404";
+
+import "./index.css";
+
 import Home from "./pages/home/Home";
 import Welcome from "./pages/welcome/Welcome";
-import WaterScarcity from "./pages/WaterScarcity/WaterScarcity";
+import Page404 from "./pages/page404/Page404";
 import WaterPollution from "./pages/waterpollution/WaterPollution";
-import OceanAcidificacion from "./pages/OceanAcidification/OceanAcidification";
-import "./index.css"
+import OceanAcidification from "./pages/OceanAcidification/OceanAcidification";
+import WaterScarcity from "./pages/waterscarcity/WaterScarcity";
+import ModelScarcity from "./pages/modelScarcity/modelScarcity";
 
 const router = createBrowserRouter([
   { path: "/", element: <Welcome /> },
   { path: "/home", element: <Home /> },
-  { path: "*", element: <Page404 /> },
   { path: "/WaterScarcity", element: <WaterScarcity /> },
-  { path: "/WaterPullution", element: <WaterPollution/>},
-  { path: "/OceanAcidification", element: <OceanAcidificacion/>}
+  { path: "/WaterPollution", element: <WaterPollution /> },
+  { path: "/OceanAcidification", element: <OceanAcidification /> },
+  { path: "/modelScarcity", element: <ModelScarcity /> },
+  { path: "*", element: <Page404 /> }, 
 ]);
 
 createRoot(document.getElementById("root")).render(

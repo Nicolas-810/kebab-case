@@ -2,9 +2,10 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import groupLogo from "../../assets/Icon.png";
 import watergruoup from "../../assets/Skin.webp";
-import "./Welcome.css";
+import waterturtle from "../../assets/turtleA.jpg"
 import useAuthStore from "../../stores/use-auth-store";
 import UserDAO from "../../daos/UserDAO";
+import "./Welcome.css";
 
 
 const Welcome = () => {
@@ -68,8 +69,8 @@ const Welcome = () => {
   };
 
   return (
-    <div className="page-container">
-      <header className="navbar-container">
+    <div className="page-container-we">
+      <header className="navbar-container-we">
         <div className="logo-section">
           <img src={groupLogo} alt="Logo del proyecto" className="logo" />
           <h3 className="project-title">HYDRONET</h3>
@@ -80,9 +81,16 @@ const Welcome = () => {
         </div>
       </header>
 
-      <main className="content-container">
+      <main className="content-container-we">
         <div className="image-section">
-          <img src={watergruoup} alt="Cuidado del agua" className="turtle-image" />
+          <div className="image-container">
+            <img src={waterturtle} alt="Antes del cuidado del agua" className="before-image" />
+            <p className="image-label">Antes</p>
+          </div>
+          <div className="image-container">
+            <img src={watergruoup} alt="Después del cuidado del agua" className="after-image" />
+            <p className="image-label">Después</p>
+          </div>
         </div>
         <div className="text-section">
           <h1>BIENVENIDOS</h1>
@@ -125,17 +133,6 @@ const Welcome = () => {
                       placeholder="Ingrese su correo"
                     />
                   </label>
-                  <label>
-                    Contraseña
-                    <input
-                      type="password"
-                      className="rounded-input"
-                      placeholder="Ingrese su contraseña"
-                    />
-                  </label>
-                  <button type="submit" className="modal-button">
-                    Iniciar sesión
-                  </button>
                 </form>
                 <button className="google-button" onClick={handleGoogleLogin}>
                   Iniciar sesión con Google
