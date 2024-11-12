@@ -107,3 +107,48 @@
   font-size: 0.9rem;
   color: #555;
 }
+
+.canvas-sea-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-color: transparent;
+}
+
+.intro-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 165vh;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Alinea el contenido en la parte superior */
+  padding-top: 350px; /* Da un espacio desde la parte superior */
+}
+
+.intro-screen h1 {
+  font-size: 2rem;
+}
+
+.intro-screen p {
+  margin-top: 10px;
+}
+
+.intro-screen button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #005f73;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.intro-screen button:hover {
+  background-color: #0a9396;
+}

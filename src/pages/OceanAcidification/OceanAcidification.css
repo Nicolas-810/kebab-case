@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100%;
   min-height: 500vh;
-  background-color: #88bbe7;
+  background-color: #6395b7;
   background-size: cover;
   background-position: center;
   padding-top: 70px;
@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #85bfe8;
+  background-color: #6395b7;
   background-size: cover;
   background-position: center;
 }
@@ -50,6 +50,19 @@
   text-align: justify;
 }
 
+.introduction-container-ocean{
+  text-align: center;
+  padding: 30px;
+  margin: 70px 20px; 
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.Welcome-Text {
+  text-align: center;
+  color: black;
+  font-family: Arial, sans-serif;
+}
 
 .text-box-ocean {
   width: 45%;

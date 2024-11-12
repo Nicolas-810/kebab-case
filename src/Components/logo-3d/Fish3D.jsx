@@ -1,53 +1,67 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import { Vector3 } from "three";
 
-const Fish3D = (props) => {
-  const { nodes, materials } = useGLTF("../models-3D/AngelFish.glb");
+const Fish3D = ({ rocks, position, onCollision }) => {
+  const { nodes, materials } = useGLTF("../models-3D/neon.glb");
   const fishRef = useRef();
-  const [startTime, setStartTime] = useState(null);
+  const speed = 0.2;
 
   useEffect(() => {
-    setStartTime(Date.now());
+    const handleKeyDown = (event) => {
+      if (fishRef.current) {
+        switch (event.key) {
+          case "ArrowUp":
+          case "w":
+            fishRef.current.position.z -= speed;
+            break;
+          case "ArrowDown":
+          case "s":
+            fishRef.current.position.z += speed;
+            break;
+          case "ArrowLeft":
+          case "a":
+            fishRef.current.position.x -= speed;
+            break;
+          case "ArrowRight":
+          case "d":
+            fishRef.current.position.x += speed;
+            break;
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   useFrame(() => {
-    if (startTime && fishRef.current) {
-      console.log("Animación ejecutándose");
+    if (fishRef.current) {
+      rocks.forEach((rockRef) => {
+        if (rockRef.current) {
+          const fishPosition = new Vector3();
+          fishRef.current.getWorldPosition(fishPosition);  
+          const rockPosition = new Vector3();
+          rockRef.current.getWorldPosition(rockPosition); 
 
-      const elapsedTime = (Date.now() - startTime) / 100;
-
-      // Movimiento de nado en el eje Y
-      const swimAmplitude = 0.1;
-      const swimFrequency = 1.2;
-      fishRef.current.position.y = swimAmplitude * Math.sin(swimFrequency * elapsedTime);
-
-      // Movimiento en el eje Z
-      const forwardBackwardAmplitude = 8;
-      fishRef.current.position.z = forwardBackwardAmplitude * Math.sin(elapsedTime * 0.1);
-
-      // Rotación para balanceo
-      fishRef.current.rotation.z = 0.05 * Math.sin(elapsedTime * 1);
+          if (fishPosition.distanceTo(rockPosition) < 3) {
+            console.log("¡Colisión detectada!");
+            if (onCollision) {
+              onCollision(); 
+            }
+          }
+        }
+      });
     }
   });
 
   return (
-    <group {...props} dispose={null}>
-      <group name="Scene">
-        <mesh
-          ref={fishRef} 
-          name="AngelFish_Royal_Instance_Wander"
-          geometry={nodes.AngelFish_Royal_Instance_Wander.geometry}
-          material={materials.AngelFish_Royal_Instanced_Indirect}
-          position={[0.556, -0.604, -0.431]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={37.253}
-        />
-      </group>
+    <group ref={fishRef} position={position} dispose={null}>
+      <mesh geometry={nodes.Cube001_1.geometry} material={materials['Material.001']} />
+      <mesh geometry={nodes.Cube001_2.geometry} material={materials['Material.003']} />
     </group>
   );
 };
-
-useGLTF.preload("../models-3D/AngelFish.glb");
 
 export default Fish3D;

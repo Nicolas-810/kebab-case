@@ -126,13 +126,13 @@ const WaterPollution = () => {
                   es crucial para la purificación del agua.
                 </li>
                 <br />
-                <br />
               </ul>
             </p>
           </div>
         </div>
       </div>
       <div className="house3D-container">
+
         <Canvas shadows camera={{ position: [2, 2, 15], fov: 80 }}>
           <Html3DWaterPollution />
           <ambientLight intensity={1} />
@@ -180,6 +180,14 @@ const WaterPollution = () => {
 
           <House3D position={[-10, -10, -17]} />
           <OrbitControls />
+
+        <Canvas camera={{ position: [10, 5, 15], fov: 85 }}>
+          <TitleWaterPollution />
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[10, 10, 5]} intensity={1} />
+          <House3D position={[-10, 0, -17]} />
+          <OrbitControls enablePan={false} autoRotate />
+
         </Canvas>
       </div>
     </div>
