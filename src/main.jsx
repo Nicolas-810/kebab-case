@@ -7,7 +7,7 @@ import "./index.css";
 import Home from "./pages/home/Home";
 import Welcome from "./pages/welcome/Welcome";
 import Page404 from "./pages/page404/Page404";
-import WaterPollution from "./pages/Waterpollution/WaterPollution";
+import WaterPollution from "./pages/WaterPollution/WaterPollution";
 import OceanAcidification from "./pages/OceanAcidification/OceanAcidification";
 import WaterScarcity from "./pages/waterscarcity/WaterScarcity";
 import ModelScarcity from "./pages/modelScarcity/modelScarcity";
