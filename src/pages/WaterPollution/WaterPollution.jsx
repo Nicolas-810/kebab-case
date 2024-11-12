@@ -132,12 +132,62 @@ const WaterPollution = () => {
         </div>
       </div>
       <div className="house3D-container">
+
+        <Canvas shadows camera={{ position: [2, 2, 15], fov: 80 }}>
+          <Html3DWaterPollution />
+          <ambientLight intensity={1} />
+          <directionalLight position={[10, 10, 5]} intensity={2} />
+          <Sparkles
+            count={300}
+            color="yellow"
+            size={15}
+            speed={0.5}
+            scale={12}
+            position={[-9, -5, -15]} // Posición de Sparkles (x, y, z)
+          />
+          <Cloud
+            seed={1}
+            scale={1}
+            volume={3}
+            color="white"
+            fade={100}
+            segments={40}
+            bounds={[-10, 2, 2]}
+            position={[0, 7, -10]}
+            growth={5}
+            speed={1}
+            concentrate={"inside"}
+          />
+          <Sky
+            sunPosition={[0, 0, -1]}
+            inclination={0.2}
+            azimuth={180}
+            mieCoefficient={0.005}
+            elevation={5}
+            mieDirectionalG={0.07}
+            rayleigh={3}
+            turbidity={10}
+            exposure={0.5}
+          />
+          <Stars
+            radius={100}
+            depth={50}
+            count={1000}
+            factor={4}
+            saturation={0}
+            speed={1}
+          />
+
+          <House3D position={[-10, -10, -17]} />
+          <OrbitControls />
+
         <Canvas camera={{ position: [10, 5, 15], fov: 85 }}>
           <TitleWaterPollution />
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
           <House3D position={[-10, 0, -17]} />
           <OrbitControls enablePan={false} autoRotate />
+
         </Canvas>
       </div>
     </div>
