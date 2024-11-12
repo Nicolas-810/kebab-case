@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { Cloud, OrbitControls, Sky, Sparkles, Stars } from "@react-three/drei";
 import groupLogo from "../../assets/Icon.png";
 import "./waterPollution.css";
 import House3D from "../../Components/logo-3d/LightHouse";
@@ -38,8 +38,8 @@ const WaterPollution = () => {
               amenazas para el planeta?
             </h2>
             <p>
-              La contaminación del agua ocurre cuando sustancias dañinas —como
-              químicos, residuos industriales y microorganismos— ingresan en
+              La contaminación del agua ocurre cuando sustancias dañinas como
+              químicos, residuos industriales y microorganismos ingresan en
               cuerpos de agua como ríos, lagos y océanos, volviéndolos
               peligrosos para los humanos, la vida silvestre y el medio ambiente
               en general.
@@ -133,13 +133,53 @@ const WaterPollution = () => {
         </div>
       </div>
       <div className="house3D-container">
-        <Canvas shadows camera={{ position: [10, 5, 15], fov: 85 }}>
+        <Canvas shadows camera={{ position: [2, 2, 15], fov: 85 }}>
           <Html3DWaterPollution />
           <ambientLight intensity={1} />
           <directionalLight position={[10, 10, 5]} intensity={2} />
+          <Sparkles
+            count={300}
+            color="yellow"
+            size={15}
+            speed={0.5}
+            scale={12}
+            position={[-9, -5, -15]} // Posición de Sparkles (x, y, z)
+          />
+          <Cloud
+            seed={1}
+            scale={1}
+            volume={3}
+            color="white"
+            fade={100}
+            segments={40}
+            bounds={[-10, 2, 2]}
+            position={[0, 7, -10]}
+            growth={5}
+            speed={1}
+            concentrate={"inside"}
+          />
+          <Sky
+            sunPosition={[0, 0, -1]}
+            inclination={0.2}
+            azimuth={180}
+            mieCoefficient={0.005}
+            elevation={5}
+            mieDirectionalG={0.07}
+            rayleigh={3}
+            turbidity={10}
+            exposure={0.5}
+          />
+          <Stars
+            radius={100}
+            depth={50}
+            count={1000}
+            factor={4}
+            saturation={0}
+            speed={1}
+          />
 
           <House3D position={[-10, -10, -17]} />
-          <OrbitControls enablePan={false} autoRotate />
+          <OrbitControls />
         </Canvas>
       </div>
     </div>
