@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import { Cloud, OrbitControls, Sky, Sparkles, Stars } from "@react-three/drei";
 import groupLogo from "../../assets/Icon.png";
-import "./waterPollution.css";
+import "./WaterPollution.css";
 import House3D from "../../Components/logo-3d/LightHouse";
 import Html3DWaterPollution from "../../Components/Html3DWaterPollution";
 
