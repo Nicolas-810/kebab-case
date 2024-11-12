@@ -13,6 +13,7 @@ const Home3D = (props) => {
               position={[0.556, -0.604, -0.431]}
               rotation={[Math.PI / 2, 0, 0]}
               scale={37.253}
+              onClick={() => alert("¡toca suave a camaleon!")} // Nuevo mensaje de alerta
             />
           </group>
         </group>

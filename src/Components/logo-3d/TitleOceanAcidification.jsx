@@ -1,8 +1,21 @@
-import {Text3D, Center } from "@react-three/drei";
+import { Text3D, Center, Html } from "@react-three/drei";
+
 
 const TitleOceanAcidification = () => {
-  return <>
-    <Center top left position={[1,7,0]}>
+  return (
+    <>
+      <Html
+        occlude
+        className="Welcome-Text"
+        center
+        distanceFactor={50}
+        trasform
+        position={[1, 8, -25]}
+      >
+        <p>TIBURON BALLENA</p>
+      </Html>
+
+      {/* <Center top left position={[1, 7, 0]}>
         <Text3D
           position={[1, 7, 0]}
           font="/fonts/Arial_Regular.json"
@@ -16,8 +29,9 @@ const TitleOceanAcidification = () => {
           {`ACIDIFICACIÓN DE LOS OCEANOS`}
           <meshNormalMaterial />
         </Text3D>
-      </Center>
-  </>;
+      </Center> */}
+    </>
+  );
 };
 
 export default TitleOceanAcidification;

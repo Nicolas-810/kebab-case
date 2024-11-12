@@ -4,7 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 import groupLogo from "../../assets/Icon.png";
 import "./waterPollution.css";
 import House3D from "../../Components/logo-3d/LightHouse";
-import TitleWaterPollution from "../../Components/logo-3d/TitleOceanAcidification";
+import TitleWaterPollution from "../../Components/logo-3d/TitleWaterPollution";
 
 
 const WaterPollution = () => {
