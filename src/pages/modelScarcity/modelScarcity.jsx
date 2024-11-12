@@ -9,7 +9,6 @@ import groupLogo from "../../assets/Icon.png";
 import useSound from "use-sound";
 import backgroundMusic from "../../assets/juegoS.mp3";
 import collisionSound from "../../assets/collision.mp3";
-
 import "./ModelScarcity.css";
 
 const ModelScarcity = () => {

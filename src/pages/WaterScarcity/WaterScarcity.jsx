@@ -39,7 +39,7 @@ const WaterScarcity = () => {
 
         <div className="introduction-container">
           <h2 className="introduction-title">
-            ¿Es realmente la escasez una problema?
+          ¿SABES QUE TAN GRAVE ES EL PROBLEMA DE LA ESCASEZ DEL AGUA?
           </h2>
           <p className="introduction-text">
             La escasez de agua es uno de los desafíos más críticos de nuestro
