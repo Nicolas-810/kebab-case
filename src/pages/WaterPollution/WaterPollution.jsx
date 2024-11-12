@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { Cloud, OrbitControls, Sky, Sparkles, Stars } from "@react-three/drei";
 import groupLogo from "../../assets/Icon.png";
 import "./waterPollution.css";
 import House3D from "../../Components/logo-3d/LightHouse";
-import TitleWaterPollution from "../../Components/logo-3d/TitleWaterPollution";
+import Html3DWaterPollution from "../../Components/Html3DWaterPollution";
 
 
 const WaterPollution = () => {
@@ -34,14 +34,16 @@ const WaterPollution = () => {
 
         <div className="text-container">
           <div className="text-box">
-            <h2 className="text-title">¿Qué es la Contaminación del Agua?</h2>
+            <h2 className="text-title">
+              ¿Sabías que la contaminación del agua es una de las principales
+              amenazas para el planeta?
+            </h2>
             <p>
-              La contaminación del agua ocurre cuando sustancias dañinas—como
-              químicos, desechos industriales y microorganismos—entran en
-              cuerpos de agua (ríos, lagos, océanos) y los hacen peligrosos para
-              los humanos, la vida silvestre y el medio ambiente en general.
-              Esto afecta la calidad del agua y pone en riesgo la salud de los
-              ecosistemas.
+              La contaminación del agua ocurre cuando sustancias dañinas como
+              químicos, residuos industriales y microorganismos ingresan en
+              cuerpos de agua como ríos, lagos y océanos, volviéndolos
+              peligrosos para los humanos, la vida silvestre y el medio ambiente
+              en general.
             </p>
           </div>
           <div className="text-box">
