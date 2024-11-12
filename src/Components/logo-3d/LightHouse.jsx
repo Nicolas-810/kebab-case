@@ -16,7 +16,7 @@ const House3D = (props) => {
   });
 
   const houseRef = useRef();
-  const speed = 0.1; // Velocidad de movimiento
+  const speed = 0.5; // Velocidad de movimiento
 
   const handleLight = () => {
     alert(

@@ -180,14 +180,6 @@ const WaterPollution = () => {
 
           <House3D position={[-10, -10, -17]} />
           <OrbitControls />
-
-        <Canvas camera={{ position: [10, 5, 15], fov: 85 }}>
-          <TitleWaterPollution />
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[10, 10, 5]} intensity={1} />
-          <House3D position={[-10, 0, -17]} />
-          <OrbitControls enablePan={false} autoRotate />
-
         </Canvas>
       </div>
     </div>
