@@ -7,16 +7,16 @@ const Html3DWaterPollution = () => {
 center
 distanceFactor={15}
 transform
-position={[-2,2,0]}
+position={[-5,2,0]}
 style={{
-color:"brown",
+color:"white",
 fontSize: "14pt"
 
 }}
 
 
   >
-    <h1>CONTAMINACIÓN DEL AGUA</h1>
+    <h1>ASÍ SE VE EL AGUA CONTAMINADA</h1>
   </Html>
 
   )

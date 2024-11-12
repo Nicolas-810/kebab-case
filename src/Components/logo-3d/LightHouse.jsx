@@ -1,14 +1,12 @@
 import { useRef, useEffect, useState, useMemo } from "react";
-import { useGLTF, useAnimations, Shadow, useTexture } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { MeshStandardMaterial } from "three";
+import { Vector3, MeshStandardMaterial } from "three";
 
 const House3D = (props) => {
-  const { nodes, materials, animations } = useGLTF(
-    "../models-3D/LightHouse.glb"
-  );
+  const { nodes, materials } = useGLTF("../models-3D/LightHouse.glb");
   const PATH = useMemo(() => "materials/waterconta/rock_face_", []);
-
+  
   const floorTexture = useTexture({
     map: PATH + "diff_1k.jpg",
     displacementMap: PATH + "disp_1k.png",
@@ -17,7 +15,8 @@ const House3D = (props) => {
     aoMap: PATH + "ao_1k.jpg",
   });
 
-  console.log(floorTexture);
+  const houseRef = useRef();
+  const speed = 0.1; // Velocidad de movimiento
 
   const handleLight = () => {
     alert(
@@ -25,45 +24,41 @@ const House3D = (props) => {
     );
   };
 
-  const houseRef = useRef();
-
-  const { actions } = useAnimations(animations, houseRef);
-
   const standardMaterial = useMemo(
-    () =>
-      new MeshStandardMaterial({
-        map: floorTexture.map,
-      }),
+    () => new MeshStandardMaterial({ map: floorTexture.map }),
     [floorTexture]
   );
 
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (fishRef.current) {
-        switch (event.key) {
-          case "ArrowUp":
-          case "w":
-            fishRef.current.position.z -= speed;
-            break;
-          case "ArrowDown":
-          case "s":
-            fishRef.current.position.z += speed;
-            break;
-          case "ArrowLeft":
-          case "a":
-            fishRef.current.position.x -= speed;
-            break;
-          case "ArrowRight":
-          case "d":
-            fishRef.current.position.x += speed;
-            break;
-        }
+  // Función para manejar el movimiento de la casa
+  const moveHouse = (key) => {
+    if (houseRef.current) {
+      switch (key) {
+        case "w":
+          houseRef.current.position.z -= speed;
+          break;
+        case "s":
+          houseRef.current.position.z += speed;
+          break;
+        case "a":
+          houseRef.current.position.x -= speed;
+          break;
+        case "d":
+          houseRef.current.position.x += speed;
+          break;
+        default:
+          break;
       }
-    };
+    }
+  };
 
+  // Evento de teclado
+  useEffect(() => {
+    const handleKeyDown = (event) => moveHouse(event.key);
     window.addEventListener("keydown", handleKeyDown);
+    
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
+
 
   return (
     <group ref={houseRef} {...props} dispose={null}>
