@@ -133,7 +133,7 @@ const WaterPollution = () => {
         </div>
       </div>
       <div className="house3D-container">
-        <Canvas shadows camera={{ position: [2, 2, 15], fov: 85 }}>
+        <Canvas shadows camera={{ position: [2, 2, 15], fov: 80 }}>
           <Html3DWaterPollution />
           <ambientLight intensity={1} />
           <directionalLight position={[10, 10, 5]} intensity={2} />
