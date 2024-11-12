@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei";
 const Shark3D = (props) => {
   const { nodes, materials } = useGLTF("../models-3D/WhaleShark.glb");
   const sharkRef = useRef();
-  const [speed] = useState(0.1); // Velocidad de movimiento
+  const [speed] = useState(0.5); // Velocidad de movimiento
 
   // Efectos de teclado para mover el tiburón
   useEffect(() => {

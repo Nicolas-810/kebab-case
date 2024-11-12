@@ -6,7 +6,7 @@ import { Vector3 } from "three";
 const Fish3D = ({ rocks, position, onCollision }) => {
   const { nodes, materials } = useGLTF("../models-3D/neon.glb");
   const fishRef = useRef();
-  const speed = 0.2;
+  const speed = 0.5;
 
   useEffect(() => {
     const handleKeyDown = (event) => {
