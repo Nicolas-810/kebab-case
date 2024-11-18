@@ -2,9 +2,9 @@ import {Text3D, Center } from "@react-three/drei";
 
 const TitleWaterPollution = () => {
   return <>
-    <Center top left position={[1,-3,0]}>
+    <Center top left position={[13,6,0]}>
         <Text3D
-          position={[1, -10, 0]}
+          position={[20, -10, 0]}
           castShadow
           font="/fonts/Arial_Regular.json"
           bevelEnabled
@@ -15,7 +15,8 @@ const TitleWaterPollution = () => {
           size={0.9}
 
         >
-          {`CONTAMINACIÓN DEL AGUA`}
+          {`LA CONTAMINACIÓN DEL AGUA ES UN PROBLEMA
+GRAVE QUE DEBEMOS ATENDER CON URGENCIA`}
           <meshNormalMaterial />
         </Text3D>
       </Center>
