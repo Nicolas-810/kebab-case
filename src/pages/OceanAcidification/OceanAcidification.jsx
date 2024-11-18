@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import groupLogo from "../../assets/Icon.png";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Sky } from "@react-three/drei";
 import "./OceanAcidification.css";
 import Shark3D from "../../Components/logo-3d/Shark3D";
 import TitleOceanAcidification from "../../Components/logo-3d/TitleOceanAcidification";
@@ -31,9 +31,26 @@ const oceanAcidification = () => {
           </div>
         </header>
 
+        <div className="introduction-container-ocean">
+          <h2 className="introduction-title">
+            ¿SABÍAS LA GRAVEDAD DE LA ACIDIFICACIÓN DE LOS OCÉANOS?
+          </h2>
+          <p className="introduction-text">
+            La acidificación de los océanos es uno de los problemas ambientales
+            más críticos de nuestro tiempo. A medida que los océanos absorben
+            más dióxido de carbono, su pH disminuye, amenazando la vida marina y
+            los ecosistemas costeros. Este fenómeno afecta la biodiversidad y la
+            cadena alimentaria global, impactando la vida de millones que
+            dependen del mar. Es esencial que tomemos conciencia de este desafío
+            y actuemos para proteger nuestros océanos antes de que sea demasiado
+            tarde.
+          </p>
+        </div>
+
         <div className="Shark3d-container">
           <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
-            <TitleOceanAcidification/>
+            <Sky azimuth={0.1} altitude={0.2} turbidity={10} rayleigh={0.5} />
+            <TitleOceanAcidification />
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
             <Shark3D position={[0, 0, -5]} />

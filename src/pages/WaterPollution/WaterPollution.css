@@ -4,8 +4,8 @@
   align-items: center; /* Centra horizontalmente */
   justify-content: center; /* Centra verticalmente */
   width: 100%;
-  height: 330%;
-  background-color: #88bbe7;
+  height: auto;
+  background-color: #6395b7;
   background-size: cover;
   background-position: center;
   padding-top: 70px;
@@ -17,7 +17,7 @@
   align-items: center; /* Centra horizontalmente */
   justify-content: center; /* Centra verticalmente */
   height: 120vh;
-  background-color: #85bfe8;
+  background-color: #6395b7;
   background-size: cover;
   background-position: center;
   margin-top: 290PX;
@@ -52,11 +52,13 @@
   align-items: center; 
   justify-content: center; 
   text-align: justify
-
 }
+
 .text-box{
   align-items: center; 
-  justify-content: center; 
+  justify-content: center;
+  margin-top: 30px; 
+  text-align: justify;
 }
 
 .text-title{

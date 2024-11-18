@@ -5,6 +5,7 @@ import groupLogo from "../../assets/Icon.png";
 import "./waterPollution.css";
 import House3D from "../../Components/logo-3d/LightHouse";
 import Html3DWaterPollution from "../../Components/Html3DWaterPollution";
+import TitleWaterPollution from "../../Components/logo-3d/TitleWaterPollution"
 
 const WaterPollution = () => {
   const navigate = useNavigate();
@@ -126,13 +127,13 @@ const WaterPollution = () => {
                   es crucial para la purificación del agua.
                 </li>
                 <br />
-                <br />
               </ul>
             </p>
           </div>
         </div>
       </div>
       <div className="house3D-container">
+
         <Canvas shadows camera={{ position: [2, 2, 15], fov: 80 }}>
           <Html3DWaterPollution />
           <ambientLight intensity={1} />
@@ -141,10 +142,11 @@ const WaterPollution = () => {
             count={300}
             color="yellow"
             size={15}
-            speed={0.5}
+            speed={5}
             scale={12}
             position={[-9, -5, -15]} // Posición de Sparkles (x, y, z)
           />
+          
           <Cloud
             seed={1}
             scale={1}
@@ -153,22 +155,19 @@ const WaterPollution = () => {
             fade={100}
             segments={40}
             bounds={[-10, 2, 2]}
-            position={[0, 7, -10]}
+            position={[-5, 7, -10]}
             growth={5}
             speed={1}
             concentrate={"inside"}
           />
+
           <Sky
             sunPosition={[0, 0, -1]}
-            inclination={0.2}
-            azimuth={180}
-            mieCoefficient={0.005}
-            elevation={5}
-            mieDirectionalG={0.07}
-            rayleigh={3}
-            turbidity={10}
-            exposure={0.5}
+            mieCoefficient={1}
+            mieDirectionalG={1}
+            exposure={10}
           />
+
           <Stars
             radius={100}
             depth={50}
@@ -180,6 +179,7 @@ const WaterPollution = () => {
 
           <House3D position={[-10, -10, -17]} />
           <OrbitControls />
+          <TitleWaterPollution/>
         </Canvas>
       </div>
     </div>
