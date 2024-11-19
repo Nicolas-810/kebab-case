@@ -5,7 +5,7 @@ import groupLogo from "../../assets/Icon.png";
 import "./WaterPollution.css";
 import House3D from "../../Components/logo-3d/LightHouse";
 import Html3DWaterPollution from "../../Components/Html3DWaterPollution";
-import TitleWaterPollution from "../../Components/logo-3d/TitleWaterPollution"
+import TitleWaterPollution from "../../Components/logo-3d/TitleWaterPollution";
 
 const WaterPollution = () => {
   const navigate = useNavigate();
@@ -18,11 +18,15 @@ const WaterPollution = () => {
     navigate("/WaterScarcity");
   };
 
+  const goToHomePage = () => {
+    navigate("/home"); // Redirige a la página de inicio
+  };
+
   return (
     <div className="home-page-pullution">
       <div className="page-container-pollution">
         <header className="waterP-navbar-container">
-          <div className="logo-section">
+          <div className="logo-section" onClick={goToHomePage}>
             <img src={groupLogo} alt="Logo del proyecto" className="logo" />
             <h3 className="project-title">HYDRONET</h3>
           </div>
@@ -133,7 +137,6 @@ const WaterPollution = () => {
         </div>
       </div>
       <div className="house3D-container">
-
         <Canvas shadows camera={{ position: [2, 2, 15], fov: 80 }}>
           <Html3DWaterPollution />
           <ambientLight intensity={1} />
@@ -146,7 +149,7 @@ const WaterPollution = () => {
             scale={12}
             position={[-9, -5, -15]} // Posición de Sparkles (x, y, z)
           />
-          
+
           <Cloud
             seed={1}
             scale={1}
@@ -179,7 +182,7 @@ const WaterPollution = () => {
 
           <House3D position={[-10, -10, -17]} />
           <OrbitControls />
-          <TitleWaterPollution/>
+          <TitleWaterPollution />
         </Canvas>
       </div>
     </div>
