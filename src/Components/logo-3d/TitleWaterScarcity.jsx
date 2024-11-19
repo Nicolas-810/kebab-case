@@ -12,7 +12,7 @@ const TitleWaterScarcity = () => {
         trasform
         position={[1, 8, 0]}
       >
-        <h4>Conoce_A_Nuestro_Pez_Camaleon</h4>
+        <h4 style={{whiteSpace:"nowrap"}}>CONOCE A NUESTRO PEZ CAMALEON</h4>
       </Html>
     </>
   );
