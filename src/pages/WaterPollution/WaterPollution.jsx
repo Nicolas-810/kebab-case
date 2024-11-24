@@ -4,8 +4,11 @@ import { Cloud, OrbitControls, Sky, Sparkles, Stars } from "@react-three/drei";
 import groupLogo from "../../assets/Icon.png";
 import "./WaterPollution.css";
 import House3D from "../../Components/logo-3d/LightHouse";
+import Dog from "../../Components/logo-3d/Dog";
 import Html3DWaterPollution from "../../Components/Html3DWaterPollution";
-import TitleWaterPollution from "../../Components/logo-3d/TitleWaterPollution";
+import TitleWaterPollution from "../../Components/logo-3d/TitleWaterPollution"
+import { Physics } from "@react-three/rapier";
+import Pelota3D from "../../Components/logo-3d/Pelota";
 
 const WaterPollution = () => {
   const navigate = useNavigate();
@@ -142,7 +145,7 @@ const WaterPollution = () => {
           <ambientLight intensity={1} />
           <directionalLight position={[10, 10, 5]} intensity={2} />
           <Sparkles
-            count={300}
+            count={100}
             color="yellow"
             size={15}
             speed={5}
@@ -179,11 +182,17 @@ const WaterPollution = () => {
             saturation={0}
             speed={1}
           />
+          <Physics >
+          <Dog position={[-12, -7, -15]} />
+
+          <Pelota3D position={[-23, -1, -2]} />
 
           <House3D position={[-10, -10, -17]} />
+          </Physics>
           <OrbitControls />
           <TitleWaterPollution />
         </Canvas>
+
       </div>
     </div>
   );
