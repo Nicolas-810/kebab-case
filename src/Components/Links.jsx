@@ -1,9 +1,9 @@
 import React, { useState, useRef, useCallback } from "react";
-import useAuthStore from "../stores/use-auth-store"; 
+import useAuthStore from "../stores/use-auth-store";
 import { useNavigate } from "react-router-dom";
-import audioFile from '../assets/Agua.mp3'; 
-import muteIcon from '../assets/sin-sonido.png';
-import soundIcon from '../assets/volumen.png'; 
+import audioFile from "../assets/Agua.mp3";
+import muteIcon from "../assets/sin-sonido.png";
+import soundIcon from "../assets/volumen.png";
 import "./Links.css";
 
 const Links = () => {
@@ -19,9 +19,9 @@ const Links = () => {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play().catch(err => {
-          console.error('Audio playback failed: ', err);
-          alert('No se pudo reproducir el audio.'); 
+        audioRef.current.play().catch((err) => {
+          console.error("Audio playback failed: ", err);
+          alert("No se pudo reproducir el audio.");
         });
       }
       setIsPlaying(!isPlaying);
@@ -38,9 +38,27 @@ const Links = () => {
   };
 
   const handleLogout = useCallback(() => {
-    console.log("Clic en cerrar sesión");
-    logout(); 
+    console.log("Click en cerrar sesión");
+    logout();
     navigate("/");
+  }, [logout, navigate]);
+
+  const handleWaterPollution = useCallback(() => {
+    console.log("Click en Water Pollution");
+    logout();
+    navigate("/WaterPollution");
+  }, [logout, navigate]);
+
+  const handleWaterScacity = useCallback(() => {
+    console.log("Click en Water Scarcity");
+    logout();
+    navigate("/WaterScarcity");
+  }, [logout, navigate]);
+
+  const handleOceanAcidification = useCallback(() => {
+    console.log("Click en Ocean acidification");
+    logout();
+    navigate("/OceanAcidification");
   }, [logout, navigate]);
 
   return (
@@ -48,37 +66,68 @@ const Links = () => {
       <header>
         <nav>
           <ul>
+            {}
             <li>
-              <button 
-                className="button-audio" 
-                onClick={handleAudioClick} 
-                aria-label={isPlaying ? 'Detener música' : 'Reproducir música'}
+              <button
+                className="button-logout"
+                onClick={handleWaterPollution}
+                aria-label="Water Pollution"
+              >
+                Water Pollution
+              </button>
+            </li>
+
+            <li>
+              <button
+                className="button-logout"
+                onClick={handleWaterScacity}
+                aria-label="Water Scarcity"
+              >
+                Water Scarcity
+              </button>
+            </li>
+
+            <li>
+              <button
+                className="button-logout"
+                onClick={handleOceanAcidification}
+                aria-label="Ocean Acidification"
+              >
+                Ocean Acidification
+              </button>
+            </li>
+
+            <li>
+              <button
+                className="button-audio"
+                onClick={handleAudioClick}
+                aria-label={isPlaying ? "Detener música" : "Reproducir música"}
               >
                 {isPlaying ? (
-                  <img src={soundIcon} alt="Mute" /> 
+                  <img src={soundIcon} alt="Mute" />
                 ) : (
-                  <img src={muteIcon} alt="Sound" /> 
+                  <img src={muteIcon} alt="Sound" />
                 )}
               </button>
             </li>
             {showVolumeSlider && (
               <li className="volume-slider-container">
-                <input 
-                  type="range" 
-                  min="0" 
-                  max="1" 
-                  step="0.01" 
-                  value={volume} 
-                  onChange={handleVolumeChange} 
-                  className="volume-slider" 
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value={volume}
+                  onChange={handleVolumeChange}
+                  className="volume-slider"
                   aria-label="Control de volumen"
                 />
               </li>
             )}
             <li>
-              <button 
-                className="button-logout" 
-                onClick={handleLogout} 
+              <button
+                className="button-logout"
+                onClick={handleLogout}
                 aria-label="Cerrar sesión"
               >
                 Cerrar sesión

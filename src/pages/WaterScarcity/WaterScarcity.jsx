@@ -23,11 +23,15 @@ const WaterScarcity = () => {
     navigate("/modelScarcity");
   };
 
+  const goToHomePage = () => {
+    navigate("/home"); // Redirige a la página de inicio
+  };
+
   return (
     <div className="home-page-scarcity">
       <div className="page-container-scarcity">
         <header className="waterS-navbar-container">
-          <div className="logo-section">
+          <div className="logo-section" onClick={goToHomePage}>
             <img src={groupLogo} alt="Logo del proyecto" className="logo" />
             <h3 className="project-title">HYDRONET</h3>
           </div>
@@ -39,7 +43,7 @@ const WaterScarcity = () => {
 
         <div className="introduction-container">
           <h2 className="introduction-title">
-          ¿SABES QUE TAN GRAVE ES EL PROBLEMA DE LA ESCASEZ DEL AGUA?
+            ¿SABES QUE TAN GRAVE ES EL PROBLEMA DE LA ESCASEZ DEL AGUA?
           </h2>
           <p className="introduction-text">
             La escasez de agua es uno de los desafíos más críticos de nuestro
@@ -80,7 +84,8 @@ const WaterScarcity = () => {
               económica. La escasez de agua puede llevar a crisis humanitarias,
               incrementar la pobreza y desencadenar conflictos por recursos
               limitados. Proteger el agua es esencial para el bienestar de
-              generaciones futuras y para mantener el equilibrio de los ecosistemas.
+              generaciones futuras y para mantener el equilibrio de los
+              ecosistemas.
             </p>
           </div>
         </div>
@@ -102,15 +107,35 @@ const WaterScarcity = () => {
               agua. Algunas de las estrategias clave incluyen:
             </p>
             <ul>
-              <li><strong>Conservación y uso eficiente:</strong> Reducir el desperdicio de agua mediante tecnologías de ahorro y hábitos responsables.</li>
-              <li><strong>Reutilización de aguas residuales:</strong> Implementar sistemas de tratamiento y reutilización de aguas residuales para diversos fines, como riego o procesos industriales.</li>
-              <li><strong>Desalinización:</strong> Convertir el agua salada en agua potable mediante tecnología de desalinización, una solución útil para zonas costeras.</li>
-              <li><strong>Protección de fuentes de agua:</strong> Preservar y restaurar fuentes naturales de agua, como ríos, lagos y acuíferos, para asegurar su disponibilidad a largo plazo.</li>
-              <li><strong>Educación y conciencia:</strong> Promover la educación sobre el manejo sostenible del agua y sensibilizar a la población sobre la importancia de este recurso.</li>
+              <li>
+                <strong>Conservación y uso eficiente:</strong> Reducir el
+                desperdicio de agua mediante tecnologías de ahorro y hábitos
+                responsables.
+              </li>
+              <li>
+                <strong>Reutilización de aguas residuales:</strong> Implementar
+                sistemas de tratamiento y reutilización de aguas residuales para
+                diversos fines, como riego o procesos industriales.
+              </li>
+              <li>
+                <strong>Desalinización:</strong> Convertir el agua salada en
+                agua potable mediante tecnología de desalinización, una solución
+                útil para zonas costeras.
+              </li>
+              <li>
+                <strong>Protección de fuentes de agua:</strong> Preservar y
+                restaurar fuentes naturales de agua, como ríos, lagos y
+                acuíferos, para asegurar su disponibilidad a largo plazo.
+              </li>
+              <li>
+                <strong>Educación y conciencia:</strong> Promover la educación
+                sobre el manejo sostenible del agua y sensibilizar a la
+                población sobre la importancia de este recurso.
+              </li>
             </ul>
             <p>
-              La implementación de estas soluciones es esencial para garantizar el
-              acceso al agua limpia y segura para todos.
+              La implementación de estas soluciones es esencial para garantizar
+              el acceso al agua limpia y segura para todos.
             </p>
           </div>
         </div>
