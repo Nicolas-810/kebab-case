@@ -4,7 +4,7 @@ import Antes1 from "../../assets/antesEs.jpeg";
 import Despues1 from "../../assets/despuesEs.jpeg";
 import Antes2 from "../../assets/AntesGlo.jpg";
 import Despues2 from "../../assets/DespuesGlo.jpg";
-import imagen1 from "../../assets/modeloscar.png";
+import imagen1 from "../../assets/Portada.jpeg";
 import "./WaterScarcity.css";
 import "../home/Home.css";
 
@@ -144,12 +144,12 @@ const WaterScarcity = () => {
           <div className="tarjeta" onClick={goToModelPage}>
             <img src={imagen1} alt="Imagen 1" className="tarjeta-imagen" />
             <h3>JUEGO</h3>
-            <p>Tu objetivo es esquivar las rocas que caen.</p>
+            <p>Tu objetivo es agarrar las botellas.</p>
             <p>
-              Usa las flechas laterales para mover el pez de lado a lado y
-              esquivar las rocas.
+              Usa las flechas laterales para mover al niño de lado a lado 
+              para agarrar las botellas.
             </p>
-            <p>¡Diviértete y ten cuidado con las rocas!</p>
+            <p>¡Diviértete y cuidado el sol esta muy fuerte!</p>
           </div>
         </div>
       </div>

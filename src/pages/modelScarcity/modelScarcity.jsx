@@ -1,113 +1,160 @@
-import { useNavigate } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
-import { Sky } from "@react-three/drei";
+import { Stars } from "@react-three/drei";
 import Fish3D from "../../Components/logo-3d/Fish3D";
-import Rock from "../../Components/Rock";
-import { Water } from "../../Components/Water";
+import Bottle from "../../Components/Bottle";
+import Desert from "../../Components/Desert";
 import { useRef, useState, useEffect } from "react";
-import groupLogo from "../../assets/Icon.png";
 import useSound from "use-sound";
-import backgroundMusic from "../../assets/juegoS.mp3";
-import collisionSound from "../../assets/collision.mp3";
+import collisionSound from "../../assets/Burbujas.mp3";
+import { useNavigate } from "react-router-dom";
 import "./ModelScarcity.css";
+import TitleWaterScarcity3D from "../../Components/logo-3d/TitleWaterScarcity3D";
+import TitleWaterScarcity from "../../Components/logo-3d/TitleWaterScarcity";
+
 
 const ModelScarcity = () => {
-  const navigate = useNavigate();
-  const goBack = () => navigate(-1);
-
-  const [play, { stop }] = useSound(backgroundMusic, {
-    volume: 0.2,
-    loop: true,
-  });
   const [playCollision] = useSound(collisionSound, { volume: 1 });
 
   const [gameStarted, setGameStarted] = useState(false);
-  const [fishSpeed, setFishSpeed] = useState(10);
+  const [showLoadingScreen, setShowLoadingScreen] = useState(true);
+  const bottleRef = useRef();
+  const [score, setScore] = useState(0);
+  const [bottlesCollected, setBottlesCollected] = useState(0);
+  const [thirst, setThirst] = useState(100);
+  const [gameOver, setGameOver] = useState(false);
+  const [gameWon, setGameWon] = useState(false);
 
-  const rockRefs = Array.from({ length: 10 }, () => useRef());
+  const [bottlePosition, setBottlePosition] = useState([Math.random() * 30 - 15, 0, Math.random() * 30 - 15]);
 
-  const onFishMove = (deltaX) => {
-    if (Math.abs(deltaX) > 10) {
-      setFishSpeed(100);
-    } else {
-      setFishSpeed(100);
-    }
-  };
-
-  const toggleGame = () => {
-    if (!gameStarted) {
-      play();
-      setGameStarted(true);
-    } else {
-      stop();
-      setGameStarted(false);
-    }
-  };
+  const navigate = useNavigate();
 
   const handleCollision = () => {
-    console.log("Colisión detectada");
-    playCollision();
-    stop();
-    setGameStarted(false);
-  };
+    if (gameOver || gameWon) return;
 
-  const startGame = () => {
-    setGameStarted(true);
-    play();
+    playCollision();
+    setScore((prev) => {
+      const newScore = prev + 10;
+      if (newScore >= 100) {
+        setGameWon(true);
+        setGameStarted(false);
+      }
+      return newScore;
+    });
+    setBottlesCollected((prev) => prev + 1);
+    setThirst((prev) => Math.min(prev + 20, 100));
+
+    setBottlePosition([Math.random() * 30 - 15, 0, Math.random() * 30 - 15]);
   };
 
   useEffect(() => {
-    if (gameStarted) {
-      play();
-    } else {
-      stop();
+    if (gameStarted && !gameWon) {
+      const interval = setInterval(() => {
+        setThirst((prev) => {
+          if (prev <= 0) {
+            setGameOver(true);
+            setGameStarted(false);
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+      return () => clearInterval(interval);
     }
-  }, [gameStarted, play, stop]);
+  }, [gameStarted, gameWon]);
+
+  useEffect(() => {
+    if (gameWon) {
+      const timer = setTimeout(() => {
+        navigate("/WaterScarcity");
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [gameWon, navigate]);
+
+  const startGame = () => {
+    setShowLoadingScreen(false);
+    setGameStarted(true);
+  };
 
   return (
     <div className="home-page-modelS">
-      <header className="modelS-navbar-container">
-        <div className="logo-section">
-          <img src={groupLogo} alt="Logo del proyecto" className="logo" />
-          <h3 className="project-title">HYDRONET</h3>
+      {showLoadingScreen ? (
+        <div className="loading-screen">
+          <h1>¡Bienvenido a la Escasez!</h1>
+          <p>Instrucciones:</p>
+          <ul>
+            <li>Usa las flechas de dirección para mover al niño.</li>
+            <li>Recoge botellas de agua para mantener tu nivel de sed alto.</li>
+            <li>Evita quedarte sin agua, ¡o perderás el juego!</li>
+          </ul>
+          <button onClick={startGame} className="start-game-button">
+            Iniciar Juego
+          </button>
         </div>
-        <div className="button-section">
-          <button onClick={goBack}>Volver</button>
-        </div>
-      </header>
-
-      <div className="canvas-sea-container">
-        <Canvas camera={{ position: [0, 10, 20], fov: 60 }}>
-          <Sky sunPosition={[10, 10, 10]} />
+      ) : (
+        <Canvas camera={{ position: [0, 10, 30], fov: 50 }}>
           <ambientLight intensity={0.5} />
-          <directionalLight position={[10, 10, 5]} intensity={1} />
-          <Water />
+          <directionalLight position={[10, 20, 10]} intensity={1.5} />
+          <Desert />
+          <Stars />
 
-          {gameStarted &&
-            rockRefs.map((rockRef, index) => (
-              <Rock
-                key={index}
-                position={[Math.random() * 30 - 15, 1, Math.random() * 30 - 15]}
-                speed={0.1}
-                rockRef={rockRef}
+          {gameStarted && (
+            <>
+              <TitleWaterScarcity
+                text={`Puntaje: ${score}`}
+                position={[-10, 10, -20]}
+                size={1.5}
+                color="green"
               />
-            ))}
+              <TitleWaterScarcity
+                text={`Sed: ${thirst}%`}
+                position={[10, 10, -20]}
+                size={1.5}
+                color="red"
+              />
+              <TitleWaterScarcity
+                text={`Botellas recogidas: ${bottlesCollected}`}
+                position={[0, 5, -20]}
+                size={1.5}
+                color="orange"
+              />
+            </>
+          )}
+
+          {gameOver && !gameWon && (
+            <TitleWaterScarcity
+              text="¡Juego Terminado! Te quedaste sin agua."
+              position={[0, 10, 0]}
+              size={2}
+              color="red"
+            />
+          )}
+
+          {gameWon && (
+            <TitleWaterScarcity3D
+              text="¡Felicidades! Has ganado."
+              position={[0, 10, 0]}
+              size={2}
+              color="green"
+            />
+          )}
+
+          {gameStarted && !gameOver && !gameWon && (
+            <Bottle
+              position={bottlePosition}
+              onCollect={handleCollision}
+              bottleRef={bottleRef}
+            />
+          )}
 
           <Fish3D
-            rocks={rockRefs}
-            position={[-10, 0, -17]}
-            onMove={onFishMove}
-            speed={fishSpeed}
+            rocks={[bottleRef]}
+            position={[0, 0, 0]}
             onCollision={handleCollision}
           />
         </Canvas>
-      </div>
-
-      <div className="button-container">
-        <button className="button-start" onClick={toggleGame}>
-          {gameStarted ? "Detener Juego" : "Iniciar Juego"}
-        </button>
-      </div>
+      )}
     </div>
   );
 };

@@ -1,14 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { OrbitControls, Sky } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import groupLogo from "../../assets/Icon.png";
 import imagen1 from "../../assets/watercon.webp";
 import imagen2 from "../../assets/waterscacez.webp";
 import imagen3 from "../../assets/aciocean.webp";
 import Links from "../../Components/Links";
-import Home3D from "../../Components/logo-3d/ModelHome";
-import TitleWater from "../../Components/logo-3d/TitleWaterScarcity";
 import "./Home.css";
 
 const Home = () => {
@@ -113,22 +109,6 @@ const Home = () => {
                   que afecta negativamente a organismos que habitan en los
                   océanos.
                 </p>
-              </div>
-
-              {/* Canvas 3D */}
-              <div className="canvas-sea-container">
-                <Canvas camera={{ position: [5, 0, 20], fov: 100 }} shadows>
-                  <Sky sunPosition={[10, 10, 10]} />
-                  <ambientLight intensity={0.5} />
-                  <OrbitControls enablePan={false} autoRotate />
-                  <directionalLight
-                    position={[10, 10, 5]}
-                    intensity={1}
-                    castShadow
-                  />
-                  <TitleWater />
-                  <Home3D position={[-10, 0, -17]} castShadow receiveShadow />
-                </Canvas>
               </div>
             </div>
           </div>
