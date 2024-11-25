@@ -9,7 +9,7 @@ const TitleOceanAcidification = () => {
         center
         distanceFactor={50}
         trasform
-        position={[-5, 8, -25]}
+        position={[-5, 5, -25]}
       >
         <p style={{ whiteSpace: "nowrap" }}>TIBURON BALLENA</p>
       </Html>

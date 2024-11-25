@@ -3,8 +3,11 @@ import groupLogo from "../../assets/Icon.png";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sky } from "@react-three/drei";
 import "./OceanAcidification.css";
-import Shark3D from "../../Components/logo-3d/Shark3D";
 import TitleOceanAcidification from "../../Components/logo-3d/TitleOceanAcidification";
+import Shark3DMov from "../../Components/logo-3d/Shark3DMov";
+import Shark3D from "../../Components/logo-3d/Shark3D";
+import { Physics } from "@react-three/rapier";
+import Shark3DMovAnimation from "../../Components/logo-3d/Shark3DAnimation";
 
 const oceanAcidification = () => {
   const navigate = useNavigate();
@@ -18,7 +21,7 @@ const oceanAcidification = () => {
   };
 
   const goToHomePage = () => {
-    navigate("/home");  // Redirige a la página de inicio
+    navigate("/home"); // Redirige a la página de inicio
   };
 
   return (
@@ -40,24 +43,25 @@ const oceanAcidification = () => {
             ¿SABÍAS LA GRAVEDAD DE LA ACIDIFICACIÓN DE LOS OCÉANOS?
           </h2>
           <p className="introduction-text">
-            La acidificación de los océanos es uno de los problemas ambientales
-            más críticos de nuestro tiempo. A medida que los océanos absorben
-            más dióxido de carbono, su pH disminuye, amenazando la vida marina y
-            los ecosistemas costeros. Este fenómeno afecta la biodiversidad y la
-            cadena alimentaria global, impactando la vida de millones que
-            dependen del mar. Es esencial que tomemos conciencia de este desafío
-            y actuemos para proteger nuestros océanos antes de que sea demasiado
-            tarde.
+            La acidificación de los océanos, causada por el aumento de dióxido
+            de carbono, reduce su pH y amenaza la vida marina y los ecosistemas
+            costeros. Esto afecta la biodiversidad y la cadena alimentaria
+            global, poniendo en riesgo a millones de personas. Es crucial actuar
+            para proteger nuestros océanos.
           </p>
         </div>
 
         <div className="Shark3d-container">
-          <Canvas camera={{ position: [0, 0, 25], fov: 50 }}>
+          <Canvas camera={{ position: [0, 5, 25], fov: 60 }}>
             <Sky azimuth={0.1} altitude={0.2} turbidity={10} rayleigh={0.5} />
-            <TitleOceanAcidification position={[20,-25,30]}/>
+            <TitleOceanAcidification position={[20, -25, 30]} />
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
-            <Shark3D position={[1, -1, 10]}  />
+            <Physics>
+            {/* <Shark3DMovAnimation position ={[-5,2,3]} /> */}
+            <Shark3DMov position = {[8,2,3]}/>
+            <Shark3D position = {[1,2,6]}/>
+            </Physics>
             <OrbitControls enablePan={false} />
           </Canvas>
         </div>
@@ -69,128 +73,59 @@ const oceanAcidification = () => {
             ¿QUE ES LA ACIDIFICACIÓN DE LOS OCEANOS?
           </h2>
           <p>
-            La acidificación de los océanos es un proceso químico que ocurre
-            cuando el dióxido de carbono (CO₂) de la atmósfera se disuelve en el
-            mar, creando ácido carbónico y disminuyendo el PH de los océanos,
-            Este fenómeno hace que el agua se vuelva mas acida, lo que afecta
-            negativamente a muchas especies marinas especialmente aquellas de
-            caparazones o esqueletos de carbonato de calcio, como los corales,
-            los moluscos y ciertos tipos de fitoplancton.
+            La acidificación de los océanos ocurre cuando el CO₂ se disuelve en
+            el mar, formando ácido carbónico y reduciendo el pH. Esto afecta a
+            especies marinas, especialmente a aquellas con caparazones o
+            esqueletos de carbonato de calcio, como corales, moluscos y
+            fitoplancton.
           </p>
         </div>
 
         <div className="text-box-ocean right-box-ocean">
           <h2 className="text-title">¿POR QUÉ ES UN PROBLEMA?</h2>
           <p>
-            La acidificación de los océanos representa una amenaza silencionsa
-            para los ecosistemas marinos.Esta alteración en la química oceánica
-            significa que los organismos marinos tienen mayores dificultades
-            para formar sus estructuras, afectando no solo a ellos, sino también
-            a todas las especies que dependen de ellos para alimentarse.
-            <br />
-            La pérdida de estas especies impacta directamente en la cadena
-            alimentaria, reduciendo la diversidad de la vida marina y poniendo
-            en riesgo a comunidades humanas que dependen de la pesca. demás, los
-            arrecifes de coral, que protegen las costas de tormentas y la
-            erosión, se deterioran más rápidamente. La acidificación no solo
-            afecta la biodiversidad, sino que también pone en riesgo la
-            estabilidad económica de muchas comunidades costeras.
+            La pérdida de especies marinas afecta la cadena alimentaria, reduce
+            la biodiversidad y pone en riesgo a las comunidades pesqueras.
+            Además, los arrecifes de coral, que protegen las costas, se
+            deterioran rápidamente, afectando la estabilidad económica de las
+            comunidades costeras.
           </p>
         </div>
 
         <div className="text-box-ocean left-box-ocean">
-          <h2 className="text-title">EFECTOS DE LA VIDA MARINA</h2>
-          <h3 className="text-subtitle">
-            Dificultades para formar estructuras
-          </h3>
-          <p>
-            Organismos como corales, moluscos y algunos crustáceos necesitan
-            carbonato de calcio para construir caparazones y esqueletos. La
-            acidificación disminuye la disponibilidad de este mineral,
-            debilitando estas estructuras y haciendo a los organismos más
-            vulnerables.
-          </p>
-          <h3 className="text-subtitle">Pérdida de biodiversidad</h3>
-          <p>
-            La acidificación afecta a especies esenciales en la cadena
-            alimentaria, como ciertos tipos de fitoplancton. Esto repercute en
-            todo el ecosistema, ya que otras especies que dependen de ellos,
-            como peces y mariscos, también se ven afectadas.
-          </p>
-          <h3 className="text-subtitle">Corales en peligro</h3>
-          <p>
-            Los arrecifes de coral, conocidos como las "selvas del mar", están
-            en alto riesgo. La acidificación les impide desarrollarse plenamente
-            y los hace más frágiles, afectando a las especies que dependen de
-            ellos para refugio y alimento.
-          </p>
-          <h3 className="text-subtitle">Alteración de los ciclos de vida</h3>
-          <p>
-            La acidez del agua afecta la reproducción y el desarrollo de muchas
-            especies marinas. Por ejemplo, algunas especies de peces
-            experimentan problemas en sus sistemas sensoriales y de navegación,
-            lo que impacta su capacidad para sobrevivir y reproducirse.
-          </p>
-          <h3 className="text-subtitle">Amenaza para la pesca y la economía</h3>
-          <p>
-            La reducción en la población de especies comerciales (como mariscos)
-            amenaza a la industria pesquera y a las economías que dependen de la
-            pesca, poniendo en riesgo la seguridad alimentaria de muchas
-            comunidades.
-          </p>
-        </div>
-
-        <div className="text-box-ocean right-box-ocean">
           <h2 className="text-title">IMPACTO EN LOS ECOSISTEMAS</h2>
-          <h3 className="text-subtitle">
-            Desequilibrio en la cadena alimentaria
-          </h3>
-          <p>
-            La acidificación afecta a organismos pequeños, como el fitoplancton
-            y algunos crustáceos, que son la base de la cadena alimentaria
-            marina. Esto genera un efecto dominó que impacta a especies mayores,
-            incluyendo peces y mamíferos marinos, alterando la estabilidad de
-            todo el ecosistema.
-          </p>
           <h3 className="text-subtitle">
             Degradación de los arrecifes de coral
           </h3>
           <p>
-            Los corales son hábitats esenciales para muchas especies marinas. La
-            acidificación debilita sus estructuras, reduciendo la capacidad de
-            los arrecifes para sostener a la biodiversidad. Esto no solo impacta
-            a las especies que viven en los arrecifes, sino que también
-            disminuye la protección que estos brindan a las costas contra
-            tormentas y erosión.
+            La acidificación debilita los corales, reduciendo su capacidad para
+            sostener la biodiversidad y disminuir la protección de las costas
+            contra tormentas y erosión.
           </p>
           <h3 className="text-subtitle">
             Reducción en la biodiversidad marina
           </h3>
           <p>
-            La acidificación afecta de manera desproporcionada a ciertas
-            especies, llevando a una pérdida de diversidad biológica. Las
-            especies que dependen de minerales para construir sus estructuras se
-            ven especialmente afectadas, lo que puede llevar a un ecosistema
-            menos resiliente y más vulnerable a otros cambios ambientales.
+            La acidificación reduce la diversidad biológica, afectando
+            especialmente a las especies que dependen de minerales para sus
+            estructuras, lo que hace al ecosistema más vulnerable y menos
+            resiliente.
           </p>
           <h3 className="text-subtitle">Amenaza para el ciclo del carbono</h3>
           <p>
-            • Los océanos juegan un papel clave en el ciclo global del carbono,
-            absorbiendo CO₂ de la atmósfera. La acidificación altera este
-            proceso, reduciendo la capacidad de los océanos para almacenar
-            carbono y contribuyendo al cambio climático a largo plazo.
+            La acidificación de los océanos reduce su capacidad para almacenar
+            carbono, alterando el ciclo global del carbono y contribuyendo al
+            cambio climático.
           </p>
           <h3 className="text-subtitle">Impacto en las comunidades humanas</h3>
           <p>
-            Los cambios en los ecosistemas marinos afectan directamente a las
-            comunidades costeras que dependen de la pesca y del turismo. La
-            pérdida de biodiversidad y la degradación de los arrecifes ponen en
-            riesgo tanto la economía como la seguridad alimentaria de estas
-            comunidades.
+            Los cambios en los ecosistemas marinos amenazan la economía y la
+            seguridad alimentaria de las comunidades costeras, al afectar la
+            pesca, el turismo, y la biodiversidad.
           </p>
         </div>
 
-        <div className="text-box-ocean left-box-ocean">
+        <div className="text-box-ocean right-box-ocean">
           <h2 className="text-title">¿QUÉ PODEMOS HACER?</h2>
           <h3 className="text-subtitle">Reducir las emisiones de CO₂</h3>
           <p>
