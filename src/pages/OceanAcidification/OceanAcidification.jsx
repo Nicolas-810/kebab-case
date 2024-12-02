@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sky } from "@react-three/drei";
 import "./OceanAcidification.css";
 import TitleOceanAcidification from "../../Components/logo-3d/TitleOceanAcidification";
-import Shark3DMov from "../../Components/logo-3d/Shark3DMov";
+import Shark3DMov from "../../Components/logo-3d/Shark3dMov"
 import Shark3D from "../../Components/logo-3d/Shark3D";
 import { Physics } from "@react-three/rapier";
 import Shark3DMovAnimation from "../../Components/logo-3d/Shark3DAnimation";
