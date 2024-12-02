@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from "react";
+import React, { useState, useRef } from "react";
 import useAuthStore from "../stores/use-auth-store";
 import { useNavigate } from "react-router-dom";
 import audioFile from "../assets/Agua.mp3";
@@ -11,7 +11,7 @@ const Links = () => {
   const navigate = useNavigate();
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(1); // Volumen inicial al 100%
+  const [volume, setVolume] = useState(1);
   const [showVolumeSlider, setShowVolumeSlider] = useState(false);
 
   const handleAudioClick = () => {
@@ -25,7 +25,7 @@ const Links = () => {
         });
       }
       setIsPlaying(!isPlaying);
-      setShowVolumeSlider(!showVolumeSlider); // Mostrar/ocultar el slider
+      setShowVolumeSlider(!showVolumeSlider);
     }
   };
 
@@ -37,66 +37,17 @@ const Links = () => {
     }
   };
 
-  const handleLogout = useCallback(() => {
+  const handleLogout = () => {
     console.log("Click en cerrar sesión");
     logout();
     navigate("/");
-  }, [logout, navigate]);
-
-  const handleWaterPollution = useCallback(() => {
-    console.log("Click en Water Pollution");
-    logout();
-    navigate("/WaterPollution");
-  }, [logout, navigate]);
-
-  const handleWaterScacity = useCallback(() => {
-    console.log("Click en Water Scarcity");
-    logout();
-    navigate("/WaterScarcity");
-  }, [logout, navigate]);
-
-  const handleOceanAcidification = useCallback(() => {
-    console.log("Click en Ocean acidification");
-    logout();
-    navigate("/OceanAcidification");
-  }, [logout, navigate]);
+  };
 
   return (
     <>
       <header>
         <nav>
           <ul>
-            {}
-            <li>
-              <button
-                className="button-logout"
-                onClick={handleWaterPollution}
-                aria-label="Water Pollution"
-              >
-                Water Pollution
-              </button>
-            </li>
-
-            <li>
-              <button
-                className="button-logout"
-                onClick={handleWaterScacity}
-                aria-label="Water Scarcity"
-              >
-                Water Scarcity
-              </button>
-            </li>
-
-            <li>
-              <button
-                className="button-logout"
-                onClick={handleOceanAcidification}
-                aria-label="Ocean Acidification"
-              >
-                Ocean Acidification
-              </button>
-            </li>
-
             <li>
               <button
                 className="button-audio"

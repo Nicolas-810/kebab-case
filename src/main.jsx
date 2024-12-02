@@ -9,8 +9,8 @@ import Welcome from "./pages/welcome/Welcome";
 import Page404 from "./pages/page404/Page404";
 import WaterPollution from "./pages/WaterPollution/WaterPollution";
 import OceanAcidification from "./pages/OceanAcidification/OceanAcidification";
-import WaterScarcity from "./pages/WaterScarcity/WaterScarcity";
 import ModelScarcity from "./pages/modelScarcity/modelScarcity";
+import WaterScarcity from "./pages/waterscarcity/WaterScarcity";
 
 const router = createBrowserRouter([
   { path: "/", element: <Welcome /> },

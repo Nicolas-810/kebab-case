@@ -11,7 +11,6 @@ const Home = () => {
   const navigate = useNavigate();
   const [introVisible, setIntroVisible] = useState(true);
 
-  // Funciones para navegar a otras páginas
   const goToPage1 = () => {
     navigate("/WaterPollution");
   };
@@ -25,10 +24,9 @@ const Home = () => {
   };
 
   const goToHomePage = () => {
-    navigate("/home"); // Redirige a la página de inicio
+    navigate("/home");
   };
 
-  // Función para ocultar la introducción y mostrar la escena 3D
   const handleIntroComplete = () => {
     setIntroVisible(false);
   };
@@ -45,7 +43,6 @@ const Home = () => {
         </div>
       </header>
 
-      {/* Introducción inicial */}
       {introVisible ? (
         <div className="intro-screen">
           <h1>Bienvenido a HYDRONET</h1>
@@ -56,7 +53,6 @@ const Home = () => {
         </div>
       ) : (
         <>
-          {/* Sección de información sobre el agua */}
           <div className="importance-container">
             <h2 className="importance-title">
               ¿POR QUÉ ES IMPORTANTE CUIDAR EL AGUA?
@@ -72,7 +68,6 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Sección de Problemáticas del Agua */}
           <div className="problematicas-container">
             <div className="header-container">
               <h2>Problemáticas del Agua</h2>

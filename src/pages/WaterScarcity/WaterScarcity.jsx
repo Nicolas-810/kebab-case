@@ -11,20 +11,20 @@ import "../home/Home.css";
 const WaterScarcity = () => {
   const navigate = useNavigate();
 
-  const goBack = () => {
-    navigate("/home");
+  const goToHomePage = () => {
+    navigate("/home"); 
   };
 
-  const goNext = () => {
+  const goToWaterPollution = () => {
+    navigate("/WaterPollution");
+  };
+
+  const goToOceanAcidification = () => {
     navigate("/OceanAcidification");
   };
 
-  const goToModelPage = () => {
-    navigate("/modelScarcity");
-  };
-
-  const goToHomePage = () => {
-    navigate("/home"); // Redirige a la página de inicio
+  const goToGame = () => {
+    navigate("/modelScarcity"); 
   };
 
   return (
@@ -36,8 +36,9 @@ const WaterScarcity = () => {
             <h3 className="project-title">HYDRONET</h3>
           </div>
           <div className="button-section">
-            <button onClick={goBack}>Volver</button>
-            <button onClick={goNext}>Siguiente</button>
+            <button onClick={goToWaterPollution}>Contaminación del Agua</button> 
+            <button onClick={goToWaterPollution}>Escasez de agua</button> 
+            <button onClick={goToOceanAcidification}>Acidificación de los océanos</button>
           </div>
         </header>
 
@@ -141,7 +142,7 @@ const WaterScarcity = () => {
         </div>
 
         <div className="tarjetas-container">
-          <div className="tarjeta" onClick={goToModelPage}>
+          <div className="tarjeta" onClick={goToGame}>
             <img src={imagen1} alt="Imagen 1" className="tarjeta-imagen" />
             <h3>JUEGO</h3>
             <p>Tu objetivo es agarrar las botellas.</p>

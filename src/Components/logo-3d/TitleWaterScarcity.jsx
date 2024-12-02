@@ -8,7 +8,7 @@ const TitleWaterScarcity = ({ text, position, size = 1, color = "black" }) => {
         occlude
         className="Welcome-Text"
         center
-        distanceFactor={40 / size}
+        distanceFactor={100 / size}
         position={position}
       >
         <h4
