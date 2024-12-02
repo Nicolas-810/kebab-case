@@ -28,6 +28,10 @@ const Home = () => {
     navigate("/OceanAcidification");
   };
 
+  const goToHomePage = () => {
+    navigate("/home"); // Redirige a la página de inicio
+  };
+
   // Función para ocultar la introducción y mostrar la escena 3D
   const handleIntroComplete = () => {
     setIntroVisible(false);
@@ -36,7 +40,7 @@ const Home = () => {
   return (
     <div className="page-container home-page">
       <header className="navbar-container-home">
-        <div className="logo-section">
+        <div className="logo-section" onClick={goToHomePage}>
           <img src={groupLogo} alt="Logo del proyecto" className="logo" />
           <h3 className="project-title">HYDRONET</h3>
         </div>
@@ -49,21 +53,26 @@ const Home = () => {
       {introVisible ? (
         <div className="intro-screen">
           <h1>Bienvenido a HYDRONET</h1>
-          <p>Descubre cómo podemos proteger nuestros océanos y la vida marina.</p>
+          <p>
+            Descubre cómo podemos proteger nuestros océanos y la vida marina.
+          </p>
           <button onClick={handleIntroComplete}>Comenzar</button>
         </div>
       ) : (
         <>
           {/* Sección de información sobre el agua */}
           <div className="importance-container">
-            <h2 className="importance-title">¿POR QUÉ ES IMPORTANTE CUIDAR EL AGUA?</h2>
+            <h2 className="importance-title">
+              ¿POR QUÉ ES IMPORTANTE CUIDAR EL AGUA?
+            </h2>
             <p className="importance-text">
-              El agua es un recurso vital para todos los seres vivos. Es esencial
-              para la supervivencia humana, la agricultura, la industria y el
-              mantenimiento de los ecosistemas. Sin embargo, la contaminación y el
-              uso excesivo están poniendo en peligro nuestras fuentes de agua.
-              Cuidar y conservar este recurso es fundamental para garantizar un
-              futuro sostenible para las generaciones venideras.
+              El agua es un recurso vital para todos los seres vivos. Es
+              esencial para la supervivencia humana, la agricultura, la
+              industria y el mantenimiento de los ecosistemas. Sin embargo, la
+              contaminación y el uso excesivo están poniendo en peligro nuestras
+              fuentes de agua. Cuidar y conservar este recurso es fundamental
+              para garantizar un futuro sostenible para las generaciones
+              venideras.
             </p>
           </div>
 
@@ -78,9 +87,9 @@ const Home = () => {
                 <h3>Contaminación del Agua</h3>
                 <p>
                   La contaminación del agua se refiere a la introducción de
-                  sustancias nocivas que afectan la salud humana y los ecosistemas
-                  acuáticos, poniendo en peligro la biodiversidad y los recursos
-                  hídricos.
+                  sustancias nocivas que afectan la salud humana y los
+                  ecosistemas acuáticos, poniendo en peligro la biodiversidad y
+                  los recursos hídricos.
                 </p>
               </div>
 
@@ -88,10 +97,10 @@ const Home = () => {
                 <img src={imagen2} alt="Imagen 2" className="tarjeta-imagen" />
                 <h3>Escasez de agua</h3>
                 <p>
-                  La escasez de agua es un problema global cada vez más grave. Esto
-                  significa que hay menos agua disponible de la que necesitamos para
-                  satisfacer las demandas de la población y las actividades
-                  económicas.
+                  La escasez de agua es un problema global cada vez más grave.
+                  Esto significa que hay menos agua disponible de la que
+                  necesitamos para satisfacer las demandas de la población y las
+                  actividades económicas.
                 </p>
               </div>
 
@@ -100,8 +109,9 @@ const Home = () => {
                 <h3>Acidificación de los océanos</h3>
                 <p>
                   La acidificación de los océanos es el aumento de la acidez del
-                  agua marina por la absorción de dióxido de carbono (CO₂), lo que
-                  afecta negativamente a organismos que habitan en los océanos.
+                  agua marina por la absorción de dióxido de carbono (CO₂), lo
+                  que afecta negativamente a organismos que habitan en los
+                  océanos.
                 </p>
               </div>
 
@@ -111,7 +121,11 @@ const Home = () => {
                   <Sky sunPosition={[10, 10, 10]} />
                   <ambientLight intensity={0.5} />
                   <OrbitControls enablePan={false} autoRotate />
-                  <directionalLight position={[10, 10, 5]} intensity={1} castShadow />
+                  <directionalLight
+                    position={[10, 10, 5]}
+                    intensity={1}
+                    castShadow
+                  />
                   <TitleWater />
                   <Home3D position={[-10, 0, -17]} castShadow receiveShadow />
                 </Canvas>

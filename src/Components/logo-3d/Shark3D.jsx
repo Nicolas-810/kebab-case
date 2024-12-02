@@ -10,20 +10,25 @@ const Shark3D = (props) => {
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (sharkRef.current) {
-        switch (event.key) {
-          case "ArrowUp":
-          case "s":
+        // Prevenir el comportamiento predeterminado de las flechas y las letras
+        if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "w", "a", "s", "d"].includes(event.key)) {
+          event.preventDefault();
+        }
+
+        switch (event.key.toLowerCase()) { // Convertir la tecla a minúscula para mayor compatibilidad
+          case "arrowup":
+          case "w":
             sharkRef.current.position.z -= speed; // Mover hacia adelante
             break;
-          case "ArrowDown":
-          case "w":
+          case "arrowdown":
+          case "s":
             sharkRef.current.position.z += speed; // Mover hacia atrás
             break;
-          case "ArrowLeft":
+          case "arrowleft":
           case "a":
             sharkRef.current.position.x -= speed; // Mover hacia la izquierda
             break;
-          case "ArrowRight":
+          case "arrowright":
           case "d":
             sharkRef.current.position.x += speed; // Mover hacia la derecha
             break;
@@ -49,9 +54,9 @@ const Shark3D = (props) => {
           name="Body"
           geometry={nodes.Body.geometry}
           material={materials["PufferFish.004"]}
-          position={[-3.052, 0.421, -0.024]} // Asegúrate de que esta posición sea visible
-          rotation={[Math.PI / 2, 0, -1.569]}
-          onClick={() => alert("¡Cuidemos nuestros océanos y la vida marina!")} // Nuevo mensaje de alerta
+          position={[-3.052, 0.421, -0.024]} // Ajusta la posición inicial si es necesario
+          rotation={[Math.PI / 2, 0, -1.569]} // Ajusta la rotación inicial si es necesario
+          onClick={() => alert("¡Cuidemos nuestros océanos y la vida marina!")}
         />
       </group>
     </group>

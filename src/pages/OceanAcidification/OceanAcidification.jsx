@@ -17,11 +17,15 @@ const oceanAcidification = () => {
     navigate("/quiz");
   };
 
+  const goToHomePage = () => {
+    navigate("/home");  // Redirige a la página de inicio
+  };
+
   return (
     <div className="home-page-ocean">
       <div className="page-container-ocean">
         <header className="ocean-navbar-container">
-          <div className="logo-section">
+          <div className="logo-section" onClick={goToHomePage}>
             <img src={groupLogo} alt="Logo del proyecto" className="logo" />
             <h3 className="project-title">HYDRONET</h3>
           </div>
@@ -48,12 +52,12 @@ const oceanAcidification = () => {
         </div>
 
         <div className="Shark3d-container">
-          <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+          <Canvas camera={{ position: [0, 0, 25], fov: 50 }}>
             <Sky azimuth={0.1} altitude={0.2} turbidity={10} rayleigh={0.5} />
-            <TitleOceanAcidification />
+            <TitleOceanAcidification position={[20,-25,30]}/>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
-            <Shark3D position={[0, 0, -5]} />
+            <Shark3D position={[1, -1, 10]}  />
             <OrbitControls enablePan={false} />
           </Canvas>
         </div>
