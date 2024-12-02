@@ -11,7 +11,7 @@ const Pelota3D = (props) => {
   }, []);
 
   return (
-    <RigidBody ref={pelotaRef} colliders={false} friction={2}>
+    <RigidBody ref={pelotaRef} colliders={false} friction={2} gravityScale={0}>
       <mesh {...props} onClick={handleBall}>
         <group>
           <group>
