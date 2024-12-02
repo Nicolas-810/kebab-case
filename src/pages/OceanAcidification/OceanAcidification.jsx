@@ -14,7 +14,7 @@ const oceanAcidification = () => {
   };
 
   const goNext = () => {
-    navigate("quiz");
+    navigate("/quiz");
   };
 
   return (
