@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;  
-  background-color: #6395b7;
-  padding-top: 70px; 
+  height: 100vh; 
+  margin: 0;
+  padding: 0;
+  background-color: #96c6f6;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 .modelS-navbar-container {
@@ -22,48 +24,23 @@
 }
 
 .canvas-sea-container {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: calc(100vh - 70px); 
+  height: 100vh; 
 }
 
 .button-container {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  margin-top: 20px; 
-}
-
-.button-start {
-  background-color: #4CAF50;  
-  border: none;
-  color: white;
-  padding: 20px;  
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 50%;  
-  width: 100px;
-  height: 100px; 
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-.button-start:hover {
-  background-color: #ff0000;  
-}
-
-.button-start:active {
-  background-color: #ff0000; 
+  display: none; 
 }
 
 .instructions-message {
   position: absolute;
-  top: 50%;  /* Centra verticalmente */
-  left: 50%;  /* Centra horizontalmente */
-  transform: translate(-50%, -50%);  /* Ajusta el posicionamiento exacto */
-  background-color: rgba(0, 0, 0, 0.7);  /* Fondo semitransparente */
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: rgba(0, 0, 0, 0.7); 
   color: white;
   padding: 20px;
   border-radius: 10px;
@@ -83,7 +60,7 @@
 }
 
 .start-button {
-  background-color: #4CAF50;  /* Verde */
+  background-color: #4CAF50; 
   border: none;
   color: white;
   padding: 10px 20px;
@@ -91,14 +68,63 @@
   font-size: 16px;
   margin-top: 20px;
   cursor: pointer;
-  border-radius: 8px;  /* Bordes redondeados */
+  border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
 .start-button:hover {
-  background-color: #45a049;  /* Un verde más oscuro cuando se pasa el ratón */
+  background-color: #45a049; 
 }
 
 .start-button:active {
-  background-color: #3e8e41;  /* Un verde aún más oscuro cuando se hace clic */
+  background-color: #3e8e41; 
+}
+
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh; 
+  background-color: #1e3a8a;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.loading-screen h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.loading-screen p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.loading-screen ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.loading-screen li {
+  margin: 0.5rem 0;
+}
+
+.start-game-button {
+  background-color: #f59e0b;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.start-game-button:hover {
+  background-color: #d97706;
 }

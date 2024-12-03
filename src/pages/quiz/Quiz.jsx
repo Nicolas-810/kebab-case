@@ -157,7 +157,7 @@ const Quiz = () => {
 
   return (
     <>
-      <header className="waterP-navbar-container">
+      <header className="waterQ-navbar-container">
         <img src={groupLogo} alt="Logo del proyecto" className="logo" />
         <h3 className="project-title">HYDRONET</h3>
         <div className="button-section">

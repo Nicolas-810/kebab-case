@@ -4,27 +4,27 @@ import Antes1 from "../../assets/antesEs.jpeg";
 import Despues1 from "../../assets/despuesEs.jpeg";
 import Antes2 from "../../assets/AntesGlo.jpg";
 import Despues2 from "../../assets/DespuesGlo.jpg";
-import imagen1 from "../../assets/modeloscar.png";
+import imagen1 from "../../assets/Portada.jpeg";
 import "./WaterScarcity.css";
 import "../home/Home.css";
 
 const WaterScarcity = () => {
   const navigate = useNavigate();
 
-  const goBack = () => {
-    navigate("/home");
+  const goToHomePage = () => {
+    navigate("/home"); 
   };
 
-  const goNext = () => {
+  const goToWaterPollution = () => {
+    navigate("/WaterPollution");
+  };
+
+  const goToOceanAcidification = () => {
     navigate("/OceanAcidification");
   };
 
-  const goToModelPage = () => {
-    navigate("/modelScarcity");
-  };
-
-  const goToHomePage = () => {
-    navigate("/home"); // Redirige a la página de inicio
+  const goToGame = () => {
+    navigate("/modelScarcity"); 
   };
 
   return (
@@ -36,8 +36,9 @@ const WaterScarcity = () => {
             <h3 className="project-title">HYDRONET</h3>
           </div>
           <div className="button-section">
-            <button onClick={goBack}>Volver</button>
-            <button onClick={goNext}>Siguiente</button>
+            <button onClick={goToWaterPollution}>Contaminación del Agua</button> 
+            <button onClick={goToWaterPollution}>Escasez de agua</button> 
+            <button onClick={goToOceanAcidification}>Acidificación de los océanos</button>
           </div>
         </header>
 
@@ -141,15 +142,15 @@ const WaterScarcity = () => {
         </div>
 
         <div className="tarjetas-container">
-          <div className="tarjeta" onClick={goToModelPage}>
+          <div className="tarjeta" onClick={goToGame}>
             <img src={imagen1} alt="Imagen 1" className="tarjeta-imagen" />
             <h3>JUEGO</h3>
-            <p>Tu objetivo es esquivar las rocas que caen.</p>
+            <p>Tu objetivo es agarrar las botellas.</p>
             <p>
-              Usa las flechas laterales para mover el pez de lado a lado y
-              esquivar las rocas.
+              Usa las flechas laterales para mover al niño de lado a lado 
+              para agarrar las botellas.
             </p>
-            <p>¡Diviértete y ten cuidado con las rocas!</p>
+            <p>¡Diviértete y cuidado el sol esta muy fuerte!</p>
           </div>
         </div>
       </div>
