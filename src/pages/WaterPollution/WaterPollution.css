@@ -48,6 +48,7 @@
 }
 
 .text-container{
+  margin-top: 140px;
   display: flexbox;
   align-items: center; 
   justify-content: center; 
