@@ -80,18 +80,18 @@ button {
   font-size: 1rem;
   padding: 10px 20px;
   background-color: #4caf50;
-  color: white;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-button:hover {
+button-Quiz:hover {
   background-color: #45a049;
 }
 
-button:active {
+button-Quiz:active {
   background-color: #3e8e41;
 }
 

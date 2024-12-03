@@ -161,7 +161,7 @@ const Quiz = () => {
         <img src={groupLogo} alt="Logo del proyecto" className="logo" />
         <h3 className="project-title">HYDRONET</h3>
         <div className="button-section">
-          <button onClick={goBack}>Volver</button>
+          <button onClick={goBack} className="button-Quiz">Volver</button>
         </div>
       </header>
 
@@ -182,7 +182,7 @@ const Quiz = () => {
             <p>
               Obtuviste {score} de {questions.length} respuestas correctas.
             </p>
-            <button onClick={resetQuiz}>Intentar Nuevamente</button>
+            <button onClick={resetQuiz} className="button-Quiz" >Intentar Nuevamente</button>
           </div>
         ) : (
           <div className="question-section">
@@ -192,7 +192,7 @@ const Quiz = () => {
             <p>{questions[currentQuestion].question}</p>
             <div className="answer-section">
               {questions[currentQuestion].options.map((option, index) => (
-                <button
+                <button className="button-Quiz"
                   key={index}
                   onClick={() => handleAnswerOptionClick(index)}>
                   {option}
