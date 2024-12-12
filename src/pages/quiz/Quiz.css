@@ -10,7 +10,6 @@
 
 .progress-bar-container {
   margin: 20px auto;
-
   max-width: 600px;
   background-color: #e0e0e0;
   border-radius: 5px;
@@ -18,13 +17,11 @@
   margin: auto;
 }
 
-.space{
-
+.space {
   margin-top: 100px;
 }
 
 .progress-bar {
-
   height: 20px;
   background-color: #4caf50;
   color: white;
@@ -53,7 +50,7 @@ p {
   margin-bottom: 20px;
 }
 
-.answer-section button {
+.answer-section .buttonQ {
   display: block;
   width: 100%;
   margin: 10px 0;
@@ -67,16 +64,16 @@ p {
   transition: background-color 0.3s, transform 0.2s;
 }
 
-.answer-section button:hover {
+.answer-section .buttonQ:hover {
   background-color: #d4d4d4;
   transform: scale(1.02);
 }
 
-.answer-section button:active {
+.answer-section .buttonQ:active {
   background-color: #c8c8c8;
 }
 
-button {
+.buttonQ {
   font-size: 1rem;
   padding: 10px 20px;
   background-color: #4caf50;
@@ -87,11 +84,11 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.buttonQ:hover {
   background-color: #45a049;
 }
 
-button:active {
+.buttonQ:active {
   background-color: #3e8e41;
 }
 
