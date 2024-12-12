@@ -212,12 +212,12 @@ const ModelScarcity = () => {
               left: "20px",
               zIndex: 10,
               cursor: "pointer",
-              display: "flex", 
-              alignItems: "center", 
+              display: "flex",
+              alignItems: "center",
               padding: "10px",
-              backgroundColor: "transparent", 
+              backgroundColor: "transparent",
               fontSize: "16px",
-              color: "white", 
+              color: "white",
               border: "transparent",
             }}
           >
@@ -256,7 +256,6 @@ const ModelScarcity = () => {
           </button>
 
           <Canvas camera={{ position: [0, 10, 50], fov: 50 }} shadows>
-            <OrbitControls />
             <Lights />
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 20, 10]} intensity={1.5} />
