@@ -86,7 +86,7 @@ const Fish3D = ({ bottleRef, bottleRef2, onCollision, onCollision2, ...props }) 
     }
   }, [movement, actions]);
 
-  // Controlar el movimiento y la rotación del personaje
+  // Controlar el movimiento, la rotación del personaje y la cámara
   useFrame((state, delta) => {
     if (!group.current) return;
 
@@ -127,6 +127,20 @@ const Fish3D = ({ bottleRef, bottleRef2, onCollision, onCollision2, ...props }) 
         onCollision2(); // Llama a la función de colisión
       }
     }
+
+    // **Logica para mover la cámara**
+    const cameraOffset = { x: 0, y: 5, z: 25 }; // Distancia de la cámara con respecto al personaje
+    const cameraPosition = state.camera.position;
+
+    // La cámara sigue suavemente la posición del personaje
+    const targetPosition = [
+      position.x + cameraOffset.x, 
+      position.y + cameraOffset.y, 
+      position.z + cameraOffset.z
+    ];
+
+    cameraPosition.lerp({ x: targetPosition[0], y: targetPosition[1], z: targetPosition[2] }, 0.1);
+    state.camera.lookAt(position.x, position.y, position.z);
   });
 
   return (
