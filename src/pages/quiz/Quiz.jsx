@@ -138,16 +138,13 @@ const Quiz = () => {
 
   return (
     <>
-      <div className="home-page-modelQ">
-        <header className="waterQ-navbar-container">
-          <img src={groupLogo} alt="Logo del proyecto" className="logo" />
-          <h3 className="project-title">HYDRONET</h3>
-          <div className="button-section">
-            <button className="buttonQ" onClick={goBack}>
-              Volver
-            </button>
-          </div>
-        </header>
+      <header className="waterQ-navbar-container">
+        <img src={groupLogo} alt="Logo del proyecto" className="logo" />
+        <h3 className="project-title">HYDRONET</h3>
+        <div className="button-section">
+          <button onClick={goBack}>Volver</button>
+        </div>
+      </header>
 
         <div className="space">
           <div className="progress-bar-container">
@@ -160,37 +157,32 @@ const Quiz = () => {
           </div>
         </div>
 
-        <div className="quiz-container">
-          {showScore ? (
-            <div className="score-section">
-              <h2>¡Has terminado!</h2>
-              <p>
-                Obtuviste {score} de {questions.length} respuestas correctas.
-              </p>
-              <button className="buttonQ" onClick={resetQuiz}>
-                Intentar Nuevamente
-              </button>
+      <div className="quiz-container">
+        {showScore ? (
+          <div className="score-section">
+            <h2>¡Has terminado!</h2>
+            <p>
+              Obtuviste {score} de {questions.length} respuestas correctas.
+            </p>
+            <button onClick={resetQuiz}>Intentar Nuevamente</button>
+          </div>
+        ) : (
+          <div className="question-section">
+            <h2>
+              Pregunta {currentQuestion + 1} de {questions.length}
+            </h2>
+            <p>{questions[currentQuestion].question}</p>
+            <div className="answer-section">
+              {questions[currentQuestion].options.map((option, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswerOptionClick(index)}>
+                  {option}
+                </button>
+              ))}
             </div>
-          ) : (
-            <div className="question-section">
-              <h2>
-                Pregunta {currentQuestion + 1} de {questions.length}
-              </h2>
-              <p>{questions[currentQuestion].question}</p>
-              <div className="answer-section">
-                {questions[currentQuestion].options.map((option, index) => (
-                  <button
-                    key={index}
-                    className="buttonQ"
-                    onClick={() => handleAnswerOptionClick(index)}
-                  >
-                    {option}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </>
   );
