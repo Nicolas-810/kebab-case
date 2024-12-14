@@ -11,8 +11,6 @@ const House3D = (props) => {
   const PATH = useMemo(() => "materials/waterconta/rock_face_", []);
   const { actions } = useAnimations(animations, houseRef);
 
-  console.log(actions);
-
   const floorTexture = useTexture({
     map: PATH + "diff_1k.jpg",
     displacementMap: PATH + "disp_1k.png",

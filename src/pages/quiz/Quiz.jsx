@@ -21,6 +21,7 @@ const Quiz = () => {
       ],
       answer: 1,
     },
+
     {
       question:
         "¿Cuál es la forma más efectiva de conservar el agua en el hogar?",
@@ -109,6 +110,7 @@ const Quiz = () => {
       ],
       answer: 0,
     },
+
   ];
 
   const handleAnswerOptionClick = (index) => {

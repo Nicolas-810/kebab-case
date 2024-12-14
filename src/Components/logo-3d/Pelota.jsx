@@ -1,17 +1,17 @@
 import React, { useCallback, useRef } from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import { BallCollider, RigidBody } from "@react-three/rapier";
 
 const Pelota3D = (props) => {
   const pelotaRef = useRef(null);
-  const { nodes, materials, animations } = useGLTF("../models-3D/pelota.glb");
+  const { nodes } = useGLTF("../models-3D/pelota.glb");
 
   const handleBall = useCallback(() => {
     pelotaRef.current.applyTorqueImpulse({ x: 0, y: 20, z: -5 }, true);
   }, []);
 
   return (
-    <RigidBody ref={pelotaRef} colliders={false} friction={2} gravityScale={0}>
+    <RigidBody ref={pelotaRef} colliders={false} friction={2}>
       <mesh {...props} onClick={handleBall}>
         <group>
           <group>
