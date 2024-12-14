@@ -9,13 +9,14 @@ const Shark3DMov = (props) => {
   );
 
   const handleShark3D = useCallback(() => {
-    shark3DMovuseRef.current.addTorque({ x: 0, y: 1, z: -5 }, true);
+    shark3DMovuseRef.current.setTranslation({ x: 5, y: 0, z: -15 }, true);
+    shark3DMovuseRef.current.applyImpulse({ x: -3, y: 0, z: 5 }, true);
   }, []);
 
   return (
     <RigidBody
       ref={shark3DMovuseRef}
-      type="kinematic"
+
       gravityScale={0}
       colliders={false}
       friction={2}
