@@ -6,10 +6,10 @@ import "./index.css";
 
 import Home from "./pages/home/Home";
 import Welcome from "./pages/welcome/Welcome";
-import Page404 from "./pages/page404/Page404";
+import Page404 from "./pages/Page404/Page404";
 import WaterPollution from "./pages/WaterPollution/WaterPollution";
 import OceanAcidification from "./pages/OceanAcidification/OceanAcidification";
-import ModelScarcity from "./pages/modelScarcity/modelScarcity";
+import ModelScarcity from "./pages/ModelScarcity/ModelScarcity";
 import WaterScarcity from "./pages/WaterScarcity/WaterScarcity";
 import Quiz from "./pages/Quiz/Quiz";
 import Quizv2 from "./pages/Quiz/Quizv2";
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   { path: "/WaterScarcity", element: <WaterScarcity /> },
   { path: "/WaterPollution", element: <WaterPollution /> },
   { path: "/OceanAcidification", element: <OceanAcidification /> },
-  { path: "/modelScarcity", element: <ModelScarcity /> },
+  { path: "/ModelScarcity", element: <ModelScarcity /> },
   { path: "/Quiz", element: <Quiz /> },
   { path: "/Quizv2", element: <Quizv2 /> },
   { path: "*", element: <Page404 /> },
