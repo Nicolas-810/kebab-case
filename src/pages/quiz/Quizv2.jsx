@@ -22,7 +22,7 @@ import Lights from "../../Components/CompontsScarcity/Lights";
 import PostProcessing from "../../Components/CompontsScarcity/Postprocessing";
 import ModelWithInteraction from "../../Components/logo-3d/Qestions";
 
-const Quizv2 = () => {
+const ModelScarcity = () => {
   const [playCollision] = useSound(collisionSound, { volume: 1 });
   const [playCollision2] = useSound(collisionSound2, { volume: 1 });
   const [playSound, { stop, isPlaying }] = useSound(soundD, {
@@ -30,16 +30,14 @@ const Quizv2 = () => {
     loop: true,
   });
 
-
-
   const [soundEnabled, setSoundEnabled] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
   const [showLoadingScreen, setShowLoadingScreen] = useState(true);
-  const [isPostProcessingEnabled, setIsPostProcessingEnabled] = useState(true);
+  const [isPostProcessingEnabled, setIsPostProcessingEnabled] = useState(true); // Estado para PostProcessing
   const bottleRef = useRef();
   const bottleRef2 = useRef();
   const [score, setScore] = useState(0);
-  const [setBottlesCollected] = useState(0);
+  const [bottlesCollected, setBottlesCollected] = useState(0);
   const [thirst, setThirst] = useState(100);
   const [life, setLife] = useState(100);
   const [gameOver, setGameOver] = useState(false);
@@ -127,7 +125,7 @@ const Quizv2 = () => {
   useEffect(() => {
     if (gameWon) {
       const timer = setTimeout(() => {
-        navigate("/home");
+        navigate("/WaterScarcity");
       }, 5000);
 
       return () => clearTimeout(timer);
@@ -137,7 +135,7 @@ const Quizv2 = () => {
   useEffect(() => {
     if (gameOver && !gameWon) {
       const timer = setTimeout(() => {
-        navigate("/home");
+        navigate("/WaterScarcity");
       }, 5000);
 
       return () => clearTimeout(timer);
@@ -274,24 +272,30 @@ const Quizv2 = () => {
                 <Cactus key={index} position={pos} scale={[0.5, 0.5, 0.5]} />
               ))}
 
+              <Fish3D
+                bottleRef={bottleRef}
+                bottleRef2={bottleRef2}
+                position={[0, 0, 35]}
+                onCollision={handleCollision}
+              />
             </Physics>
             {gameStarted && (
               <>
                 <TitleWaterScarcity
                   text={`Puntaje: ${score}`}
-                  position={[-30, 20, -20]}
+                  position={[30, 20, -20]}
                   size={1.5}
                   color="orange"
                 />
                 <TitleWaterScarcity
                   text={`Agua: ${thirst}%`}
-                  position={[1, 20, -20]}
+                  position={[50, 20, -20]}
                   size={1.5}
                   color="blue"
                 />
                 <TitleWaterScarcity
                   text={`Vida: ${life}%`}
-                  position={[30, 20, -20]}
+                  position={[70, 20, -20]}
                   size={1.5}
                   color="green"
                 />
@@ -333,6 +337,7 @@ const Quizv2 = () => {
                 />
               </>
             )}
+            <ModelWithInteraction/>
           </Canvas>
         </>
       )}
@@ -340,4 +345,4 @@ const Quizv2 = () => {
   );
 };
 
-export default Quizv2;
+export default ModelScarcity;

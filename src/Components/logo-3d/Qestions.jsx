@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Html } from "@react-three/drei";
 
 const questions = [
@@ -39,8 +39,7 @@ const questions = [
   },
 
   {
-    question:
-      "¿Cuál es la principal causa de la acidificación de los océanos?",
+    question: "¿Cuál es la principal causa de la acidificación de los océanos?",
     options: [
       "La sobrepesca",
       "El aumento del dióxido de carbono (CO₂) en la atmósfera",
@@ -110,8 +109,7 @@ const questions = [
     answer: 1,
   },
   {
-    question:
-      "¿Por qué es importante proteger las fuentes naturales de agua?",
+    question: "¿Por qué es importante proteger las fuentes naturales de agua?",
     options: [
       "Para asegurar su disponibilidad a largo plazo",
       "Para desviar el agua hacia zonas urbanas",
@@ -123,17 +121,18 @@ const questions = [
 ];
 
 const Html3DWaterPollution = ({ onOptionSelected }) => {
+  
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
   const handleOptionClick = (optionIndex) => {
-    const isCorrect =
-      optionIndex === questions[currentQuestionIndex].answer;
+    
+    const isCorrect = optionIndex === questions[currentQuestionIndex].answer;
 
     onOptionSelected && onOptionSelected(isCorrect);
 
-    // Cambiar a la siguiente pregunta o finalizar
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
+
     } else {
       console.log("Cuestionario completado");
     }
@@ -141,17 +140,18 @@ const Html3DWaterPollution = ({ onOptionSelected }) => {
 
   const currentQuestion = questions[currentQuestionIndex];
 
+  const optionColors = ["#FF5733", "blue", "black", "#F1C40F"];
+
   return (
     <Html
       center
       distanceFactor={15}
       transform
-      position={[-8, -10, 0]}
+      position={[-6, 18, -30]} // Fija la posición de las preguntas y respuestas
       style={{
         color: "white",
-        fontSize: "14pt",
-      }}
-    >
+        fontSize: "25pt",
+      }}>
       <div style={{ textAlign: "center" }}>
         <h1>{currentQuestion.question}</h1>
         <div
@@ -159,23 +159,25 @@ const Html3DWaterPollution = ({ onOptionSelected }) => {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            gap: "50px", // Espaciado horizontal entre opciones
+            gap: "50px",
             marginTop: "20px",
-          }}
-        >
+          }}>
           {currentQuestion.options.map((option, index) => (
             <div
               key={index}
               style={{
                 cursor: "pointer",
-                padding: "10px 20px",
-                backgroundColor: "rgba(0, 0, 0, 0.5)",
-                borderRadius: "10px",
+                padding: "10px",
+                width: "500px",
+                backgroundColor: optionColors[index % optionColors.length],
+                borderRadius: "15px",
                 textAlign: "center",
-                flex: "1", // Opcional: igual ancho para todas las opciones
+                color: "white",
+                fontWeight: "bold",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)",
+                flex: "1",
               }}
-              onClick={() => handleOptionClick(index)}
-            >
+              onClick={() => handleOptionClick(index)}>
               {option}
             </div>
           ))}
@@ -185,25 +187,75 @@ const Html3DWaterPollution = ({ onOptionSelected }) => {
   );
 };
 
-// Componente principal con modelo
-const ModelWithInteraction = () => {
-  const handleModelClick = (optionIndex) => {
-    console.log(`Opción seleccionada: ${optionIndex}`);
-  };
+const randomPosition = () => {
+  return [Math.random() * 45 - 15, 0, Math.random() * 45 - 15];
+};
+
+const arePositionsEqual = (pos1, pos2) => {
+  return Math.abs(pos1[0] - pos2[0]) < 1 && Math.abs(pos1[2] - pos2[2]) < 1;
+};
+
+const ModelWithRandomPositions = () => {
+  const [positions, setPositions] = useState([
+    randomPosition(),
+    randomPosition(),
+    randomPosition(),
+    randomPosition(),
+  ]);
+  const [previousPositions, setPreviousPositions] = useState(positions);
+
+  useEffect(() => {
+    let newPositions = [
+      randomPosition(),
+      randomPosition(),
+      randomPosition(),
+      randomPosition(),
+    ];
+
+    let validPositions = newPositions.map((newPos, index) => {
+      let prevPos = previousPositions[index];
+
+      if (arePositionsEqual(prevPos, newPos)) {
+        return randomPosition();
+      }
+      return newPos;
+    });
+
+    setPositions(validPositions);
+    setPreviousPositions(validPositions);
+  }, [questions.length]);
 
   return (
     <>
-      <mesh onClick={() => handleModelClick(1)}>
-        <boxGeometry args={[1, 1, 1]} />
+      <mesh position={positions[0]}>
+        <boxGeometry args={[3, 3, 3]} />
         <meshStandardMaterial color="blue" />
       </mesh>
+
+      <mesh position={positions[1]}>
+        <boxGeometry args={[3, 3, 3]} />
+        <meshStandardMaterial color="#FF5733" />
+      </mesh>
+
+      <mesh position={positions[2]}>
+        <boxGeometry args={[3, 3, 3]} />
+        <meshStandardMaterial color="black" />
+      </mesh>
+
+      <mesh position={positions[3]}>
+        <boxGeometry args={[3, 3, 3]} />
+        <meshStandardMaterial color="#F1C40F" />
+      </mesh>
+
       <Html3DWaterPollution
         onOptionSelected={(isCorrect) => {
-          console.log(isCorrect ? "Respuesta correcta" : "Respuesta incorrecta");
+          console.log(
+            isCorrect ? "Respuesta correcta" : "Respuesta incorrecta"
+          );
         }}
       />
     </>
   );
 };
 
-export default ModelWithInteraction;
+export default ModelWithRandomPositions;
