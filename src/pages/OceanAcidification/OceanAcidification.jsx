@@ -4,11 +4,11 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sky } from "@react-three/drei";
 import "./OceanAcidification.css";
 import TitleOceanAcidification from "../../Components/logo-3d/TitleOceanAcidification";
-import Shark3DMov from "../../Components/logo-3d/Shark3dMov"
+import Shark3DMov from "../../Components/logo-3d/Shark3dMov";
 import Shark3D from "../../Components/logo-3d/Shark3D";
 import { Physics } from "@react-three/rapier";
-import Shark3DMovAnimation from "../../Components/logo-3d/Shark3DAnimation";
 import { Shark } from "../../Components/logo-3d/Shark";
+import Desert from "../../Components/CompontsScarcity/Desert";
 
 const oceanAcidification = () => {
   const navigate = useNavigate();
@@ -53,15 +53,16 @@ const oceanAcidification = () => {
         </div>
 
         <div className="Shark3d-container">
-          <Canvas camera={{ position: [0, 5, 25], fov: 65 }}>
+          <Canvas camera={{ position: [0, 5, 25], fov: 65 }} castShadow>
             <Sky azimuth={0.1} altitude={0.2} turbidity={10} rayleigh={0.5} />
             <TitleOceanAcidification position={[20, -25, 30]} />
-            <ambientLight intensity={0.5} />
+            <ambientLight intensity={1.5}/>
             <directionalLight position={[10, 10, 5]} intensity={1} />
             <Physics>
-            <Shark position = {[0,2,-7]} scale = {[5,5,5]}/>
-            <Shark3DMov position = {[22,2,3]} scale = {[1,1,1]}/>
-            <Shark3D position = {[-25,2,6]}/>
+              <Shark position={[0, 5, -7]} scale={[5, 5, 5]} />
+              <Shark3DMov position={[22, 2, 3]} scale={[1, 1, 1]} />
+              <Shark3D position={[-25, 2, 6]} />
+              <Desert position = {[0,-25,0]}/>
             </Physics>
             <OrbitControls enablePan={false} />
           </Canvas>
