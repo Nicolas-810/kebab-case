@@ -20,7 +20,7 @@ const Quiz = () => {
       ],
       answer: 1,
     },
-    // Resto de las preguntas
+   
   ];
 
   const handleAnswerOptionClick = (index) => {

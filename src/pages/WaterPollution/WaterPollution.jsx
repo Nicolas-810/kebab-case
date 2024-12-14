@@ -1,14 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
-import { Cloud, OrbitControls, Sky, Sparkles, Stars } from "@react-three/drei";
+import {
+  Cloud,
+  OrbitControls,
+  PositionalAudio,
+  Sky,
+  Sparkles,
+  Stars,
+} from "@react-three/drei";
 import groupLogo from "../../assets/Icon.png";
 import "./WaterPollution.css";
 import House3D from "../../Components/logo-3d/LightHouse";
 import Dog from "../../Components/logo-3d/Dog";
 import Html3DWaterPollution from "../../Components/Html3DWaterPollution";
-import TitleWaterPollution from "../../Components/logo-3d/TitleWaterPollution"
+import TitleWaterPollution from "../../Components/logo-3d/TitleWaterPollution";
 import { Physics } from "@react-three/rapier";
 import Pelota3D from "../../Components/logo-3d/Pelota";
+import { useCallback, useRef } from "react";
+import PostProcessingWaterPollution from "../../Components/PostProcessingWaterPollution";
 
 const WaterPollution = () => {
   const navigate = useNavigate();
@@ -22,8 +31,15 @@ const WaterPollution = () => {
   };
 
   const goToHomePage = () => {
-    navigate("/home"); // Redirige a la página de inicio
+    navigate("/home");
   };
+
+  const audioRef = useRef(null);
+
+  const handleAudio = useCallback(() => {
+    audioRef.current.play();
+    audioRef.current.setVolume(2);
+  }, []);
 
   return (
     <div className="home-page-pullution">
@@ -45,7 +61,7 @@ const WaterPollution = () => {
               ¿Sabías que la contaminación del agua es una de las principales
               amenazas para el planeta?
             </h2>
-            <p>
+            <p className="text">
               La contaminación del agua ocurre cuando sustancias dañinas como
               químicos, residuos industriales y microorganismos ingresan en
               cuerpos de agua como ríos, lagos y océanos, volviéndolos
@@ -53,89 +69,83 @@ const WaterPollution = () => {
               en general.
             </p>
           </div>
-          <div className="text-box">
-            <h2 className="text-title">
-              Principales Causas de la Contaminación del Agua
-            </h2>
-            <p>
-              <ul>
+          <div className="text-container">
+            <div className="text-box">
+              <h2 className="text-title">
+                Principales Causas de la Contaminación del Agua
+              </h2>
+              <ul className="text">
                 <li>
-                  Desechos Industriales: Muchas industrias vierten productos
-                  químicos y tóxicos directamente en ríos y mares sin tratarlos
-                  adecuadamente. Esto incluye metales pesados, plásticos y
-                  residuos químicos.
+                  <strong>Desechos Industriales:</strong> Muchas industrias
+                  vierten productos químicos y tóxicos directamente en ríos y
+                  mares sin tratarlos adecuadamente. Esto incluye metales
+                  pesados, plásticos y residuos químicos.
                 </li>
-
                 <li>
-                  Agricultura: El uso de fertilizantes y pesticidas en la
-                  agricultura contamina el agua al filtrarse en el suelo y
-                  llegar a los cuerpos de agua cercanos. El nitrato en los
-                  fertilizantes, por ejemplo, contribuye al crecimiento de algas
-                  que consume el oxígeno del agua.
+                  <strong>Agricultura:</strong> El uso de fertilizantes y
+                  pesticidas en la agricultura contamina el agua al filtrarse en
+                  el suelo y llegar a los cuerpos de agua cercanos. El nitrato
+                  en los fertilizantes, por ejemplo, contribuye al crecimiento
+                  de algas que consume el oxígeno del agua.
                 </li>
-
                 <li>
-                  Desechos Domésticos: Las aguas residuales de los hogares
-                  (incluyendo detergentes, jabones y residuos orgánicos) pueden
-                  contaminar las fuentes de agua si no son tratadas
-                  correctamente.
+                  <strong>Desechos Domésticos:</strong> Las aguas residuales de
+                  los hogares (incluyendo detergentes, jabones y residuos
+                  orgánicos) pueden contaminar las fuentes de agua si no son
+                  tratadas correctamente.
                 </li>
-
                 <li>
-                  Derrames de Petróleo: Los derrames de petróleo en el océano
-                  afectan a millones de especies acuáticas y pueden tardar
-                  décadas en limpiarse completamente.
+                  <strong>Derrames de Petróleo:</strong> Los derrames de
+                  petróleo en el océano afectan a millones de especies acuáticas
+                  y pueden tardar décadas en limpiarse completamente.
                 </li>
-
                 <li>
-                  Basura Plástica: El plástico es un contaminante persistente
-                  que afecta la vida marina y puede ser ingerido por animales
-                  acuáticos, entrando en la cadena alimenticia.
+                  <strong>Basura Plástica:</strong> El plástico es un
+                  contaminante persistente que afecta la vida marina y puede ser
+                  ingerido por animales acuáticos, entrando en la cadena
+                  alimenticia.
                 </li>
               </ul>
-            </p>
-          </div>
-          <div className="text-box">
-            <h2 className="text-title">
-              Solución al problema de la contaminación del Agua
-            </h2>
-            <p>
-              <ul>
-                <li>
-                  Actualizar plantas de tratamiento: Mejorar las instalaciones
-                  para el tratamiento de aguas residuales ayuda a remover
-                  contaminantes industriales, agrícolas y domésticos antes de
-                  que lleguen a ríos y mares.
-                </li>
+            </div>
 
+            <div className="text-box">
+              <h2 className="text-title">
+                Solución al problema de la contaminación del Agua
+              </h2>
+              <ul className="text">
                 <li>
-                  Instalación de sistemas de filtración avanzados: Las
-                  tecnologías avanzadas, como los sistemas de filtración por
+                  <strong>Actualizar plantas de tratamiento:</strong> Mejorar
+                  las instalaciones para el tratamiento de aguas residuales
+                  ayuda a remover contaminantes industriales, agrícolas y
+                  domésticos antes de que lleguen a ríos y mares.
+                </li>
+                <li>
+                  <strong>
+                    Instalación de sistemas de filtración avanzados:
+                  </strong>{" "}
+                  Las tecnologías avanzadas, como los sistemas de filtración por
                   membrana, pueden ser más efectivas en la eliminación de
                   toxinas y bacterias.
                 </li>
-
                 <li>
-                  Agricultura sostenible: Promover técnicas de agricultura
-                  sostenible, como el uso de fertilizantes orgánicos y
-                  pesticidas naturales, reduce la contaminación que llega a
+                  <strong>Agricultura sostenible:</strong> Promover técnicas de
+                  agricultura sostenible, como el uso de fertilizantes orgánicos
+                  y pesticidas naturales, reduce la contaminación que llega a
                   cuerpos de agua.
                 </li>
-
                 <li>
-                  Crear barreras vegetales: Los árboles y plantas cerca de
-                  campos agrícolas pueden absorber el exceso de nutrientes y
-                  contaminantes antes de que lleguen a los ríos.
+                  <strong>Crear barreras vegetales:</strong> Los árboles y
+                  plantas cerca de campos agrícolas pueden absorber el exceso de
+                  nutrientes y contaminantes antes de que lleguen a los ríos.
                 </li>
-
                 <li>
-                  Los humedales y manglares actúan como filtros naturales al
+                  <strong>Protección de humedales y manglares:</strong> Los
+                  humedales y manglares actúan como filtros naturales al
                   absorber y filtrar contaminantes. Proteger estos ecosistemas
                   es crucial para la purificación del agua.
                 </li>
-                <br />
               </ul>
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -150,7 +160,7 @@ const WaterPollution = () => {
             size={15}
             speed={5}
             scale={12}
-            position={[-9, -5, -15]} // Posición de Sparkles (x, y, z)
+            position={[-9, -5, -15]}
           />
 
           <Cloud
@@ -182,17 +192,26 @@ const WaterPollution = () => {
             saturation={0}
             speed={1}
           />
-          <Physics >
-          <Dog position={[-12, -7, -15]} />
+          <Physics>
+            <Dog position={[-12, -7, -15]} />
 
-          <Pelota3D position={[-23, -1, -2]} />
+            <Pelota3D position={[-22, -1, -2]} />
 
-          <House3D position={[-10, -10, -17]} />
+            <House3D position={[-10, -10, -17]} onClick={handleAudio} />
+            <PostProcessingWaterPollution/>
+            
           </Physics>
           <OrbitControls />
           <TitleWaterPollution />
+          <group position={[-10, -5, -15]}>
+            <PositionalAudio
+              ref={audioRef}
+              loop
+              url="/sound.mp3"
+              distance={5}
+            />
+          </group>
         </Canvas>
-
       </div>
     </div>
   );

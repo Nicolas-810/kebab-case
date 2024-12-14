@@ -13,7 +13,7 @@ const Dog = (props) => {
     actions["Pleased"].play();
     return () => actions["Pleased"].stop();
   }, [actions]);
-  console.log(actions);
+ 
 
 
   return (

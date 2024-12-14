@@ -1,8 +1,8 @@
 .home-page-pullution {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
-  justify-content: center; /* Centra verticalmente */
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: auto;
   background-color: #6395b7;
@@ -14,13 +14,13 @@
 .page-container-pollution {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
-  justify-content: center; /* Centra verticalmente */
+  align-items: center;
+  justify-content: center;
   height: 120vh;
   background-color: #6395b7;
   background-size: cover;
   background-position: center;
-  margin-top: 290PX;
+  margin-top: 290px;
   border-radius: 10px;
 }
 
@@ -38,30 +38,35 @@
 }
 
 .house3D-container {
-  margin-top: 290px;
-  width: 222vh; 
-  height: 85vh; 
+  margin-top: 300px;
+  width: 222vh;
+  height: 85vh;
   justify-content: center;
   align-items: center;
   padding: 1px;
   border-radius: 20px;
 }
 
-.text-container{
-  margin-top: 140px;
+.text-container {
   display: flexbox;
-  align-items: center; 
-  justify-content: center; 
-  text-align: justify
-}
-
-.text-box{
-  align-items: center; 
+  align-items: center;
   justify-content: center;
-  margin-top: 30px; 
   text-align: justify;
 }
 
-.text-title{
- text-align: center;
+.text-box {
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  text-align: justify;
+}
+
+.text-title {
+  text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text {
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
