@@ -21,110 +21,91 @@ const Quiz = () => {
       ],
       answer: 1,
     },
-
     {
       question:
-        "¿Cuál es una de las principales consecuencias de la acidificación para las especies marinas?",
+        "¿Cuál es la forma más efectiva de conservar el agua en el hogar?",
       options: [
-        "Aumento de la biodiversidad ",
-        "Mejora en la reproducción de especies ",
-        "Dificultad para formar caparazones y esqueletos de carbonato de calcio",
-        "E Mayor resistencia a cambios ambientales  ",
-      ],
-      answer: 2,
-    },
-
-    {
-      question:
-        "¿Cómo afecta la acidificación de los océanos a las comunidades costeras?",
-      options: [
-        "Reduce el turismo pero mejora la pesca",
-        "Protege las costas contra tormentas y erosión",
-        "Amenaza la economía y la seguridad alimentaria",
-        "Disminuye la diversidad pero no afecta a las personas",
-      ],
-      answer: 2,
-    },
-
-    {
-      question:
-        "¿Cuál es la principal causa de la acidificación de los océanos?",
-      options: [
-        "La sobrepesca",
-        "El aumento del dióxido de carbono (CO₂) en la atmósfera",
-        "La contaminación plástica  ",
-        "El aumento de la temperatura del agua ",
+        "Lavar el auto todos los días",
+        "Cerrar el grifo mientras te cepillas los dientes",
+        "Regar el jardín al mediodía",
+        "Usar solo agua embotellada",
       ],
       answer: 1,
     },
-
     {
-      question:
-        "¿Cuál es una estrategia efectiva para reducir la contaminación del agua causada por la agricultura?",
-
+      question: "¿Qué es una práctica sostenible para la pesca?",
       options: [
-        "Utilizar fertilizantes y pesticidas sintéticos en mayores cantidades",
-        "Promover técnicas de agricultura sostenible, como fertilizantes orgánicos",
-        "Incrementar la deforestación cercana a campos agrícolas",
-        "Construir más fábricas cerca de fuentes de agua",
-      ],
-      answer: 1,
-    },
-
-    {
-      question:
-        "¿Cuál de las siguientes es una causa principal de la contaminación del agua?",
-
-      options: [
-        "El uso de detergentes biodegradables en el hogar",
-        "La presencia de árboles cerca de cuerpos de agua",
-        "El vertido de desechos industriales no tratados en ríos y mares",
-        "La instalación de sistemas de filtración avanzados en plantas de tratamiento",
-      ],
-      answer: 2,
-    },
-
-    {
-      question:
-        "¿Qué ocurre cuando sustancias dañinas ingresan en cuerpos de agua como ríos, lagos y océanos?",
-      options: [
-        "Mejoran la calidad del agua",
-        "Favorecen el crecimiento de ecosistemas acuáticos",
-        "Generan agua potable más rápidamente",
-        "Pueden volverse peligrosos para humanos, vida silvestre y el medio ambiente",
-      ],
-      answer: 3,
-    },
-
-    {
-      question: "¿Cuáles son algunos de los efectos de la escasez de agua?",
-      options: [
-        "Mejora la producción de alimentos",
-        "Aumenta la estabilidad económica global",
-        "Puede provocar crisis humanitarias y conflictos",
-        "Facilita el acceso al agua limpia",
-      ],
-      answer: 2,
-    },
-    {
-      question:
-        "¿Cuál de las siguientes es una solución para la escasez de agua?",
-      options: [
-        "Incrementar el uso de agua en procesos industriales",
-        "Reutilizar aguas residuales tratadas",
-        "Contaminar fuentes de agua para acelerar su renovación",
-        "Reducir la desalinización en zonas costeras",
+        "Usar redes de arrastre masivo",
+        "Respetar las temporadas de veda",
+        "Pescar solo las especies más abundantes",
+        "Pescar con dinamita para capturar más peces",
       ],
       answer: 1,
     },
     {
       question:
-        "¿Por qué es importante proteger las fuentes naturales de agua?",
+        "¿Cuál de las siguientes acciones ayuda a reducir el consumo de agua?",
       options: [
-        "Para asegurar su disponibilidad a largo plazo",
-        "Para desviar el agua hacia zonas urbanas",
-        "Para permitir la contaminación controlada",
-        "Para reducir la biodiversidad en los ecosistemas",
+        "Reparar fugas de agua en casa",
+        "Lavar la ropa todos los días",
+        "Dejar la llave abierta al lavar platos",
+        "Bañarse durante más de 30 minutos",
+      ],
+      answer: 0,
+    },
+    {
+      question:
+        "¿Qué elemento contribuye más a la contaminación de los océanos?",
+      options: [
+        "Residuos plásticos",
+        "Restos de comida",
+        "Arena de la playa",
+        "Rocas marinas",
+      ],
+      answer: 0,
+    },
+    {
+      question:
+        "¿Qué organismo marino se ve más afectado por la contaminación por plásticos?",
+      options: ["Tiburones", "Tortugas marinas", "Corales", "Medusas"],
+      answer: 1,
+    },
+    {
+      question:
+        "¿Cuál es una forma responsable de deshacerse de los residuos electrónicos?",
+      options: [
+        "Tirarlos a la basura común",
+        "Llevarlos a un centro de reciclaje especializado",
+        "Dejarlos en la calle para que alguien los recoja",
+        "Quemarlos para reducir el espacio que ocupan",
+      ],
+      answer: 1,
+    },
+    {
+      question:
+        "¿Cuál es una alternativa ecológica a las botellas de plástico de un solo uso?",
+      options: [
+        "Botellas de vidrio reutilizables",
+        "Bolsas de plástico reutilizables",
+        "Botellas de aluminio de un solo uso",
+        "Botellas de cartón desechables",
+      ],
+      answer: 0,
+    },
+    {
+      question:
+        "¿Qué animal marino suele confundir el plástico con su alimento natural?",
+      options: ["Delfines", "Ballenas", "Tortugas marinas", "Estrellas de mar"],
+      answer: 2,
+    },
+    {
+      question:
+        "¿Cuál es el principal gas de efecto invernadero responsable del calentamiento global?",
+      options: [
+        "Dióxido de carbono (CO₂)",
+        "Oxígeno (O₂)",
+        "Ozono (O₃)",
+        "Nitrógeno (N₂)",
       ],
       answer: 0,
     },
@@ -161,19 +142,20 @@ const Quiz = () => {
         <img src={groupLogo} alt="Logo del proyecto" className="logo" />
         <h3 className="project-title">HYDRONET</h3>
         <div className="button-section">
-          <button onClick={goBack} className="button-Quiz">Volver</button>
+          <button onClick={goBack}>Volver</button>
         </div>
       </header>
 
-      <div className="space">
-        <div className="progress-bar-container">
-          <div
-            className="progress-bar"
-            style={{ width: `${(score / questions.length) * 100}%` }}>
-            {((score / questions.length) * 100).toFixed(0)}%
+        <div className="space">
+          <div className="progress-bar-container">
+            <div
+              className="progress-bar"
+              style={{ width: `${(score / questions.length) * 100}%` }}
+            >
+              {((score / questions.length) * 100).toFixed(0)}%
+            </div>
           </div>
         </div>
-      </div>
 
       <div className="quiz-container">
         {showScore ? (
@@ -182,7 +164,7 @@ const Quiz = () => {
             <p>
               Obtuviste {score} de {questions.length} respuestas correctas.
             </p>
-            <button onClick={resetQuiz} className="button-Quiz" >Intentar Nuevamente</button>
+            <button onClick={resetQuiz}>Intentar Nuevamente</button>
           </div>
         ) : (
           <div className="question-section">
@@ -192,7 +174,7 @@ const Quiz = () => {
             <p>{questions[currentQuestion].question}</p>
             <div className="answer-section">
               {questions[currentQuestion].options.map((option, index) => (
-                <button className="button-Quiz"
+                <button
                   key={index}
                   onClick={() => handleAnswerOptionClick(index)}>
                   {option}
