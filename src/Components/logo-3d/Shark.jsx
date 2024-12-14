@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
+import { RigidBody } from '@react-three/rapier'
 
 export function Shark(props) {
   const group = useRef()
@@ -10,6 +11,9 @@ export function Shark(props) {
         actions ["circling"]?.play()
     }, [actions])
   return (
+    <RigidBody
+    
+    >
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
         <group name="Mesh" scale={0.001}>
@@ -23,6 +27,7 @@ export function Shark(props) {
         </group>
       </group>
     </group>
+    </RigidBody>
   )
 }
 
