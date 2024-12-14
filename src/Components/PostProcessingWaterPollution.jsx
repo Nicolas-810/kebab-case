@@ -1,7 +1,4 @@
-import {
-  EffectComposer,
-  Vignette,
-} from "@react-three/postprocessing";
+import { EffectComposer, Vignette } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 
 const PostProcessingWaterPollution = () => {

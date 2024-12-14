@@ -1,14 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import groupLogo from "../../assets/Icon.png";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Sky } from "@react-three/drei";
+import { OrbitControls, PositionalAudio, Sky } from "@react-three/drei";
 import "./OceanAcidification.css";
 import TitleOceanAcidification from "../../Components/logo-3d/TitleOceanAcidification";
 import Shark3DMov from "../../Components/logo-3d/Shark3dMov";
 import Shark3D from "../../Components/logo-3d/Shark3D";
 import { Physics } from "@react-three/rapier";
 import { Shark } from "../../Components/logo-3d/Shark";
-import Desert from "../../Components/CompontsScarcity/Desert";
+import PostProcessingOceanAcidification from "../../Components/logo-3d/PostProcessingOceanAcidification";
+import ScenaShark from "../../Components/logo-3d/ScenaShark";
+import { useCallback, useRef } from "react";
 
 const oceanAcidification = () => {
   const navigate = useNavigate();
@@ -24,6 +26,21 @@ const oceanAcidification = () => {
   const goToHomePage = () => {
     navigate("/home"); // Redirige a la página de inicio
   };
+
+  const audioRef = useRef(null);
+
+  const handleAudio = useCallback(() => {
+    if (audioRef.current) {
+      audioRef.current
+        .play()
+        .then(() => {
+          audioRef.current.setVolume(2);
+        })
+        .catch((error) => {
+          console.error("Error al reproducir el audio:", error);
+        });
+    }
+  }, []);
 
   return (
     <div className="home-page-ocean">
@@ -56,15 +73,22 @@ const oceanAcidification = () => {
           <Canvas camera={{ position: [0, 5, 25], fov: 65 }} castShadow>
             <Sky azimuth={0.1} altitude={0.2} turbidity={10} rayleigh={0.5} />
             <TitleOceanAcidification position={[20, -25, 30]} />
-            <ambientLight intensity={1.5}/>
+            <ambientLight intensity={1.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
             <Physics>
-              <Shark position={[0, 5, -7]} scale={[5, 5, 5]} />
-              <Shark3DMov position={[22, 2, 3]} scale={[1, 1, 1]} />
-              <Shark3D position={[-25, 2, 6]} />
-              <Desert position = {[0,-25,0]}/>
+              <Shark position={[0, 2, -7]} scale={[5, 5, 5]} />
+              <Shark3DMov position={[35, 2, 3]} scale={[1, 1, 1]} />
+              <Shark3D position={[-25, 2, 6]} onClick={handleAudio} />
+              <ScenaShark position={[0, -25, 0]} />
             </Physics>
             <OrbitControls enablePan={false} />
+            <PostProcessingOceanAcidification />
+            <PositionalAudio
+              ref={audioRef}
+              loop
+              url="/Sounds/ocean-waves.mp3"
+              distance={10}
+            />
           </Canvas>
         </div>
       </div>
