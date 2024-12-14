@@ -10,9 +10,9 @@ import Page404 from "./pages/page404/Page404";
 import WaterPollution from "./pages/WaterPollution/WaterPollution";
 import OceanAcidification from "./pages/OceanAcidification/OceanAcidification";
 import ModelScarcity from "./pages/modelScarcity/modelScarcity";
-import WaterScarcity from "./pages/waterscarcity/WaterScarcity";
-import Quiz from "./pages/quiz/Quiz";
-import Quizv2 from "./pages/quiz/Quizv2";
+import WaterScarcity from "./pages/WaterScarcity/WaterScarcity";
+import Quiz from "./pages/Quiz/Quiz";
+import Quizv2 from "./pages/Quiz/Quizv2";
 
 const router = createBrowserRouter([
   { path: "/", element: <Welcome /> },
