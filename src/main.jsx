@@ -7,10 +7,10 @@ import "./index.css";
 import Home from "./pages/Home/Home";
 import Welcome from "./pages/Welcome/Welcome";
 import Page404 from "./pages/Page404/Page404";
-import WaterPollution from "./pages/Waterpollution/WaterPollution";
-import OceanAcidification from "./pages/Oceanacidification/OceanAcidification";
+import WaterPollution from "./pages/waterpollution/WaterPollution";
+import OceanAcidification from "./pages/OceanAcidification/OceanAcidification";
 import ModelScarcity from "./pages/ModelScarcity/ModelScarcity";
-import WaterScarcity from "./pages/Waterscarcity/WaterScarcity";
+import WaterScarcity from "./pages/WaterScarcity/WaterScarcity";
 import Quiz from "./pages/Quiz/Quiz";
 import Quizv2 from "./pages/quiz/Quizv2";
 
