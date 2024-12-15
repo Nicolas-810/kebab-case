@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import groupLogo from '../../assets/Icon.png';
 import centerImage from '../../assets/Error404.png'; 
-import './page404.css';
+import './Page404.css';
 
 const Page404 = () => {
   const navigate = useNavigate();
