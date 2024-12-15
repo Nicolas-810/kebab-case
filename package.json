@@ -9,7 +9,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "vercel --prod",
-    "login": "vercel login"
+    "login": "vercel login",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@react-three/cannon": "^6.6.0",
