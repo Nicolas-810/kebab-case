@@ -1,5 +1,5 @@
 import { Html } from "@react-three/drei";
-import "../../pages/WaterScarcity/WaterScarcity.css";
+import "../../pages/waterscarcity/WaterScarcity.css";
 
 const TitleWaterScarcity = ({ text, position, size = 1, color = "black" }) => {
   return (
