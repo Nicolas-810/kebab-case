@@ -19,7 +19,7 @@ import muteIcon from "../../assets/mute.png";
 import soundIcon from "../../assets/sound.png";
 import { Physics } from "@react-three/rapier";
 import Lights from "../../Components/CompontsScarcity/Lights";
-import PostProcessing from "../../Components/CompontsScarcity/PostProcessinge";
+import PostProcessing from "../../Components/CompontsScarcity/Postprocessing";
 import ModelWithInteraction from "../../Components/logo-3d/Qestions";
 
 const ModelScarcity = () => {
