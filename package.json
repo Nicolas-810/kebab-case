@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vercel --prod",
+    "login": "vercel login"
   },
   "dependencies": {
     "@react-three/cannon": "^6.6.0",
@@ -24,6 +26,7 @@
     "react-router-dom": "^6.28.0",
     "three": "^0.170.0",
     "use-sound": "^4.0.3",
+    "vercel": "^39.2.2",
     "zustand": "^4.5.5"
   },
   "devDependencies": {

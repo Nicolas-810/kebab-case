@@ -4,14 +4,14 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./index.css";
 
-import Home from "./pages/Home/Home";
-import Welcome from "./pages/Welcome/Welcome";
-import Page404 from "./pages/Page404/Page404";
+import Home from "./pages/home/Home";
+import Welcome from "./pages/welcome/Welcome";
+import Page404 from "./pages/page404/Page404";
 import WaterPollution from "./pages/waterpollution/WaterPollution";
-import OceanAcidification from "./pages/OceanAcidification/OceanAcidification";
-import ModelScarcity from "./pages/ModelScarcity/ModelScarcity";
-import WaterScarcity from "./pages/WaterScarcity/WaterScarcity";
-import Quiz from "./pages/Quiz/Quiz";
+import OceanAcidification from "./pages/oceanacidification/OceanAcidification";
+import ModelScarcity from "./pages/modelScarcity/ModelScarcity";
+import WaterScarcity from "./pages/waterscarcity/WaterScarcity";
+import Quiz from "./pages/quiz/Quiz";
 import Quizv2 from "./pages/quiz/Quizv2";
 
 const router = createBrowserRouter([
