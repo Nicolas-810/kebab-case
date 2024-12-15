@@ -9,17 +9,17 @@ import { useNavigate } from "react-router-dom";
 import "./ModelScarcity.css";
 import TitleWaterScarcity3D from "../../Components/logo-3d/TitleWaterScarcity3D";
 import TitleWaterScarcity from "../../Components/logo-3d/TitleWaterScarcity";
-import Grass from "../../Components/CompontsScarcity/Grass";
-import Cactus from "../../Components/CompontsScarcity/Cactus";
-import Fish3D from "../../Components/CompontsScarcity/Fish3D";
-import Bottle from "../../Components/CompontsScarcity/Bottle";
-import Bottle2 from "../../Components/CompontsScarcity/Bottle2";
-import Desert from "../../Components/CompontsScarcity/Desert";
+import Grass from "../../Components/ComponentsScarcity/Grass";
+import Cactus from "../../Components/ComponentsScarcity/Cactus";
+import Fish3D from "../../Components/ComponentsScarcity/Fish3D";
+import Bottle from "../../Components/ComponentsScarcity/Bottle";
+import Bottle2 from "../../Components/ComponentsScarcity/Bottle2";
+import Desert from "../../Components/ComponentsScarcity/Desert";
 import muteIcon from "../../assets/mute.png";
 import soundIcon from "../../assets/sound.png";
 import { Physics } from "@react-three/rapier";
-import Lights from "../../Components/CompontsScarcity/Lights";
-import PostProcessing from "../../Components/CompontsScarcity/Postprocessing";
+import Lights from "../../Components/ComponentsScarcity/Lights";
+import PostProcessing from "../../Components/ComponentsScarcity/PostProcessing";
 
 const ModelScarcity = () => {
   const [playCollision] = useSound(collisionSound, { volume: 1 });
