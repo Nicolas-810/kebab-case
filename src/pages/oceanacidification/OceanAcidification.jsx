@@ -1,7 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import groupLogo from "../../assets/Icon.png";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PositionalAudio, Sky } from "@react-three/drei";
+import {
+  BakeShadows,
+  OrbitControls,
+  PositionalAudio,
+  Sky,
+} from "@react-three/drei";
 import "./OceanAcidification.css";
 import TitleOceanAcidification from "../../Components/logo-3d/TitleOceanAcidification";
 import Shark3DMov from "../../Components/logo-3d/Shark3dMov";
@@ -70,16 +75,31 @@ const oceanAcidification = () => {
         </div>
 
         <div className="Shark3d-container">
-          <Canvas camera={{ position: [0, 5, 25], fov: 65 }} castShadow>
+          <Canvas camera={{ position: [0, 5, 25], fov: 65 }} shadows>
             <Sky azimuth={0.1} altitude={0.2} turbidity={10} rayleigh={0.5} />
             <TitleOceanAcidification position={[20, -25, 30]} />
             <ambientLight intensity={1.5} />
-            <directionalLight position={[10, 10, 5]} intensity={1} />
+            <directionalLight
+              position={[10, 10, 5]}
+              intensity={1}
+              castShadow
+              shadow-mapSize-width={1024}
+              shadow-mapSize-height={1024}
+              shadow-camera-far={50}
+              shadow-camera-left={-10}
+              shadow-camera-right={10}
+              shadow-camera-top={10}
+              shadow-camera-bottom={-10}
+            />
             <Physics>
-              <Shark position={[0, 2, -7]} scale={[5, 5, 5]} />
-              <Shark3DMov position={[35, 2, 3]} scale={[1, 1, 1]} />
-              <Shark3D position={[-25, 2, 6]} onClick={handleAudio} />
-              <ScenaShark position={[0, -25, 0]} />
+              <Shark position={[0, 2, -7]} scale={[5, 5, 5]} castShadow />
+              <Shark3DMov position={[35, 2, 3]} scale={[1, 1, 1]} castShadow />
+              <Shark3D
+                position={[-25, 2, 6]}
+                onClick={handleAudio}
+                castShadow
+              />
+              <ScenaShark position={[0, -25, 0]} receiveShadow />
             </Physics>
             <OrbitControls enablePan={false} />
             <PostProcessingOceanAcidification />
