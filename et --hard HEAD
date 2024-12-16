@@ -1,0 +1,1257 @@
+[33mcommit c73e2473d899d70dbd2fde0c45cf641f4e75b846[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mSAM[m[33m, [m[1;31morigin/SAM[m[33m)[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Dec 16 11:41:00 2024 -0500
+
+    solucion error ruta
+
+[33mcommit c29c64a93ad937489624f3e9cb61ab4f49dfbda2[m
+Merge: 69831eb 7bf6354
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Dec 16 10:50:14 2024 -0500
+
+    Merge pull request #45 from Nicolas-810/SAM
+    
+    Correción en ruta Shark para el despliegue
+
+[33mcommit 7bf6354bdd67ef27db8796cefbad598a5a56654b[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Dec 16 10:49:18 2024 -0500
+
+    Correción en ruta Shark para el despliegue
+
+[33mcommit 69831eb9edcbf1de99342a3b2fa10c0bfd41939b[m
+Merge: c66795f 22443c6
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Dec 16 10:36:33 2024 -0500
+
+    Merge pull request #44 from Nicolas-810/SAM
+    
+    Ruta Shark
+
+[33mcommit 22443c6ca2f75cad5d268ffd4dd5f4ee0f98908c[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Dec 16 10:35:44 2024 -0500
+
+    Ruta Shark
+
+[33mcommit c66795f58fb09e74187ff71fb889859f2ca8048a[m
+Merge: 7f7a943 cfd278a
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Dec 16 10:03:16 2024 -0500
+
+    Merge pull request #43 from Nicolas-810/SAM
+    
+    Implementación del quiz y modificación de la barra de navegación
+
+[33mcommit cfd278ae3cd4a963cc2fcff8ba239e4c63485d68[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Dec 16 09:55:28 2024 -0500
+
+    Implementación de Quiz, modificacion de barra de navegación
+
+[33mcommit f19eb7b38d5b77569b9e9df987b479234df07af1[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Dec 15 19:15:00 2024 -0500
+
+    Correción Postprocesado oceanacification
+
+[33mcommit 7f7a943a6f2457b42a99eb8d42a668d90d2c9f29[m
+Merge: 3296e38 745d841
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Dec 15 18:42:45 2024 -0500
+
+    Merge pull request #42 from Nicolas-810/SAM
+    
+    cambio en escena
+
+[33mcommit 745d84139a9289f5b1e14302705f3a7b91eca18f[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Dec 15 18:41:17 2024 -0500
+
+    cambio en escena
+
+[33mcommit 3296e38d8e3c98cd984c6a0edecccab1a6169a9f[m
+Merge: 072ec59 609db52
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Dec 15 17:52:25 2024 -0500
+
+    Merge pull request #41 from Nicolas-810/SAM
+    
+    despliegue vercel
+
+[33mcommit 609db52ae22651b6751fdecc8c79f97ab8181038[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Dec 15 17:50:30 2024 -0500
+
+    despliegue vercel
+
+[33mcommit 072ec59da99148718609d81d405c62cb057c1051[m
+Merge: f0d2ed8 f647e86
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Dec 15 17:28:45 2024 -0500
+
+    Merge pull request #40 from Nicolas-810/SAM
+    
+    Forzar a Git a reconocer cambios de nombres en carpetas y archivos
+
+[33mcommit f647e8601eeb73e92dce8b3ba7762fca65e08974[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Dec 15 17:25:45 2024 -0500
+
+    Forzar a Git a reconocer cambios de nombres en carpetas y archivos
+
+[33mcommit f0d2ed80e0a58c39cfa37bfcb6f317cb81fd825d[m
+Merge: 8ba39cd c222604
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Dec 15 17:14:44 2024 -0500
+
+    Merge pull request #39 from Nicolas-810/SAM
+    
+    correcion de nombres carpetas
+
+[33mcommit c222604f881bf6f965a0c10e6173080db5227165[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Dec 15 17:13:53 2024 -0500
+
+    correcion de nombres carpetas
+
+[33mcommit 8ba39cdd4f6314b713e4d46e8d61974f7c789ed8[m
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 20:27:23 2024 -0500
+
+    Rename page404.css to Page404.css
+
+[33mcommit d2527add242e078a14b823af05df465cc54a6f97[m
+Merge: 8b36786 91e9baa
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 20:25:47 2024 -0500
+
+    Merge pull request #38 from Nicolas-810/SAM
+    
+    page404
+
+[33mcommit 91e9baa954e1b1715b8d86beadabddbc8359eb33[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 20:24:17 2024 -0500
+
+    page404
+
+[33mcommit 8b3678615017d845884e2e667d4fda50d789e6c3[m
+Merge: f67aa85 947fe50
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 19:57:37 2024 -0500
+
+    Merge pull request #37 from Nicolas-810/SAM
+    
+    Sam
+
+[33mcommit 947fe501c762f232ffc6b2dfd8bbf7d9deb64e04[m
+Merge: 180eef9 9118cb0
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 19:56:46 2024 -0500
+
+    Merge branch 'SAM' of https://github.com/Nicolas-810/kebab-case into SAM
+
+[33mcommit 180eef97502bc4daa845253685d6c23f38ae774a[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 19:55:57 2024 -0500
+
+    Components
+
+[33mcommit f67aa858eb70cb49068ef3d3c55faf31144a86fb[m
+Merge: e14310c 9118cb0
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 19:21:37 2024 -0500
+
+    Merge pull request #36 from Nicolas-810/SAM
+    
+    Sam
+
+[33mcommit 9118cb0fa0e884503222698dc219091fb5d965ba[m
+Merge: 7810917 e14310c
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 19:21:30 2024 -0500
+
+    Merge branch 'main' into SAM
+
+[33mcommit 781091771b7dd22f495d4da4feec7b64c0d1a2e3[m
+Merge: dbbe2fc c68a1f5
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 19:19:23 2024 -0500
+
+    Merge branch 'SAM' of https://github.com/Nicolas-810/kebab-case into SAM
+
+[33mcommit dbbe2fc069c66e9dfa367dff03d41ab81851da0b[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 19:19:08 2024 -0500
+
+    vercel
+
+[33mcommit e14310cd47b0fcbd1fd9a7887906d15e50e0380e[m
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 19:13:12 2024 -0500
+
+    Update main.jsx
+
+[33mcommit 7f552f7087c029645cb18bc6f7372f3560533fdb[m
+Merge: c9ddeef c68a1f5
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 19:09:18 2024 -0500
+
+    Merge pull request #35 from Nicolas-810/SAM
+    
+    Sam
+
+[33mcommit c68a1f55e464fdcdb06e8b4bc45ea5a29296b0a7[m
+Merge: 9289ba1 c9ddeef
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 19:09:09 2024 -0500
+
+    Merge branch 'main' into SAM
+
+[33mcommit 9289ba12fac2426e9ce378a43143b95cfe99fdba[m
+Merge: 84ed5a3 36cf419
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 19:06:08 2024 -0500
+
+    Merge branch 'SAM' of https://github.com/Nicolas-810/kebab-case into SAM
+
+[33mcommit 84ed5a308a8860e4ca27aa050835b292e2631ee3[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 19:04:15 2024 -0500
+
+    rutas
+
+[33mcommit 7b9d085454488552112f10565b77b130f71bef42[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 18:44:40 2024 -0500
+
+    rutas
+
+[33mcommit c9ddeef172b11b8ec29fc56753bbc7795d5c7ac6[m
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 18:22:16 2024 -0500
+
+    Update main.jsx
+
+[33mcommit d4c383d68a9d23884372b59fe4d4257fbf279824[m
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 18:16:41 2024 -0500
+
+    Update main.jsx
+
+[33mcommit 08ed9b94f934fe403db1f2fda6ce1db75c1f65da[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 18:09:06 2024 -0500
+
+    correcion de errores en rutas
+
+[33mcommit 36cf4191122e6aa300d75cef31524ff7936308f6[m
+Merge: cd87a49 a3a888b
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 18:10:41 2024 -0500
+
+    :wq|Merge branch 'main' of https://github.com/Nicolas-810/kebab-case into SAM
+
+[33mcommit cd87a49fa6af62aa51677e043c6b43bfdf6ac10b[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 18:09:06 2024 -0500
+
+    correcion de errores en rutas
+
+[33mcommit a3a888b2f74be798b164d813a038330dcde1bec3[m
+Merge: 34d5526 654c7ee
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 17:42:17 2024 -0500
+
+    Merge pull request #34 from Nicolas-810/SAM
+    
+    implementación de pos-procesado y sonido en OcenaAcidification
+
+[33mcommit 654c7eedd13c550e4c1754bad737a6c7a69df4b2[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 17:41:01 2024 -0500
+
+    implementación de pos-´rpcesado y sonido en OcenaAcidification
+
+[33mcommit 34d55262dd142c8d6c7b3c6f9965e1886f635dad[m
+Merge: 9055889 975f221
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sat Dec 14 17:35:29 2024 -0500
+
+    Merge pull request #33 from Nicolas-810/DUP
+    
+    hize el quiz v2
+
+[33mcommit 975f221a8a2d30d3dc5428691a2655aaba2d8718[m[33m ([m[1;31morigin/DUP[m[33m)[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sat Dec 14 17:34:43 2024 -0500
+
+    hize el quiz v2
+
+[33mcommit 90558890b5695e15e7aab5b597af54e1aaadb43d[m
+Merge: b793ecd 54aa4f4
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sat Dec 14 15:20:53 2024 -0500
+
+    Merge pull request #32 from Nicolas-810/DUP
+    
+    quizv2
+
+[33mcommit 54aa4f4cdfc312e77ef61e4d9b2629f32ed4eb81[m
+Merge: 2ee1738 b793ecd
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sat Dec 14 15:20:45 2024 -0500
+
+    Merge branch 'main' into DUP
+
+[33mcommit 2ee1738c53468519cbe819854601efebbc6af759[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sat Dec 14 15:15:38 2024 -0500
+
+    quizv2
+
+[33mcommit b793ecd116299624c3a50899449fcf2dd476681b[m
+Merge: b8d9876 2a68d9f
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 15:14:21 2024 -0500
+
+    Merge pull request #31 from Nicolas-810/SAM
+    
+    Sam
+
+[33mcommit 2a68d9f564071c95d6193e03b64ac93c753cfba7[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 15:09:03 2024 -0500
+
+    solucion problema Shark.glb
+
+[33mcommit f4adb3c299bcc6928e545f4e555e5f4482aa9324[m
+Merge: dfda039 b8d9876
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sat Dec 14 14:50:21 2024 -0500
+
+    Merge branch 'main' of https://github.com/Nicolas-810/kebab-case into SAM
+
+[33mcommit b8d98766063c384539d7ec0b7b0f7528b13c82af[m
+Merge: c43424f 2779552
+Author: Nicolas Taborda Gomez <nicolas.taborda@correounivalle.edu.co>
+Date:   Thu Dec 12 21:58:25 2024 -0500
+
+    Merge pull request #30 from Nicolas-810/NTG
+    
+    seguimiento de la cámara al modelo
+
+[33mcommit 27795522f38b04f54e18e49f4c5e00775aef103a[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Thu Dec 12 21:56:30 2024 -0500
+
+    seguimiento de la camara al modelo
+
+[33mcommit c43424fd48706a829ca9c86d4c0aa169d21932fe[m
+Merge: 1152ca0 02a8c51
+Author: Nicolas Taborda Gomez <nicolas.taborda@correounivalle.edu.co>
+Date:   Wed Dec 11 23:12:14 2024 -0500
+
+    Merge pull request #29 from Nicolas-810/NTG
+    
+    Implementación del modelo con huesos
+
+[33mcommit 02a8c510c95eaf286c9f6e33c203688df4c985cb[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Wed Dec 11 23:10:35 2024 -0500
+
+    Implementacion del modelo con huesos
+
+[33mcommit dfda0390716c213624a30d9e6b8be25869d8096d[m
+Merge: 6a5f3e3 1152ca0
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Dec 2 19:23:38 2024 -0500
+
+    Merge branch 'main' of https://github.com/Nicolas-810/kebab-case into SAM
+
+[33mcommit 6a5f3e3cab9a69992b15d1e332af9effbf0d674f[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Dec 2 19:22:28 2024 -0500
+
+    nuevos cambios en modelos
+
+[33mcommit 1152ca0e3a777d0c4d646e2fec3d953d3d723545[m
+Merge: d36df84 8f43251
+Author: Nicolas Taborda Gomez <nicolas.taborda@correounivalle.edu.co>
+Date:   Mon Dec 2 19:19:32 2024 -0500
+
+    Merge pull request #28 from Nicolas-810/NTG
+    
+    Cambios en la main y en links
+
+[33mcommit 8f43251f562cbf95245a117d221e38ddf1e71976[m
+Merge: c114700 d36df84
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Dec 2 19:18:05 2024 -0500
+
+    Cambios en main y links
+
+[33mcommit d36df84412adbe7a52edf077c285671c5d986904[m
+Merge: e5b0d69 d09fcdc
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Dec 2 18:57:28 2024 -0500
+
+    Merge pull request #27 from Nicolas-810/SAM
+    
+    Sam
+
+[33mcommit d09fcdce4797c407162153a25e23229489a9f2ae[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Dec 2 18:55:26 2024 -0500
+
+    implementación modelo shark con movimiento de circling
+
+[33mcommit c1147001d1ed1c63af7eee716a12403d15c82d77[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Dec 2 18:46:16 2024 -0500
+
+    Implementacion de sombras y cosas del sprint 4
+
+[33mcommit 1d7a6bc095c441e20ba8ce7936b9e37a0f6fb649[m
+Merge: 2a43043 e5b0d69
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Dec 1 23:51:01 2024 -0500
+
+    Merge branch 'main' of https://github.com/Nicolas-810/kebab-case into SAM
+
+[33mcommit 2a43043e108b7032c085dcad2f557f30af6ac003[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Dec 1 23:50:36 2024 -0500
+
+    NUEVO MODELO
+
+[33mcommit e5b0d6950aa5e6c6647359027cba4e4d2870f3f1[m
+Merge: 330356f b013192
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sun Dec 1 23:48:37 2024 -0500
+
+    Merge pull request #26 from Nicolas-810/DUP
+    
+    Dup
+
+[33mcommit b013192fba7004f07062e7f604af51d43659e97b[m
+Merge: 2002767 cea3cdf
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Dec 1 23:46:07 2024 -0500
+
+    Merge branch 'DUP' of univalle:Nicolas-810/kebab-case into DUP
+
+[33mcommit 200276741d6709ada7b4b92a95d1bbbc23bf911f[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Dec 1 23:41:40 2024 -0500
+
+    implementacion del quiz
+
+[33mcommit 50d7318904a264d80d82ec1f71428bad4d04f8fe[m
+Merge: ae36ce2 330356f
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Nov 25 19:25:03 2024 -0500
+
+    Merge branch 'main' into NTG
+
+[33mcommit ae36ce218a012ea8b396d0289197d26eab7e32c0[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Nov 25 18:28:08 2024 -0500
+
+    juego niño con sed
+
+[33mcommit 330356fb825a32a396cd24949d78d9d5255a073a[m
+Merge: c79f1b6 9dece8c
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Nov 24 21:39:45 2024 -0500
+
+    Merge pull request #25 from Nicolas-810/SAM
+    
+    Se añade otro tiburon en la pagina de acidificacion de oceanos, el cu…
+
+[33mcommit 9dece8c51847e1f63e46621ab1e9018e3d60ea5b[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Nov 24 21:37:43 2024 -0500
+
+    Se añade otro tiburon en la pagina de acidificacion de oceanos, el cual se le adiciona el mundo de las fisicas, se modifica la barra de navegación
+
+[33mcommit c79f1b650192a4e5c881b868f81f57467fbb3724[m
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sun Nov 24 20:42:19 2024 -0500
+
+    Update Pelota.jsx
+
+[33mcommit 9363df219f605f85409264b2af71d1c9f9f1af2e[m
+Merge: a5e5285 cea3cdf
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sun Nov 24 11:55:50 2024 -0500
+
+    Merge pull request #24 from Nicolas-810/DUP
+    
+    Dup
+
+[33mcommit cea3cdffda9e9b03dffd020b76d4ac20de527931[m
+Merge: b0d6610 a5e5285
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sun Nov 24 11:55:42 2024 -0500
+
+    Merge branch 'main' into DUP
+
+[33mcommit b0d6610af8805c6217c31013369875dab8b776df[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Nov 24 11:09:28 2024 -0500
+
+    agregue las fisicas al modelo
+
+[33mcommit bc2886f6685dfaa4cc309c5aaa91798940752f44[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Nov 24 11:01:25 2024 -0500
+
+    agregue nuevos cambios y dos modelos mas
+
+[33mcommit a5e52857d8f6a80fbf1ca782f4db30794ad29722[m
+Merge: 5db32f4 97b07c0
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 18 21:52:16 2024 -0500
+
+    Merge pull request #23 from Nicolas-810/SAM
+    
+    "Corrección de la página Ocean Acidification, redirección con evento de click en logo, página Home, implementación de botones que redireccionan a las páginas de problema en barra de navegación"
+
+[33mcommit 97b07c0c66e84ecc96d2e498580c79004bb3049f[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 18 21:50:04 2024 -0500
+
+    Corrección de la página Ocean Acidification, redirección con evento de click en logo, página Home, implementación de botones que redireccionan a las páginas de problema en barra de navegación
+
+[33mcommit 5db32f45be25b07d551927d78bfe8e8b09bcc661[m
+Merge: 6feb84b e5d2096
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sun Nov 17 21:47:08 2024 -0500
+
+    Merge pull request #22 from Nicolas-810/DUP
+    
+    fixed model 3d
+
+[33mcommit e5d209670a67372ce85cccdf3070fba915e4ce62[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Nov 17 21:45:58 2024 -0500
+
+    fixed model 3d
+
+[33mcommit 6feb84b2c46ccad5f722ab4a311d5b8684059179[m
+Merge: bee6725 b13f43d
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sun Nov 17 21:37:42 2024 -0500
+
+    Merge pull request #21 from Nicolas-810/DUP
+    
+    Dup
+
+[33mcommit b13f43d496727b94a1d0add74ac233b4c1f9589b[m
+Merge: f6d240c 7003dd8
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Nov 17 21:35:42 2024 -0500
+
+    added texto 3d and fixed model 3d
+
+[33mcommit 7003dd8fe8ca12a12eaab9a0ee5c93cfca31d8e7[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Nov 17 21:29:27 2024 -0500
+
+    added texto 3d and fixed model 3d
+
+[33mcommit bee67253965f4ed36ff98da389a9330e44b65e7a[m
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Mon Nov 11 21:59:00 2024 -0500
+
+    Update WaterPollution.jsx
+
+[33mcommit d42c6b597bc8ddb0a859d4e215100f6183dafd67[m
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Mon Nov 11 21:55:54 2024 -0500
+
+    Update main.jsx
+
+[33mcommit 9923a5b7f9c40831af4120a722bd6e924fc600c9[m
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Mon Nov 11 21:52:28 2024 -0500
+
+    Update main.jsx
+
+[33mcommit e73c3cd17dc74163e39884816b39b43445ef6bfd[m
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Mon Nov 11 21:48:21 2024 -0500
+
+    Update main.jsx
+
+[33mcommit f6d240c17f4f96fa51dbf921b6a5fa3e76a203c0[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Mon Nov 11 21:35:10 2024 -0500
+
+    fixed importaciones
+
+[33mcommit 64f51b74ef0a28fba158bb0687c0d439ca381784[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Nov 11 20:57:56 2024 -0500
+
+    Cambios en water pollution
+
+[33mcommit 847d13754640595b4275957d756a7d1bad2cd5db[m
+Merge: a3c6049 238a673
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Mon Nov 11 20:37:35 2024 -0500
+
+    Merge pull request #20 from Nicolas-810/DUP
+    
+    HTML 3d, eventos de Mouse y teclado
+
+[33mcommit 238a673261287b568e634654238f256d32ac74b9[m
+Merge: 82cc84e a3c6049
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Mon Nov 11 20:37:26 2024 -0500
+
+    Merge branch 'main' into DUP
+
+[33mcommit 82cc84eb1dc501cdf2e912b80601e6caedd38a0a[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Mon Nov 11 20:35:02 2024 -0500
+
+    HTML 3d, eventos de Mouse y teclado
+
+[33mcommit a3c60493ab3501f3dd87f71d50f96c74c8e5b6a9[m
+Merge: 9227f2d a8f8803
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 11 20:27:00 2024 -0500
+
+    Merge pull request #19 from Nicolas-810/SAM
+    
+    Sam
+
+[33mcommit a8f8803a1d3ae53aa7a81481971dc6e0abece340[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 11 20:17:13 2024 -0500
+
+    solucion de comflictos
+
+[33mcommit e744baa5476e3488f5e1488446009080e1280150[m
+Merge: bbed229 9227f2d
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 11 20:15:12 2024 -0500
+
+    Merge branch 'main' of https://github.com/Nicolas-810/kebab-case into SAM
+
+[33mcommit bbed229bb0789f7699498605ca5c649a32369f4d[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 11 20:10:16 2024 -0500
+
+    Eventos de mouse, teclado, HTML 3D y skype en problema acidificación de los oceanos
+
+[33mcommit 9227f2d8afae2710c836ea5a7a2d36ed69dcac1e[m
+Merge: 002b26a 487285e
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Mon Nov 11 20:06:13 2024 -0500
+
+    Merge pull request #18 from Nicolas-810/DUP
+    
+    implementación de puesta en escena
+
+[33mcommit 487285e6a6c15fc16ca9944453bb12588cfb2064[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Mon Nov 11 20:05:30 2024 -0500
+
+    implementación de puesta en escena
+
+[33mcommit 002b26a3e3a9bac5d8cf97c48dbcbadde10649da[m
+Merge: d35a806 4eaf823
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Mon Nov 11 18:41:59 2024 -0500
+
+    Merge pull request #17 from Nicolas-810/DUP
+    
+    Dup
+
+[33mcommit 4eaf8235c1a167b7d2eb00d6c6e4b05659126ce0[m
+Merge: 750cf1b 745c88a
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Mon Nov 11 18:41:09 2024 -0500
+
+    correción del modelo, agregando materiales PBR e iluminación
+
+[33mcommit 08577e055052035ed365be0ac4bbf3f5d55c16d9[m
+Merge: 67c8cbd d35a806
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 11 17:12:53 2024 -0500
+
+    Merge branch 'main' of https://github.com/Nicolas-810/kebab-case into SAM
+
+[33mcommit d35a806350aaf5300af41cf139b743241491f7c3[m
+Merge: 745c88a c4e1303
+Author: Nicolas Taborda Gomez <nicolas.taborda@correounivalle.edu.co>
+Date:   Sun Nov 10 15:33:03 2024 -0500
+
+    Merge pull request #16 from Nicolas-810/NTG
+    
+    Cambio en Scarcity
+
+[33mcommit c4e13032696145c743aaa227824dfd6a203f1482[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Sun Nov 10 15:31:07 2024 -0500
+
+    Implematacion de modelo en scarcity y sky en home
+
+[33mcommit 67c8cbd3a003593f23a7a5888b1ae1bc8560267c[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 4 21:27:52 2024 -0500
+
+    Cambios solucuiones problematicas pagina Douglas
+
+[33mcommit 750cf1bb80fd4fcb5ad8ed69a8627a19081889d2[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Mon Nov 4 20:55:42 2024 -0500
+
+    implemetación de solución a la problematica del agua
+
+[33mcommit f9fda779800c9061207303950458ce6387fdea4b[m
+Merge: b904d50 77f60c3
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Nov 4 20:49:41 2024 -0500
+
+    Merge branch 'main' into NTG
+
+[33mcommit 77f60c3d1ba0ca7627ecc2b25fcaa8ddf02fd097[m
+Merge: 98d74ef 745c88a
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Nov 4 20:47:15 2024 -0500
+
+    Merge branch 'main' of https://github.com/Nicolas-810/kebab-case
+    :v
+    :q
+    :qu
+    :q!
+    :wq
+
+[33mcommit 745c88a87e468d4175f8b3be70fdf300e1523672[m
+Merge: 8d95057 1f62bb7
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 4 20:45:00 2024 -0500
+
+    Merge pull request #15 from Nicolas-810/SAM
+    
+    SAM
+
+[33mcommit 1f62bb77d1327d2522aa08c952f084336a57352f[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 4 20:44:12 2024 -0500
+
+    implementación texto 3D en problematicas
+
+[33mcommit b904d508101bdc3a10c3db694c7342c394a69f84[m
+Merge: b31c7d9 98d74ef
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Nov 4 20:36:37 2024 -0500
+
+    Resuelto conflicto en WaterScarcity.jsx
+
+[33mcommit 98d74ef576b92701fb9d40a353861963b919e543[m
+Merge: 7930d4e 8d95057
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Nov 4 20:30:25 2024 -0500
+
+    Merge branch 'main' of https://github.com/Nicolas-810/kebab-case
+
+[33mcommit b31c7d96369ca34aa27444c75a69dd629091080e[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Nov 4 19:58:40 2024 -0500
+
+    modelo nuevo
+
+[33mcommit 7c7c6812cbfdaf29de6b3f8ccd4f77039dd0db8d[m
+Merge: b0c2d68 8d95057
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 4 19:28:52 2024 -0500
+
+    Merge branch 'main' of https://github.com/Nicolas-810/kebab-case into SAM
+
+[33mcommit b0c2d6813049088e22c2e2767d442cd546b60eba[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 4 19:28:07 2024 -0500
+
+    Cambios pagina home
+
+[33mcommit 8d95057c7a0606013aa3b07cee22f979ac74d871[m
+Merge: 7ea2a1d 44fd230
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 4 19:25:43 2024 -0500
+
+    Merge pull request #14 from Nicolas-810/SAM
+    
+    corrección modelo Shark3D
+
+[33mcommit 7ea2a1da3ee7ec1592fc179535dbf796c1277db3[m
+Merge: 8c60102 d6c190c
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Mon Nov 4 19:23:21 2024 -0500
+
+    Merge pull request #13 from Nicolas-810/DUP
+    
+    Dup
+
+[33mcommit d6c190cc4f90d7e13a1239297f0da499d0e095a1[m
+Merge: cc2351b 8c60102
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Mon Nov 4 19:23:07 2024 -0500
+
+    Merge branch 'main' into DUP
+
+[33mcommit cc2351bda289f7eb84a39207cba441bd75f3ce96[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Mon Nov 4 19:17:28 2024 -0500
+
+    implementé  modelo 3D en contaminación del agua
+
+[33mcommit 44fd2305444f945ff3e4da8f8854938608f01828[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 4 18:40:49 2024 -0500
+
+    corrección modelo Shark3D
+
+[33mcommit 8c60102fe8b913fb112052c0146a4f3ede17d0f1[m
+Merge: 96c0d9f 92a7e0e
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 4 18:25:13 2024 -0500
+
+    Merge pull request #12 from Nicolas-810/SAM
+    
+    implementación de información para la pagina OceanAcidification
+
+[33mcommit 92a7e0e74ec49927b25fc1d5d4f7c4aff05863b4[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 4 18:24:28 2024 -0500
+
+    implementación de información para la pagina OceanAcidification
+
+[33mcommit 1a81e7ba9eca50e5b466ef909cf9db3ae09c9ff8[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Mon Nov 4 15:51:12 2024 -0500
+
+    fixed names of archivesç
+
+[33mcommit 96c0d9f038b0bb9fdad0f21fd8a7bf61f9e94be2[m
+Merge: 810d27c 795f9f1
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Mon Nov 4 15:47:59 2024 -0500
+
+    Merge branch 'main' of univalle:Nicolas-810/kebab-case
+
+[33mcommit 795f9f18eb0e40ddd97e454578dee3e49cb1bd80[m
+Merge: 2586d87 8821ff4
+Author: Sebastian Albaran <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 4 14:38:23 2024 -0500
+
+    Merge pull request #11 from Nicolas-810/SAM
+    
+    Sam
+
+[33mcommit 8821ff409968e2adec0152e865336ef86f60b207[m
+Merge: fdcf354 4704e5a
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Mon Nov 4 14:36:48 2024 -0500
+
+    Implementation of pages
+
+[33mcommit 810d27cdc1766b775bf7f699169978270c7068f4[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Mon Nov 4 13:57:09 2024 -0500
+
+    fixed renames
+
+[33mcommit 4704e5a8373b602f30c2ae42edeada125876093e[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@correounivalle.edu.co>
+Date:   Mon Nov 4 12:55:29 2024 -0500
+
+    Update Links.jsx
+
+[33mcommit a9bb697f558ff39d1a9cd26512ae7861003b0f3c[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Nov 4 12:48:20 2024 -0500
+
+    correccion conflictos
+
+[33mcommit abae40ca5788ae83e51d9c4db4c083a1a063010e[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Nov 4 12:42:25 2024 -0500
+
+    implementacion de los modelos en la tarjetas
+
+[33mcommit 2586d8715d384a9e06c703d4a457aaabf7a227a9[m
+Merge: f46d6f4 fdcf354
+Author: SeAlMa2157 <sebastian.albaran@correounivalle.edu.co>
+Date:   Wed Oct 30 20:55:03 2024 -0500
+
+    Merge pull request #10 from Nicolas-810/SAM
+    
+    SAM
+
+[33mcommit fdcf3545da3ec6b90d147e23bb95168767a34ba4[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Wed Oct 30 20:53:07 2024 -0500
+
+    Ajustes del modelo Shark3D y correcion de errores
+
+[33mcommit 10131fbe2a7388e4c4fc2f3e40e6bad8960b3c73[m
+Merge: 7accfaf f46d6f4
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Wed Oct 30 20:05:34 2024 -0500
+
+    Merge branch 'main' of https://github.com/Nicolas-810/kebab-case into SAM
+
+[33mcommit 713f9a7582e9768c91756441a9a5086a043fa3fb[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Wed Oct 30 19:53:15 2024 -0500
+
+    Implementacion de la navegacion de las tarjetas
+
+[33mcommit 7930d4e2321f965e0ebfd6bf7fba0a60e1db429c[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Wed Oct 30 19:50:01 2024 -0500
+
+    Implemenetacion de la navegacion de las targetas
+
+[33mcommit f46d6f4bdaeea4b09ebcf9fe597d47d64f648790[m
+Merge: 990eda3 de81d89
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Wed Oct 30 19:47:03 2024 -0500
+
+    Implementación del modelo Shark3D SAM
+
+[33mcommit 669baee06795d4b454009094afc94a982b515f73[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Oct 28 21:38:09 2024 -0500
+
+    cambios de nuevo
+
+[33mcommit de81d892c4c1b9d21f5bdc9b418c7a64dd2bea5b[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@correounivalle.edu.co>
+Date:   Mon Oct 28 21:35:35 2024 -0500
+
+    Update Links.css
+
+[33mcommit e8518b9a787a5d0d7a650cd982890f8d666aa199[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Mon Oct 28 21:12:14 2024 -0500
+
+    Implementacion de la paginas de la probelmaticas
+
+[33mcommit 8e74b1af57d2d2994a4e5c12c02b320380135d9f[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Oct 27 22:03:10 2024 -0500
+
+    fixed fish
+
+[33mcommit 7accfafcf7235b5b9b15f08ca8c83a316a8624cb[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Oct 27 20:55:34 2024 -0500
+
+    cambio en la estructura
+
+[33mcommit b8b48de321dade9a4e211f0e16894fb350445f8e[m
+Merge: fd1d32e d0e974f
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Oct 27 20:48:15 2024 -0500
+
+    Merge remote-tracking branch 'origin/NTG' into SAM
+
+[33mcommit d0e974f27c7ffdc6a315dd0785d702c21aa6c9f4[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Sun Oct 27 20:09:13 2024 -0500
+
+    Implementacion de muchos cambios
+
+[33mcommit fd1d32e31495bbe085b8807b1e1a6fd031ba7787[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Oct 27 20:06:47 2024 -0500
+
+    Actualizacion para implementar el modelo 3D
+
+[33mcommit 4a6d21d9f2b9e414cf76cf0e10a57eda9675c891[m
+Merge: b8b3ef8 2ee4166
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Oct 27 19:25:46 2024 -0500
+
+    Merge branch 'main' of univalle:Nicolas-810/kebab-case
+
+[33mcommit b8b3ef8ddd39284ce6e48560eca454116cf82339[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Oct 27 19:25:19 2024 -0500
+
+    corregido renderizado en Wellcome
+
+[33mcommit 2ee4166dd2228ff5c1b07ab393b0e547b280c379[m
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sun Oct 27 19:07:56 2024 -0500
+
+    Update Problematics.jsx
+
+[33mcommit cd19eda14d63ee81462aece9120883762f1e16f0[m
+Merge: 993c901 eac5946
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Oct 27 19:05:50 2024 -0500
+
+    Merge branch 'main' of univalle:Nicolas-810/kebab-case
+
+[33mcommit 993c90186de492e632eab0a4bd97aa69c7127685[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Oct 27 19:04:28 2024 -0500
+
+    fix page 404
+
+[33mcommit eac59468f65f02408d4002fb636fda69139c6b1f[m
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sun Oct 27 18:58:43 2024 -0500
+
+    Update Home.jsx
+
+[33mcommit ed056c5b9baba112f5c2fddf2ac2f4b69eb66287[m
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sun Oct 27 18:53:37 2024 -0500
+
+    Update Page404.jsx
+
+[33mcommit d2026ba667e1b77251f002cd3ecb96c0b7419e4b[m
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sun Oct 27 18:48:44 2024 -0500
+
+    Rename page404.jsx to Page404.jsx
+
+[33mcommit 365f9e33516e8a50120ba3054a30b85f01d44ec5[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Oct 27 18:41:39 2024 -0500
+
+    fix url
+
+[33mcommit 733d8e756c23673401e2cecc57b1c715ffb72668[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Oct 27 18:17:15 2024 -0500
+
+    imagenes y merge con las tarjetas de introducción
+
+[33mcommit 49d21bbc1ddd20386054781adc29af932f88c331[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Oct 27 18:15:26 2024 -0500
+
+    fix url
+
+[33mcommit e9a59cafd490a13e4bc92b2f7c8cf37874448b5d[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Oct 27 18:12:38 2024 -0500
+
+    fix url
+
+[33mcommit d6442f7ca7e035636b308d1d78a3fdbce41423dd[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Oct 27 18:08:22 2024 -0500
+
+    fix page wellcome
+
+[33mcommit 403b865e2f8d96e0b288683410f3b0530efd883c[m
+Merge: 0903301 64a9149
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Oct 27 18:04:15 2024 -0500
+
+    Merge remote-tracking branch 'origin/main' into SAMi
+
+[33mcommit 64a9149439c64e89871528f240abf2113ac97267[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Oct 27 17:50:40 2024 -0500
+
+    url correct
+
+[33mcommit ab66d5d3dcdcf2f107873662047b766e7ff5a647[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Oct 27 17:44:10 2024 -0500
+
+    pages problematics created
+
+[33mcommit 0903301e7a6853ac5cbe0459cd464613cc5fbb12[m
+Merge: 6591909 ecb9eed
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Sun Oct 27 14:22:25 2024 -0500
+
+    aplicación de cambios con rama NTG
+    Merge branch 'NTG' of https://github.com/Nicolas-810/kebab-case into SAM
+
+[33mcommit 55afbfbaa94d3c43569cac0e811feeb2b20cf335[m
+Merge: 6591909 ecb9eed
+Author: Nicolas Taborda Gomez <nicolas.taborda@correounivalle.edu.co>
+Date:   Fri Oct 18 20:37:37 2024 -0500
+
+    Merge pull request #8 from Nicolas-810/NTG
+    
+    NTG "Cambios en pagina welcome"
+
+[33mcommit ecb9eed6f3a9a7ad132c4131e9b3c1b6e6012ea4[m
+Author: Nicolas Taborda Gomez <nicolas.taborda@univalle.edu.co>
+Date:   Fri Oct 18 20:33:04 2024 -0500
+
+    Cambios en la pagina Welcome
+
+[33mcommit 78a52610f2ded9282095643d9d9e99cc1a97db5b[m
+Author: Admin <admin@MacBook-Pro-de-Nicolas-Taborda.local>
+Date:   Fri Sep 13 20:38:21 2024 -0500
+
+    Cambios del modelo 3D y mejoras en la pagina
+
+[33mcommit 659190948ff7bfefe8b6c8b565e8329bdedbf7a3[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: a9e6d15 60ae4a2
+Author: Nicolas-810 <nicolas.taborda@correounivalle.edu.co>
+Date:   Fri Sep 6 19:33:25 2024 -0500
+
+    Merge pull request #7 from Nicolas-810/NTG
+    
+    Cambios en el login
+
+[33mcommit 60ae4a263f0ab22ce38a24f97033c98af848d83a[m
+Author: Admin <admin@MBPdeNisTaborda.domain.name>
+Date:   Fri Sep 6 19:26:58 2024 -0500
+
+    Cambios en el login
+
+[33mcommit a9e6d159dd86944ccfc1606d51dc6ad1705222a9[m
+Merge: ee5aa23 fd0f145
+Author: SeAlMa2157 <sebastian.albaran@correounivalle.edu.co>
+Date:   Fri Sep 6 17:43:04 2024 -0500
+
+    Merge pull request #6 from Nicolas-810/SAM
+    
+    Movimiento de coseno con logo 3D
+
+[33mcommit fd0f145c17281e506588d32919f2d130a3381749[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Fri Sep 6 17:41:37 2024 -0500
+
+    Movimiento de coseno con logo 3D
+
+[33mcommit 990eda321cd782041106bafc9684fa8a0b738af7[m
+Author: Sebastian Albaran Maya <sebastian.albaran@correounivalle.edu.co>
+Date:   Fri Sep 6 17:27:45 2024 -0500
+
+    movimiento de coseno en logo 3D
+
+[33mcommit ee5aa23865de1c1eb4cf27553e500514f1fdc3ff[m
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Wed Sep 4 22:55:11 2024 -0500
+
+    Update Music.jsx
+
+[33mcommit 9a2c0bf0b47e500ffbfaf965f64280f16ef62aff[m
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Wed Sep 4 22:42:44 2024 -0500
+
+    Rename home.jsx to Home.jsx
+
+[33mcommit 01c4f73d2c2800db8b24eafa4afb99b2d0dddff0[m
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Wed Sep 4 22:42:34 2024 -0500
+
+    Rename home.css to Home.css
+
+[33mcommit 86263b6922dbad085f1f2e4bc3fe52e530375022[m
+Merge: 3ebeef1 18c1595
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Wed Sep 4 22:42:01 2024 -0500
+
+    Merge pull request #5 from Nicolas-810/dup
+    
+    nombres de archivos Home corregidos
+
+[33mcommit 18c15953142488fe5f29863c332ae183abea72d2[m[33m ([m[1;31morigin/dup[m[33m)[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Wed Sep 4 22:40:55 2024 -0500
+
+    nombres de archivos Home corregidos
+
+[33mcommit 3ebeef13c2f7eda90b05ea2982215efc68dca6e5[m
+Merge: b1d9716 d20b9f5
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Wed Sep 4 22:23:14 2024 -0500
+
+    Merge pull request #4 from Nicolas-810/dup
+    
+    Login, Logout y logo funciona ok
+
+[33mcommit d20b9f52f3d2792557cb7dd55c753cf8c1c2d6d4[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Wed Sep 4 22:21:36 2024 -0500
+
+    Login, Logout y logo funciona ok
+
+[33mcommit b1d9716b9381dc2a94213e06e048d679cc950b38[m
+Merge: 1237d81 c5ba340
+Author: Nicolas-810 <nicolas.taborda@correounivalle.edu.co>
+Date:   Wed Sep 4 20:37:05 2024 -0500
+
+    Merge pull request #3 from Nicolas-810/NTG
+    
+    Ntg
+
+[33mcommit c5ba340eb6931c3d72559df3057b149605f709c9[m
+Author: Admin <admin@MBPdeNisTaborda.domain.name>
+Date:   Wed Sep 4 20:36:07 2024 -0500
+
+    Implementacio de cambio de pagina a home1
+
+[33mcommit 8da4771d3580a8b3a8f3835775865bbe16392d0e[m
+Author: Admin <admin@MBPdeNisTaborda.domain.name>
+Date:   Wed Sep 4 20:26:47 2024 -0500
+
+    Implementacio de cambio de pagina a home
+
+[33mcommit 64347c39b029f2e50b71622838eb97a17e547f6d[m
+Author: Admin <admin@MBPdeNisTaborda.domain.name>
+Date:   Wed Sep 4 20:09:56 2024 -0500
+
+    Implementacio Page404,components,assst,Logo3D,Music
+
+[33mcommit a8724929cec3142e77ac0d293f829d0060d9a417[m
+Author: Admin <admin@MBPdeNisTaborda.domain.name>
+Date:   Wed Sep 4 19:52:39 2024 -0500
+
+    Implementacio Home
+
+[33mcommit 1237d814033d574ed57c492fefa076ea7c799f85[m
+Merge: 22c3917 49dd539
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Tue Sep 3 11:22:13 2024 -0500
+
+    Merge pull request #2 from Nicolas-810/dup
+    
+    Login terminado, valida si el usuario ya esta registrado y no lo crea…
+
+[33mcommit 49dd53947c178b215ea95f3219181c4b9b728c1a[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Tue Sep 3 11:18:01 2024 -0500
+
+    Login terminado, valida si el usuario ya esta registrado y no lo crea de nuevo
+
+[33mcommit 22c3917da5019700e394301e52d8c45dc7cbbea5[m
+Merge: aa86d99 632537b
+Author: douglausupa <douglas.usuriaga@correounivalle.edu.co>
+Date:   Sun Aug 25 19:28:00 2024 -0500
+
+    Merge pull request #1 from Nicolas-810/dup
+    
+    Se implementa login con firebase
+
+[33mcommit 632537bf686dce54f4e8d052db7de791ca36c73f[m
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Sun Aug 25 19:21:37 2024 -0500
+
+    Se implementa login con firebase
+
+[33mcommit aa86d993f33fe94fbd1b0470b5f85da40ba7f73a[m
+Author: Admin <admin@MBPdeNisTaborda.domain.name>
+Date:   Wed Aug 21 19:52:51 2024 -0500
+
+    Primer commit del proyecto
