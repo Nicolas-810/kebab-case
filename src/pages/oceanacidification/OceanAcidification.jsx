@@ -12,10 +12,10 @@ import TitleOceanAcidification from "../../Components/logo-3d/TitleOceanAcidific
 import Shark3DMov from "../../Components/logo-3d/Shark3dMov";
 import Shark3D from "../../Components/logo-3d/Shark3D";
 import { Physics } from "@react-three/rapier";
-import { Shark } from "../../Components/logo-3d/Shark";
 import PostProcessingOceanAcidification from "../../Components/logo-3d/PostProcessingOceanAcidification";
 import ScenaShark from "../../Components/logo-3d/ScenaShark";
 import { useCallback, useRef } from "react";
+import Shark from "../../Components/logo-3d/Shark";
 
 const oceanAcidification = () => {
   const navigate = useNavigate();
