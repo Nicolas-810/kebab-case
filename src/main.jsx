@@ -12,7 +12,6 @@ import OceanAcidification from "./pages/oceanacidification/OceanAcidification";
 import ModelScarcity from "./pages/modelScarcity/ModelScarcity";
 import WaterScarcity from "./pages/waterscarcity/WaterScarcity";
 import Quiz from "./pages/quiz/Quiz";
-import Quizv2 from "./pages/quiz/Quizv2";
 
 const router = createBrowserRouter([
   { path: "/", element: <Welcome /> },
@@ -22,7 +21,6 @@ const router = createBrowserRouter([
   { path: "/OceanAcidification", element: <OceanAcidification /> },
   { path: "/ModelScarcity", element: <ModelScarcity /> },
   { path: "/Quiz", element: <Quiz /> },
-  { path: "/Quizv2", element: <Quizv2 /> },
   { path: "*", element: <Page404 /> },
 ]);
 

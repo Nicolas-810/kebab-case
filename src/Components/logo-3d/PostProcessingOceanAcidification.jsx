@@ -1,4 +1,4 @@
-import { EffectComposer, GodRays, Vignette } from "@react-three/postprocessing";
+import { EffectComposer, Vignette } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 
 const PostProcessingOceanAcidification = () => {
@@ -8,7 +8,7 @@ const PostProcessingOceanAcidification = () => {
         offset={0.5}
         darkness={0.5}
         eskil={false}
-        blendFunction={BlendFunction.DST}
+        blendFunction={BlendFunction.SRC}
       />
     </EffectComposer>
   );

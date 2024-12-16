@@ -22,16 +22,24 @@ import PostProcessingWaterPollution from "../../Components/PostProcessingWaterPo
 const WaterPollution = () => {
   const navigate = useNavigate();
 
-  const goBack = () => {
+  const goToHomePage = () => {
     navigate("/home");
   };
 
-  const goNext = () => {
+  const goToWaterPollution = () => {
+    navigate("/WaterPollution");
+  };
+
+  const goToOceanAcidification = () => {
+    navigate("/OceanAcidification");
+  };
+
+  const goToWaterscarcity = () => {
     navigate("/WaterScarcity");
   };
 
-  const goToHomePage = () => {
-    navigate("/home");
+  const goToQuiz = () => {
+    navigate("/quiz");
   };
 
   const audioRef = useRef(null);
@@ -50,8 +58,12 @@ const WaterPollution = () => {
             <h3 className="project-title">HYDRONET</h3>
           </div>
           <div className="button-section">
-            <button onClick={goBack}>Volver</button>
-            <button onClick={goNext}>Siguiente</button>
+            <button onClick={goToWaterPollution}>Contaminación del Agua</button>
+            <button onClick={goToWaterscarcity}>Escasez de agua</button>
+            <button onClick={goToOceanAcidification}>
+              Acidificación de los océanos
+            </button>
+            <button onClick={goToQuiz}>Quiz</button>
           </div>
         </header>
 
@@ -198,8 +210,7 @@ const WaterPollution = () => {
             <Pelota3D position={[-22, -1, -2]} />
 
             <House3D position={[-10, -10, -17]} onClick={handleAudio} />
-            <PostProcessingWaterPollution/>
-            
+            <PostProcessingWaterPollution />
           </Physics>
           <OrbitControls />
           <TitleWaterPollution />

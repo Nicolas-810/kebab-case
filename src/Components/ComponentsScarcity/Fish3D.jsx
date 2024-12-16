@@ -38,7 +38,7 @@ const Fish3D = ({ bottleRef, bottleRef2, onCollision, onCollision2, ...props }) 
           break;
       }
     };
-
+ 
     const handleKeyUp = (event) => {
       switch (event.key) {
         case "ArrowUp":
