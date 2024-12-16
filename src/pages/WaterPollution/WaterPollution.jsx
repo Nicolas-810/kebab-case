@@ -10,13 +10,25 @@ import TitleWaterPollution from "../../Components/logo-3d/TitleWaterPollution"
 const WaterPollution = () => {
   const navigate = useNavigate();
 
-  const goBack = () => {
-    navigate("/home");
+const goToHomePage = () => {
+    navigate("/home"); 
   };
 
-  const goNext = () => {
-    navigate("/WaterScarcity");
-  };  
+  const goToWaterPollution = () => {
+    navigate("/WaterPollution");
+  };
+
+  const goToOceanAcidification = () => {
+    navigate("/OceanAcidification");
+  };
+
+  const goToWaterscarcity = () => {
+    navigate("/WaterScarcity"); 
+  };
+
+  const goToQuiz = () => {
+    navigate("/quiz");
+  };
 
   return (
     <div className="home-page-pullution">
@@ -26,9 +38,11 @@ const WaterPollution = () => {
             <img src={groupLogo} alt="Logo del proyecto" className="logo" />
             <h3 className="project-title">HYDRONET</h3>
           </div>
-          <div className="button-section">
-            <button onClick={goBack}>Volver</button>
-            <button onClick={goNext}>Siguiente</button>
+            <div className="button-section">
+              <button onClick={goToWaterPollution}>Contaminación del Agua</button> 
+              <button onClick={goToWaterscarcity}>Escasez de agua</button> 
+              <button onClick={goToOceanAcidification}>Acidificación de los océanos</button>
+              <button onClick={goToQuiz}>Quiz</button> 
           </div>
         </header>
 
