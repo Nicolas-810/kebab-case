@@ -38,6 +38,7 @@ const WaterPollution = () => {
     navigate("/WaterScarcity");
   };
 
+
   const goToQuiz = () => {
     navigate("/quiz");
   };

@@ -7,10 +7,11 @@ import "./index.css";
 import Home from "./pages/home/Home";
 import Welcome from "./pages/welcome/Welcome";
 import Page404 from "./pages/page404/Page404";
-import WaterPollution from "./pages/WaterPollution/WaterPollution";
-import OceanAcidification from "./pages/OceanAcidification/OceanAcidification";
-import WaterScarcity from "./pages/WaterScarcity/WaterScarcity";
-import ModelScarcity from "./pages/modelScarcity/modelScarcity";
+import WaterPollution from "./pages/waterpollution/WaterPollution";
+import OceanAcidification from "./pages/oceanacidification/OceanAcidification";
+import ModelScarcity from "./pages/modelScarcity/ModelScarcity";
+import WaterScarcity from "./pages/waterscarcity/WaterScarcity";
+import Quiz from "./pages/quiz/Quiz";
 
 const router = createBrowserRouter([
   { path: "/", element: <Welcome /> },
@@ -18,8 +19,9 @@ const router = createBrowserRouter([
   { path: "/WaterScarcity", element: <WaterScarcity /> },
   { path: "/WaterPollution", element: <WaterPollution /> },
   { path: "/OceanAcidification", element: <OceanAcidification /> },
-  { path: "/modelScarcity", element: <ModelScarcity /> },
-  { path: "*", element: <Page404 /> }, 
+  { path: "/ModelScarcity", element: <ModelScarcity /> },
+  { path: "/Quiz", element: <Quiz /> },
+  { path: "*", element: <Page404 /> },
 ]);
 
 createRoot(document.getElementById("root")).render(

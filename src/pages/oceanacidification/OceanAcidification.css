@@ -1,0 +1,85 @@
+.home-page-ocean {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 500vh;
+  background-color: #6395b7;
+  background-size: cover;
+  background-position: center;
+  padding-top: 70px;
+}
+
+.page-container-ocean {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #6395b7;
+  background-size: cover;
+  background-position: center;
+}
+
+.ocean-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: rgb(12, 68, 118);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.Shark3d-container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  margin-left: auto;
+  border-radius: 20;
+}
+
+.text-container-ocean {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  text-align: justify;
+}
+
+.introduction-container-ocean{
+  text-align: center;
+  padding: 30px;
+  margin: 70px 20px; 
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.Welcome-Text {
+  text-align: center;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.text-box-ocean {
+  width: 45%;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  color: #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-box-ocean {
+  align-self: flex-start;
+  margin-left: 1rem;
+}
+
+.right-box-ocean {
+  align-self: flex-end;
+  margin-right: 1rem;
+}
