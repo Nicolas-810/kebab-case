@@ -30,8 +30,8 @@ const WaterPollution = () => {
     navigate("/WaterScarcity");
   };
 
-  const goToHomePage = () => {
-    navigate("/home");
+  const goToQuiz = () => {
+    navigate("/quiz");
   };
 
   const audioRef = useRef(null);
