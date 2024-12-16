@@ -12,7 +12,7 @@ const WaterScarcity = () => {
   const navigate = useNavigate();
 
   const goToHomePage = () => {
-    navigate("/home"); 
+    navigate("/home");
   };
 
   const goToWaterPollution = () => {
@@ -23,8 +23,15 @@ const WaterScarcity = () => {
     navigate("/OceanAcidification");
   };
 
+  const goToWaterscarcity = () => {
+    navigate("/WaterScarcity");
+  };
+
+  const goToQuiz = () => {
+    navigate("/quiz");
+  };
   const goToGame = () => {
-    navigate("/modelScarcity"); 
+    navigate("/modelScarcity");
   };
 
   return (
@@ -36,9 +43,12 @@ const WaterScarcity = () => {
             <h3 className="project-title">HYDRONET</h3>
           </div>
           <div className="button-section">
-            <button onClick={goToWaterPollution}>Contaminación del Agua</button> 
-            <button onClick={goToWaterPollution}>Escasez de agua</button> 
-            <button onClick={goToOceanAcidification}>Acidificación de los océanos</button>
+            <button onClick={goToWaterPollution}>Contaminación del Agua</button>
+            <button onClick={goToWaterscarcity}>Escasez de agua</button>
+            <button onClick={goToOceanAcidification}>
+              Acidificación de los océanos
+            </button>
+            <button onClick={goToQuiz}>Quiz</button>
           </div>
         </header>
 
@@ -147,8 +157,8 @@ const WaterScarcity = () => {
             <h3>JUEGO</h3>
             <p>Tu objetivo es agarrar las botellas.</p>
             <p>
-              Usa las flechas laterales para mover al niño de lado a lado 
-              para agarrar las botellas.
+              Usa las flechas laterales para mover al niño de lado a lado para
+              agarrar las botellas.
             </p>
             <p>¡Diviértete y cuidado el sol esta muy fuerte!</p>
           </div>

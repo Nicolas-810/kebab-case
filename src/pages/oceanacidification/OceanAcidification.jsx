@@ -20,16 +20,24 @@ import { useCallback, useRef } from "react";
 const oceanAcidification = () => {
   const navigate = useNavigate();
 
-  const goBack = () => {
+  const goToHomePage = () => {
     navigate("/home");
   };
 
-  const goNext = () => {
-    navigate("/quiz");
+  const goToWaterPollution = () => {
+    navigate("/WaterPollution");
   };
 
-  const goToHomePage = () => {
-    navigate("/home"); // Redirige a la página de inicio
+  const goToOceanAcidification = () => {
+    navigate("/OceanAcidification");
+  };
+
+  const goToWaterscarcity = () => {
+    navigate("/WaterScarcity");
+  };
+
+  const goToQuiz = () => {
+    navigate("/quiz");
   };
 
   const audioRef = useRef(null);
@@ -56,8 +64,12 @@ const oceanAcidification = () => {
             <h3 className="project-title">HYDRONET</h3>
           </div>
           <div className="button-section">
-            <button onClick={goBack}>Volver</button>
-            <button onClick={goNext}>Siguiente</button>
+            <button onClick={goToWaterPollution}>Contaminación del Agua</button>
+            <button onClick={goToWaterscarcity}>Escasez de agua</button>
+            <button onClick={goToOceanAcidification}>
+              Acidificación de los océanos
+            </button>
+            <button onClick={goToQuiz}>Quiz</button>
           </div>
         </header>
 
