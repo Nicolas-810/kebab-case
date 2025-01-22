@@ -29,7 +29,7 @@
     "react-router-dom": "^6.28.0",
     "three": "^0.170.0",
     "use-sound": "^4.0.3",
-    "vercel": "^39.2.2",
+    "vercel": "^39.3.0",
     "zustand": "^4.5.5"
   },
   "devDependencies": {
